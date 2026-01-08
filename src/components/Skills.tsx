@@ -2,36 +2,37 @@ import { Server, Network, Shield, Cloud, Monitor, Database } from "lucide-react"
 
 const skillCategories = [
   {
+    icon: Shield,
+    title: "Sécurité Infrastructure",
+    skills: ["Durcissement systèmes", "Gestion des accès (IAM)", "Politiques de sécurité (GPO)", "Audit & conformité"],
+    highlight: true,
+  },
+  {
+    icon: Monitor,
+    title: "SIEM & Supervision",
+    skills: ["Wazuh (déploiement & exploitation)", "Analyse de logs", "Détection d'incidents", "Alerting & corrélation"],
+    highlight: true,
+  },
+  {
+    icon: Cloud,
+    title: "Sécurité Cloud",
+    skills: ["Microsoft 365 Security", "Migration sécurisée", "Gestion des identités cloud", "Bonnes pratiques Azure/GCP"],
+    highlight: true,
+  },
+  {
     icon: Server,
     title: "Systèmes",
-    skills: ["Windows Server", "Linux (Debian, Ubuntu)", "Active Directory", "GPO"],
-    highlight: true,
+    skills: ["Windows Server", "Linux (Debian, Ubuntu)", "Active Directory", "Virtualisation (Proxmox, vSphere)"],
   },
   {
     icon: Network,
     title: "Réseaux",
-    skills: ["LAN / VLAN", "DHCP / DNS", "Équipements Cisco", "Topologies réseau"],
-  },
-  {
-    icon: Monitor,
-    title: "Virtualisation",
-    skills: ["Proxmox VE", "VMware vSphere", "VirtualBox", "Containers"],
-  },
-  {
-    icon: Shield,
-    title: "Sécurité & Supervision",
-    skills: ["SIEM Wazuh", "Gestion d'incidents", "Supervision SI", "Logs & alertes"],
-    highlight: true,
+    skills: ["LAN / VLAN", "DHCP / DNS", "Équipements Cisco", "Segmentation réseau"],
   },
   {
     icon: Database,
-    title: "Continuité",
-    skills: ["PRA / PCA", "Sauvegardes", "Reprise d'activité", "Documentation"],
-  },
-  {
-    icon: Cloud,
-    title: "Environnements Cloud",
-    skills: ["Microsoft 365", "Google Workspace", "Migration", "Administration"],
+    title: "Continuité & PRA",
+    skills: ["Plan de reprise d'activité", "Sauvegardes & restauration", "Haute disponibilité", "Documentation technique"],
   },
 ];
 
@@ -42,10 +43,10 @@ const Skills = () => {
         <div className="text-center mb-12">
           <span className="terminal-text mb-4 block">&gt; cat /skills</span>
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            Compétences <span className="text-gradient">Techniques</span>
+            Compétences <span className="text-gradient">Sécurité & Infra</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Stack technique orientée production et sécurité, acquise en environnement professionnel.
+            Focus sur la sécurisation des infrastructures, la supervision et la protection des environnements cloud.
           </p>
         </div>
 

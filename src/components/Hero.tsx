@@ -51,15 +51,22 @@ const Hero = () => {
               Nicolas <span className="text-gradient">HELT</span>
             </h1>
             
-            <h2 className="text-xl lg:text-2xl text-muted-foreground font-medium mb-6 animate-slide-up" style={{ animationDelay: '0.1s' }}>
+            <h2 className="text-xl lg:text-2xl text-muted-foreground font-medium mb-2 animate-slide-up" style={{ animationDelay: '0.1s' }}>
               Administrateur Systèmes & Réseaux
-              <span className="block text-primary mt-1">Orientation Cybersécurité Opérationnelle</span>
             </h2>
+            
+            {/* Trajectory badge */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-2 mb-6 animate-slide-up" style={{ animationDelay: '0.15s' }}>
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 border border-primary/30 rounded-full text-sm font-medium text-primary">
+                <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse-glow" />
+                Incoming: Master Cybersecurity – Infrastructure & Cloud
+              </span>
+            </div>
 
             <p className="text-muted-foreground max-w-2xl mb-8 leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
-              Profil expérimenté en administration d'infrastructures Windows/Linux, virtualisation et supervision. 
-              Parcours structuré avec une sensibilité aux enjeux de sécurité du SI, de continuité de service et de gestion des incidents.
-              Objectif : évoluer vers des missions de cybersécurité opérationnelle (SOC, blue team).
+              Profil expérimenté en sécurisation d'infrastructures Windows/Linux, durcissement systèmes, 
+              gestion des identités (IAM) et supervision SIEM. Parcours structuré vers la cybersécurité 
+              opérationnelle : protection des infrastructures, sécurité cloud et continuité de service.
             </p>
 
             {/* Contact info */}

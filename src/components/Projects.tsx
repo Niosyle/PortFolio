@@ -1,24 +1,25 @@
-import { Server, Users, Target, ExternalLink } from "lucide-react";
+import { Server, Shield, Target, ExternalLink, Lock, Cloud } from "lucide-react";
 
 const projects = [
   {
     icon: Server,
-    title: "Homelab",
-    description: "Conception et administration d'une infrastructure personnelle complète",
-    details: ["Active Directory", "DNS / DHCP", "Supervision", "Tests de sécurité"],
-    tech: ["Proxmox", "Windows Server", "Linux"],
+    title: "Homelab Sécurisé",
+    description: "Infrastructure personnelle avec focus sécurité et durcissement",
+    details: ["Active Directory durci", "Segmentation réseau (VLAN)", "Supervision Wazuh", "Gestion centralisée des logs"],
+    tech: ["Proxmox", "Windows Server", "Linux", "Wazuh"],
   },
   {
-    icon: Users,
-    title: "Association Entraide IT",
-    description: "Création et animation d'une communauté d'entraide pour informaticiens en alternance",
-    details: ["Partage de ressources", "Retours d'expérience", "Préparation entretiens"],
+    icon: Cloud,
+    title: "Migration Cloud Sécurisée",
+    description: "Migration Google Workspace → Microsoft 365 avec sécurisation des accès",
+    details: ["Audit des permissions", "MFA & Conditional Access", "Protection des données", "Formation utilisateurs"],
+    tech: ["Microsoft 365", "Azure AD", "IAM"],
   },
   {
     icon: Target,
     title: "CTF & Hack The Box",
     description: "Pratique régulière sur des environnements de sécurité offensive et défensive",
-    details: ["Profil : NyOne", "Challenges réseaux", "Exploitation système"],
+    details: ["Profil : NyOne", "Challenges réseaux", "Exploitation système", "Blue team labs"],
     link: "https://app.hackthebox.com/profile/NyOne",
   },
 ];
@@ -26,28 +27,28 @@ const projects = [
 const differentiators = [
   {
     number: "01",
-    title: "Expérience terrain réelle",
-    description: "Plusieurs années d'administration en environnement de production, pas seulement académique.",
+    title: "Sécurité infrastructure native",
+    description: "Approche sécurité intégrée dès la conception : durcissement, IAM, logs, supervision SIEM.",
   },
   {
     number: "02",
+    title: "Expérience cloud réelle",
+    description: "Migration et sécurisation d'environnements Microsoft 365 en production.",
+  },
+  {
+    number: "03",
     title: "Passé militaire",
     description: "Rigueur procédurale, fiabilité sous pression, respect strict des consignes de sécurité.",
   },
   {
-    number: "03",
-    title: "Opérationnalité immédiate",
-    description: "Autonome sur les tâches d'administration courantes dès le premier jour.",
-  },
-  {
     number: "04",
-    title: "Vision sécurité intégrée",
-    description: "Approche sécurité native dans chaque projet (SIEM, supervision, gestion d'incidents).",
+    title: "Opérationnalité immédiate",
+    description: "Autonome sur l'administration et la sécurisation d'infrastructures dès le premier jour.",
   },
   {
     number: "05",
-    title: "Trajectoire cohérente",
-    description: "Montée en compétences structurée RNCP 5 → 6 → 7 vers la cybersécurité opérationnelle.",
+    title: "Trajectoire claire",
+    description: "Montée en compétences structurée vers un Master Cybersécurité – Infrastructure & Cloud.",
   },
 ];
 

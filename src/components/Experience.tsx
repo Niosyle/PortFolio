@@ -8,11 +8,11 @@ const experiences = [
     period: "2025 – 2027",
     current: true,
     highlights: [
-      "Administration infrastructures Windows/Linux",
-      "Déploiement et exploitation SIEM (Wazuh)",
-      "Migration Google Workspace → Microsoft 365",
-      "Mise en place PRA et continuité de service",
-      "Supervision SI et gestion des incidents de sécurité",
+      "Sécurisation d'infrastructures Windows/Linux (durcissement, GPO)",
+      "Déploiement et exploitation SIEM Wazuh (logs, alertes, corrélation)",
+      "Migration sécurisée Google Workspace → Microsoft 365 (IAM, MFA)",
+      "Mise en place PRA et procédures de continuité de service",
+      "Gestion des incidents de sécurité et documentation",
     ],
   },
   {
@@ -43,10 +43,10 @@ const experiences = [
 
 const formations = [
   {
-    title: "RNCP Niveau 7 – Cybersécurité",
+    title: "Master Cybersécurité – Infrastructure & Cloud",
     organization: "Objectif 2027-2029",
     status: "Visé",
-    description: "Contrat de professionnalisation orienté cybersécurité opérationnelle (SOC, blue team)",
+    description: "Formation en alternance orientée sécurisation d'infrastructures, protection cloud et opérations SOC/blue team",
   },
   {
     title: "Administrateur Systèmes & Réseaux",

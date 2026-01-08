@@ -64,7 +64,7 @@ const Hero = () => {
             </div>
 
             <p className="text-muted-foreground max-w-2xl mb-8 leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
-              Profil expérimenté en sécurisation d'infrastructures Windows/Linux, durcissement systèmes, 
+              Profil orienté sécurisation d'infrastructures Windows/Linux, durcissement systèmes, 
               gestion des identités (IAM) et supervision SIEM. Parcours structuré vers la cybersécurité 
               opérationnelle : protection des infrastructures, sécurité cloud et continuité de service.
             </p>

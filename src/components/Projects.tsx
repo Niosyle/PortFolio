@@ -43,7 +43,7 @@ const differentiators = [
   {
     number: "04",
     title: "Autonomie en environnement de production",
-    description: "Capacité à intervenir rapidement sur des infrastructures sécurisées.",
+    description: "Capacité à intervenir rapidement sur des infrastructures sécurisées, dans un cadre défini et documenté.",
   },
   {
     number: "05",

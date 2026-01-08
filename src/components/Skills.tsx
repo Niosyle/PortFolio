@@ -16,7 +16,7 @@ const skillCategories = [
   {
     icon: Cloud,
     title: "Sécurité Cloud",
-    skills: ["Microsoft 365 Security", "Migration sécurisée", "Gestion des identités cloud", "Bonnes pratiques Azure/GCP"],
+    skills: ["Microsoft 365 Security", "Azure AD / Entra ID", "Migration sécurisée", "Notions sécurité GCP"],
     highlight: true,
   },
   {

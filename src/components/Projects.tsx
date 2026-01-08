@@ -10,16 +10,16 @@ const projects = [
   },
   {
     icon: Cloud,
-    title: "Migration Cloud Sécurisée",
-    description: "Migration Google Workspace → Microsoft 365 avec sécurisation des accès",
-    details: ["Audit des permissions", "MFA & Conditional Access", "Protection des données", "Formation utilisateurs"],
-    tech: ["Microsoft 365", "Azure AD", "IAM"],
+    title: "Migration Microsoft 365",
+    description: "Migration Google Workspace → Microsoft 365 avec sécurisation des accès (Azure AD)",
+    details: ["Audit des permissions", "MFA & Conditional Access", "Protection des données", "Gestion des identités"],
+    tech: ["Microsoft 365", "Azure AD / Entra ID", "IAM"],
   },
   {
     icon: Target,
-    title: "CTF & Hack The Box",
-    description: "Pratique régulière sur des environnements de sécurité offensive et défensive",
-    details: ["Profil : NyOne", "Challenges réseaux", "Exploitation système", "Blue team labs"],
+    title: "CTF & Labs Blue Team",
+    description: "Pratique régulière sur des environnements de détection et d'analyse défensive",
+    details: ["Profil HTB : NyOne", "Labs Blue Team", "Détection & supervision", "Analyse d'incidents"],
     link: "https://app.hackthebox.com/profile/NyOne",
   },
 ];
@@ -27,23 +27,23 @@ const projects = [
 const differentiators = [
   {
     number: "01",
-    title: "Sécurité infrastructure native",
-    description: "Approche sécurité intégrée dès la conception : durcissement, IAM, logs, supervision SIEM.",
+    title: "Sécurité infrastructure intégrée",
+    description: "Approche sécurité dès la conception : durcissement, IAM, logs, supervision SIEM.",
   },
   {
     number: "02",
-    title: "Expérience cloud réelle",
-    description: "Migration et sécurisation d'environnements Microsoft 365 en production.",
+    title: "Expérience Microsoft 365 / Azure AD",
+    description: "Migration et sécurisation d'environnements M365 en production. Notions sécurité GCP.",
   },
   {
     number: "03",
-    title: "Passé militaire",
-    description: "Rigueur procédurale, fiabilité sous pression, respect strict des consignes de sécurité.",
+    title: "Rigueur militaire",
+    description: "Fiabilité sous pression, respect strict des procédures et consignes de sécurité.",
   },
   {
     number: "04",
-    title: "Opérationnalité immédiate",
-    description: "Autonome sur l'administration et la sécurisation d'infrastructures dès le premier jour.",
+    title: "Autonomie en environnement de production",
+    description: "Capacité à intervenir rapidement sur des infrastructures sécurisées.",
   },
   {
     number: "05",

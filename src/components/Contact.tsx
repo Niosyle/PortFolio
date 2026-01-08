@@ -10,8 +10,8 @@ const Contact = () => {
         </h2>
         
         <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-          Je recherche une alternance RNCP niveau 7 en cybersécurité opérationnelle à partir de 2027.
-          Ouvert aux échanges sur des opportunités ou projets techniques.
+          Je recherche une alternance Master en Cybersécurité – Infrastructure & Cloud à partir de 2027.
+          Objectif : contribuer à la sécurisation des infrastructures et environnements cloud.
         </p>
 
         {/* Main CTA */}
@@ -48,7 +48,7 @@ const Contact = () => {
         {/* Footer quote */}
         <div className="mt-16 pt-8 border-t border-border">
           <blockquote className="text-muted-foreground italic">
-            "Mon objectif est clair : intégrer un parcours RNCP 7 en cybersécurité opérationnelle pour contribuer à la protection des infrastructures et des systèmes d'information."
+            "Sécuriser les infrastructures et les environnements cloud : une trajectoire claire vers un Master Cybersécurité – Infrastructure & Cloud."
           </blockquote>
         </div>
       </div>

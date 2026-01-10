@@ -8,13 +8,18 @@ const projects = [
     details: ["Active Directory durci", "Segmentation réseau (VLAN)", "Supervision Wazuh", "Gestion centralisée des logs"],
     tech: ["Proxmox", "Windows Server", "Linux", "Wazuh"],
   },
-  {
-    icon: Cloud,
-    title: "Migration Microsoft 365",
-    description: "Migration Google Workspace → Microsoft 365 avec sécurisation des accès (Azure AD)",
-    details: ["Audit des permissions", "MFA & Conditional Access", "Protection des données", "Gestion des identités"],
-    tech: ["Microsoft 365", "Azure AD / Entra ID", "IAM"],
-  },
+{
+  icon: Users,
+  title: "Kernel Club",
+  description: "Création et structuration d’une association étudiante IT orientée systèmes, réseaux et cybersécurité",
+  details: [
+    "Fondation et gouvernance de l’association",
+    "Mise en place des outils collaboratifs (Discord, rôles, gestion des accès)",
+    "Organisation de labs techniques et d’ateliers pratiques",
+    "Animation de la communauté et coordination des membres",
+  ],
+  tech: ["Linux", "Réseau", "Cybersécurité", "Discord", "Labs techniques"],
+},
   {
     icon: Target,
     title: "CTF & Labs Blue Team",

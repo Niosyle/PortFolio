@@ -8,18 +8,18 @@ const projects = [
     details: ["Active Directory durci", "Segmentation réseau (VLAN)", "Supervision Wazuh", "Gestion centralisée des logs"],
     tech: ["Proxmox", "Windows Server", "Linux", "Wazuh"],
   },
-{
-  icon: Users,
-  title: "Kernel Club",
-  description: "Création et structuration d’une association étudiante IT orientée systèmes, réseaux et cybersécurité",
-  details: [
-    "Fondation et gouvernance de l’association",
-    "Mise en place des outils collaboratifs (Discord, rôles, gestion des accès)",
-    "Organisation de labs techniques et d’ateliers pratiques",
-    "Animation de la communauté et coordination des membres",
-  ],
-  tech: ["Linux", "Réseau", "Cybersécurité", "Discord", "Labs techniques"],
-},
+  {
+icon: Users,
+title: "Kernel Club",
+description: "Création et animation d’une association étudiante orientée pratique IT (systèmes, réseaux, cybersécurité)",
+details: [
+  "Structuration d’une organisation étudiante (rôles, fonctionnement, gouvernance)",
+  "Mise en place et administration d’outils collaboratifs",
+  "Conception et animation de labs pratiques (systèmes, réseau, cyber)",
+  "Coordination d’activités techniques et travail en équipe",
+],
+tech: ["Linux", "Réseau", "Cybersécurité", "Active Directory", "Discord", "Labs"],
+  },
   {
     icon: Target,
     title: "CTF & Labs Blue Team",

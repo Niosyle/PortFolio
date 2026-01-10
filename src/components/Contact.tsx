@@ -26,7 +26,7 @@ const Contact = () => {
         {/* Social links */}
         <div className="flex justify-center gap-4">
           <a
-            href="https://www.linkedin.com/in/nicolas-helt"
+            href="https://www.linkedin.com/in/nicolas-h-03b75438b/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-5 py-3 bg-secondary rounded-lg border border-border hover:border-primary/50 text-muted-foreground hover:text-foreground transition-all"

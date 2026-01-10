@@ -1,4 +1,4 @@
-import { Server, Shield, Target, ExternalLink, Lock, Cloud } from "lucide-react";
+import { Server, Target, ExternalLink, Users } from "lucide-react";
 
 const projects = [
   {

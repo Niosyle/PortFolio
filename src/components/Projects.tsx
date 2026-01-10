@@ -127,7 +127,7 @@ const Projects = () => {
             Ce qui <span className="text-gradient">me différencie</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Un profil mature et structuré, pas un junior débutant.
+Profil avec une expérience concrète en environnement de production
           </p>
         </div>
 

@@ -17,15 +17,15 @@ export const translations = {
     hero: {
       status: "En alternance",
       role: "Administrateur Systèmes & Réseaux | Sécurité Cloud",
-      badge: "Objectif : Mastère Cybersécurité Cloud",
+      badge: "Mastère cybersécurité cloud visé en septembre 2027",
       intro:
-        "Profil orienté sécurité des environnements cloud et hybrides : gestion des identités (Entra ID, IAM, MFA), sécurisation Microsoft 365, durcissement des infrastructures Windows/Linux et supervision SIEM. Objectif : ingénieur sécurité cloud.",
+        "Depuis 2023, je travaille en alternance au service informatique d'ISC Paris : serveurs Windows et Linux, réseau Cisco, Active Directory. J'ai participé à la migration vers Microsoft 365 et mis en place Wazuh pour surveiller la sécurité du parc. Aujourd'hui, je me tourne vers la sécurité du cloud.",
       location: "93130 Noisy-le-Sec",
       cta: "Voir mon parcours",
     },
     experience: {
       title: "Parcours",
-      titleAccent: "Professionnel",
+      titleAccent: "professionnel",
       jobsTitle: "Expériences",
       educationTitle: "Formations",
       targetStatus: "Visé",
@@ -91,7 +91,7 @@ export const translations = {
     },
     skills: {
       title: "Compétences",
-      titleAccent: "Cloud & Sécurité",
+      titleAccent: "cloud et sécurité",
       subtitle:
         "Focus sur la sécurité des environnements cloud et hybrides : identités, infrastructures et supervision.",
       categories: [
@@ -133,17 +133,17 @@ export const translations = {
     },
     projects: {
       title: "Projets",
-      titleAccent: "Personnels",
+      titleAccent: "personnels",
       items: [
         {
           title: "Homelab Sécurisé",
-          description: "Infrastructure personnelle avec focus sécurité et durcissement",
+          description: "Mon labo perso sous Proxmox, pour tester ce que je n'ai pas le droit de casser au travail.",
           details: ["Active Directory durci", "Segmentation réseau (VLAN)", "Virtualisation Proxmox", "Politiques de sécurité (GPO)"],
         },
         {
           title: "Supervision & SIEM",
           description:
-            "Mise en place d'une supervision complète : disponibilité des services et détection des événements de sécurité",
+            "Surveiller à la fois la disponibilité des services et les événements de sécurité.",
           details: [
             "Déploiement Wazuh (agents, règles, alertes)",
             "Supervision Zabbix (hôtes, services, seuils)",
@@ -153,7 +153,7 @@ export const translations = {
         },
         {
           title: "Sécurisation d'un réseau Wi-Fi",
-          description: "Durcissement d'un réseau sans fil : authentification forte et cloisonnement des usages",
+          description: "Authentification forte et séparation des usages sur le réseau sans fil.",
           details: [
             "Authentification 802.1X via RADIUS (NPS)",
             "Séparation des SSID par VLAN",
@@ -165,7 +165,7 @@ export const translations = {
           title: "Cloud privé en local",
           status: "À venir",
           description:
-            "Déploiement d'un cloud privé sur le homelab pour comprendre le fonctionnement d'une plateforme cloud de l'intérieur",
+            "Monter un cloud privé sur le homelab pour voir comment fonctionne une plateforme cloud de l'intérieur.",
           details: [
             "Provisionnement d'instances à la demande (IaaS)",
             "Réseaux virtuels et groupes de sécurité",
@@ -174,31 +174,31 @@ export const translations = {
           ],
         },
       ],
-      diffTitle: "Ce qui",
-      diffTitleAccent: "me différencie",
-      diffSubtitle: "Profil avec une expérience concrète en environnement de production",
+      diffTitle: "Ce que",
+      diffTitleAccent: "j'apporte",
+      diffSubtitle: "Ce que trois ans d'alternance et cinq ans d'armée m'ont appris.",
       differentiators: [
         {
-          title: "Sécurité infrastructure intégrée",
-          description: "Approche sécurité dès la conception : durcissement, IAM, logs, supervision SIEM.",
+          title: "La sécurité dès le départ",
+          description: "Quand je monte un serveur, je pense durcissement, droits d'accès et logs dès le début, pas après coup.",
         },
         {
-          title: "Expérience cloud Microsoft 365 / Entra ID",
-          description: "Migration et sécurisation d'un environnement M365 en production (IAM, MFA). Notions sécurité GCP.",
+          title: "Du concret sur Microsoft 365",
+          description: "J'ai travaillé sur une vraie migration vers Microsoft 365 : comptes Entra ID, MFA, droits d'accès, en production.",
         },
         {
-          title: "Rigueur militaire",
-          description: "Fiabilité sous pression, respect strict des procédures et consignes de sécurité.",
+          title: "Cinq ans d'armée",
+          description: "J'ai l'habitude des procédures, des consignes de sécurité et de travailler sous pression.",
         },
         {
-          title: "Autonomie en environnement de production",
+          title: "Autonome en production",
           description:
-            "Capacité à intervenir rapidement sur des infrastructures sécurisées, dans un cadre défini et documenté.",
+            "Je gère des incidents et des mises en production au quotidien, en suivant les procédures et en documentant ce que je fais.",
         },
         {
-          title: "Trajectoire claire",
+          title: "Un objectif précis",
           description:
-            "Montée en compétences vers la sécurité cloud : Master Cybersécurité Cloud, certifications AZ-500 et SC-200.",
+            "Je vise la sécurité du cloud : Mastère en 2027, puis les certifications AZ-500 et SC-200.",
         },
       ],
     },
@@ -206,10 +206,8 @@ export const translations = {
       title: "Prenons",
       titleAccent: "contact",
       text1:
-        "Je recherche une alternance en sécurité cloud dans le cadre d'un Master Cybersécurité Cloud, à partir de septembre 2027.",
-      text2: "Objectif : sécuriser les identités, les workloads et les environnements cloud et hybrides.",
-      quote:
-        "De l'infrastructure on-premise à la sécurité cloud : une trajectoire claire vers l'ingénierie sécurité cloud.",
+        "Je cherche une alternance en sécurité du cloud à partir de septembre 2027, en parallèle de mon Mastère.",
+      text2: "Le plus simple pour me joindre, c'est par mail.",
     },
     footer: "Administrateur Systèmes & Réseaux",
     notFound: {
@@ -234,15 +232,15 @@ export const translations = {
     hero: {
       status: "Work-study",
       role: "System & Network Administrator | Cloud Security",
-      badge: "Goal: Master's degree in Cloud Cybersecurity",
+      badge: "Aiming for a Master's in cloud cybersecurity, September 2027",
       intro:
-        "Focused on securing cloud and hybrid environments: identity management (Entra ID, IAM, MFA), Microsoft 365 security, Windows/Linux infrastructure hardening and SIEM monitoring. Goal: cloud security engineer.",
+        "Since 2023, I have been working in the IT department of ISC Paris as a work-study student: Windows and Linux servers, Cisco networking, Active Directory. I worked on the migration to Microsoft 365 and set up Wazuh to monitor security across the network. I am now moving into cloud security.",
       location: "Noisy-le-Sec, France",
       cta: "View my background",
     },
     experience: {
       title: "Professional",
-      titleAccent: "Background",
+      titleAccent: "background",
       jobsTitle: "Experience",
       educationTitle: "Education",
       targetStatus: "Target",
@@ -307,8 +305,8 @@ export const translations = {
       ],
     },
     skills: {
-      title: "Cloud & Security",
-      titleAccent: "Skills",
+      title: "Cloud and security",
+      titleAccent: "skills",
       subtitle: "Focused on securing cloud and hybrid environments: identity, infrastructure and monitoring.",
       categories: [
         {
@@ -349,16 +347,16 @@ export const translations = {
     },
     projects: {
       title: "Personal",
-      titleAccent: "Projects",
+      titleAccent: "projects",
       items: [
         {
           title: "Secure Homelab",
-          description: "Personal infrastructure built with a focus on security and hardening",
+          description: "My personal lab on Proxmox, where I test what I am not allowed to break at work.",
           details: ["Hardened Active Directory", "Network segmentation (VLAN)", "Proxmox virtualization", "Security policies (GPO)"],
         },
         {
           title: "Monitoring & SIEM",
-          description: "End-to-end monitoring: service availability and security event detection",
+          description: "Watching both service availability and security events.",
           details: [
             "Wazuh deployment (agents, rules, alerts)",
             "Zabbix monitoring (hosts, services, thresholds)",
@@ -368,7 +366,7 @@ export const translations = {
         },
         {
           title: "Wi-Fi Network Security",
-          description: "Wireless network hardening: strong authentication and traffic isolation",
+          description: "Strong authentication and separated uses on the wireless network.",
           details: [
             "802.1X authentication with RADIUS (NPS)",
             "SSIDs separated by VLAN",
@@ -379,7 +377,7 @@ export const translations = {
         {
           title: "On-premises Private Cloud",
           status: "Upcoming",
-          description: "Deploying a private cloud on the homelab to understand how a cloud platform works from the inside",
+          description: "Building a private cloud on the homelab to see how a cloud platform works from the inside.",
           details: [
             "On-demand instance provisioning (IaaS)",
             "Virtual networks and security groups",
@@ -389,29 +387,29 @@ export const translations = {
         },
       ],
       diffTitle: "What",
-      diffTitleAccent: "sets me apart",
-      diffSubtitle: "Hands-on experience in production environments",
+      diffTitleAccent: "I bring",
+      diffSubtitle: "What three years of work-study and five years in the army taught me.",
       differentiators: [
         {
-          title: "Security built into infrastructure",
-          description: "Security by design: hardening, IAM, logging, SIEM monitoring.",
+          title: "Security from the start",
+          description: "When I set up a server, I think about hardening, access rights and logs from day one, not as an afterthought.",
         },
         {
-          title: "Microsoft 365 / Entra ID cloud experience",
-          description: "Migration and security of a production M365 environment (IAM, MFA). GCP security basics.",
+          title: "Hands-on Microsoft 365",
+          description: "I worked on a real migration to Microsoft 365: Entra ID accounts, MFA, access rights, in production.",
         },
         {
-          title: "Military discipline",
-          description: "Reliable under pressure, strict compliance with procedures and security instructions.",
+          title: "Five years in the army",
+          description: "Used to procedures, safety rules and working under pressure.",
         },
         {
           title: "Autonomy in production",
-          description: "Able to act quickly on secured infrastructures, within a defined and documented framework.",
+          description: "I handle incidents and production changes day to day, following procedures and documenting what I do.",
         },
         {
-          title: "Clear career path",
+          title: "A clear goal",
           description:
-            "Building skills toward cloud security: Master's in Cloud Cybersecurity, AZ-500 and SC-200 certifications.",
+            "I am heading for cloud security: a Master's degree in 2027, then the AZ-500 and SC-200 certifications.",
         },
       ],
     },
@@ -419,9 +417,8 @@ export const translations = {
       title: "Get in",
       titleAccent: "touch",
       text1:
-        "I am looking for a cloud security work-study position as part of a Master's degree in Cloud Cybersecurity, starting September 2027.",
-      text2: "Goal: securing identities, workloads, and cloud and hybrid environments.",
-      quote: "From on-premises infrastructure to cloud security: a clear path toward cloud security engineering.",
+        "I am looking for a cloud security work-study position starting September 2027, alongside my Master's degree.",
+      text2: "Email is the easiest way to reach me.",
     },
     footer: "System & Network Administrator",
     notFound: {

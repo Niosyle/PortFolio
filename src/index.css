@@ -113,8 +113,7 @@
   }
 
   .card-elevated {
-    background: linear-gradient(180deg, hsl(var(--card)) 0%, hsl(220 22% 7%) 100%);
-    box-shadow: var(--shadow-card);
+    background: hsl(var(--card));
   }
 
   .terminal-text {

@@ -18,9 +18,8 @@ const Skills = () => {
     <section id="competences" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <span className="terminal-text mb-4 block">&gt; cat /skills</span>
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            {t.skills.title} <span className="text-gradient">{t.skills.titleAccent}</span>
+          <h2 className="text-2xl lg:text-3xl font-semibold mb-3">
+            {t.skills.title} {t.skills.titleAccent}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             {t.skills.subtitle}

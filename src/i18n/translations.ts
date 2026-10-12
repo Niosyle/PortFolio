@@ -19,7 +19,7 @@ export const translations = {
       role: "Administrateur Systèmes & Réseaux | Sécurité Cloud",
       badge: "Je cherche une alternance en sécurité cloud pour septembre 2027",
       intro:
-        "Depuis 2023, je travaille en alternance au service informatique d'ISC Paris : serveurs Windows et Linux, réseau Cisco, Active Directory. J'ai participé à la migration vers Microsoft 365 et déployé Wazuh pour surveiller la sécurité du parc. Je veux maintenant mettre cette expérience de terrain au service de la sécurité du cloud.",
+        "Depuis 2023, je travaille en alternance au service informatique d'ISC Paris : 200 postes, 150 collaborateurs et 3 000 étudiants. J'ai participé à la migration vers Microsoft 365, géré seul un incident de sécurité de six jours et testé Wazuh sur une partie du parc. Je veux maintenant mettre cette expérience de terrain au service de la sécurité du cloud.",
       location: "93130 Noisy-le-Sec",
       cta: "Me contacter",
     },
@@ -34,11 +34,12 @@ export const translations = {
           title: "Administrateur Systèmes & Réseaux",
           organization: "ISC Paris (alternance)",
           highlights: [
-            "Migration de Google Workspace vers Microsoft 365 : comptes Entra ID, MFA, gestion des droits",
-            "Déploiement et exploitation de Wazuh : collecte des logs, règles de détection, alertes",
-            "Durcissement des serveurs Windows et Linux, stratégies de groupe (GPO)",
-            "Rédaction du plan de reprise d'activité et des procédures de continuité",
-            "Traitement des incidents de sécurité et documentation",
+            "Migration de Google Workspace vers Microsoft 365 pour 150 collaborateurs et 3 000 étudiants : comptes Entra ID, MFA, gestion des droits",
+            "Gestion en autonomie d'un incident de sécurité sur 6 jours : comptes de messagerie compromis, connexion suspecte à l'administration Microsoft 365, puis campagne de phishing envoyée depuis des comptes étudiants",
+            "Preuve de concept Wazuh sur 30 machines : collecte des logs, règles de détection, alertes",
+            "Exploitation d'un parc de 200 postes : Active Directory (contrôleurs principal et secondaire), DNS, DHCP, téléphonie sur site",
+            "Réseau de 20 switchs Cisco, supervision du Wi-Fi, outils open source de ticketing et de gestion des impressions",
+            "Durcissement des serveurs Windows et Linux, stratégies de groupe (GPO), plan de reprise d'activité",
           ],
         },
         {
@@ -110,7 +111,7 @@ export const translations = {
         },
         {
           title: "SIEM & Supervision",
-          skills: ["Wazuh (déploiement & exploitation)", "Analyse de logs", "Détection d'incidents", "Alerting & corrélation"],
+          skills: ["Wazuh (déploiement & exploitation)", "Analyse de logs", "Détection et gestion d'incidents", "Alerting & corrélation"],
         },
         {
           title: "Systèmes",
@@ -184,16 +185,16 @@ export const translations = {
         },
         {
           title: "Du concret sur Microsoft 365",
-          description: "J'ai travaillé sur une vraie migration vers Microsoft 365 : comptes Entra ID, MFA, droits d'accès, en production.",
+          description: "J'ai participé à la migration de 150 collaborateurs et 3 000 étudiants vers Microsoft 365 : comptes Entra ID, MFA, droits d'accès.",
         },
         {
           title: "Cinq ans d'armée",
           description: "J'ai l'habitude des procédures, des consignes de sécurité et de travailler sous pression.",
         },
         {
-          title: "Autonome en production",
+          title: "Une crise gérée seul",
           description:
-            "Je gère des incidents et des mises en production au quotidien, en suivant les procédures et en documentant ce que je fais.",
+            "Comptes compromis, connexion suspecte à l'administration Microsoft 365, puis phishing depuis nos propres adresses : j'ai géré l'incident en autonomie pendant 6 jours.",
         },
       ],
     },
@@ -229,7 +230,7 @@ export const translations = {
       role: "System & Network Administrator | Cloud Security",
       badge: "Looking for a cloud security work-study position, September 2027",
       intro:
-        "Since 2023, I have been working in the IT department of ISC Paris as a work-study student: Windows and Linux servers, Cisco networking, Active Directory. I worked on the migration to Microsoft 365 and deployed Wazuh to monitor security across the network. I now want to bring this hands-on experience to cloud security.",
+        "Since 2023, I have been working in the IT department of ISC Paris as a work-study student: 200 workstations, 150 staff and 3,000 students. I worked on the migration to Microsoft 365, handled a six-day security incident on my own and trialed Wazuh on part of the network. I now want to bring this hands-on experience to cloud security.",
       location: "Noisy-le-Sec, France",
       cta: "Get in touch",
     },
@@ -244,11 +245,12 @@ export const translations = {
           title: "System & Network Administrator",
           organization: "ISC Paris (work-study)",
           highlights: [
-            "Migration from Google Workspace to Microsoft 365: Entra ID accounts, MFA, access rights",
-            "Wazuh deployment and operation: log collection, detection rules, alerts",
-            "Hardening of Windows and Linux servers, group policies (GPO)",
-            "Writing the disaster recovery plan and business continuity procedures",
-            "Security incident handling and documentation",
+            "Migration from Google Workspace to Microsoft 365 for 150 staff and 3,000 students: Entra ID accounts, MFA, access rights",
+            "Handled a 6-day security incident on my own: compromised mailboxes, suspicious sign-in to the Microsoft 365 admin center, then a phishing campaign sent from student accounts",
+            "Wazuh proof of concept on 30 machines: log collection, detection rules, alerts",
+            "Running a 200-workstation environment: Active Directory (primary and secondary domain controllers), DNS, DHCP, on-premises telephony",
+            "Network of 20 Cisco switches, Wi-Fi monitoring, open source ticketing and print management tools",
+            "Hardening of Windows and Linux servers, group policies (GPO), disaster recovery plan",
           ],
         },
         {
@@ -319,7 +321,7 @@ export const translations = {
         },
         {
           title: "SIEM & Monitoring",
-          skills: ["Wazuh (deployment & operation)", "Log analysis", "Incident detection", "Alerting & correlation"],
+          skills: ["Wazuh (deployment & operation)", "Log analysis", "Incident detection and response", "Alerting & correlation"],
         },
         {
           title: "Systems",
@@ -391,15 +393,15 @@ export const translations = {
         },
         {
           title: "Hands-on Microsoft 365",
-          description: "I worked on a real migration to Microsoft 365: Entra ID accounts, MFA, access rights, in production.",
+          description: "I took part in migrating 150 staff and 3,000 students to Microsoft 365: Entra ID accounts, MFA, access rights.",
         },
         {
           title: "Five years in the army",
           description: "Used to procedures, safety rules and working under pressure.",
         },
         {
-          title: "Autonomy in production",
-          description: "I handle incidents and production changes day to day, following procedures and documenting what I do.",
+          title: "A crisis handled on my own",
+          description: "Compromised accounts, a suspicious Microsoft 365 admin sign-in, then phishing sent from our own addresses: I handled the incident on my own for 6 days.",
         },
       ],
     },

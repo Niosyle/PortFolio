@@ -17,11 +17,11 @@ export const translations = {
     hero: {
       status: "En alternance",
       role: "Administrateur Systèmes & Réseaux | Sécurité Cloud",
-      badge: "Mastère cybersécurité cloud visé en septembre 2027",
+      badge: "Je cherche une alternance en sécurité cloud pour septembre 2027",
       intro:
-        "Depuis 2023, je travaille en alternance au service informatique d'ISC Paris : serveurs Windows et Linux, réseau Cisco, Active Directory. J'ai participé à la migration vers Microsoft 365 et mis en place Wazuh pour surveiller la sécurité du parc. Aujourd'hui, je me tourne vers la sécurité du cloud.",
+        "Depuis 2023, je travaille en alternance au service informatique d'ISC Paris : serveurs Windows et Linux, réseau Cisco, Active Directory. J'ai participé à la migration vers Microsoft 365 et déployé Wazuh pour surveiller la sécurité du parc. Je veux maintenant mettre cette expérience de terrain au service de la sécurité du cloud.",
       location: "93130 Noisy-le-Sec",
-      cta: "Voir mon parcours",
+      cta: "Me contacter",
     },
     experience: {
       title: "Parcours",
@@ -34,11 +34,11 @@ export const translations = {
           title: "Administrateur Systèmes & Réseaux",
           organization: "ISC Paris (alternance)",
           highlights: [
-            "Sécurisation d'infrastructures Windows/Linux (durcissement, GPO)",
-            "Déploiement et exploitation SIEM Wazuh (logs, alertes, corrélation)",
-            "Migration cloud sécurisée Google Workspace → Microsoft 365 (Entra ID, IAM, MFA)",
-            "Mise en place PRA et procédures de continuité de service",
-            "Gestion des incidents de sécurité et documentation",
+            "Migration de Google Workspace vers Microsoft 365 : comptes Entra ID, MFA, gestion des droits",
+            "Déploiement et exploitation de Wazuh : collecte des logs, règles de détection, alertes",
+            "Durcissement des serveurs Windows et Linux, stratégies de groupe (GPO)",
+            "Rédaction du plan de reprise d'activité et des procédures de continuité",
+            "Traitement des incidents de sécurité et documentation",
           ],
         },
         {
@@ -176,7 +176,7 @@ export const translations = {
       ],
       diffTitle: "Ce que",
       diffTitleAccent: "j'apporte",
-      diffSubtitle: "Ce que trois ans d'alternance et cinq ans d'armée m'ont appris.",
+      diffSubtitle: "Trois ans d'alternance en production et cinq ans dans l'armée.",
       differentiators: [
         {
           title: "La sécurité dès le départ",
@@ -194,11 +194,6 @@ export const translations = {
           title: "Autonome en production",
           description:
             "Je gère des incidents et des mises en production au quotidien, en suivant les procédures et en documentant ce que je fais.",
-        },
-        {
-          title: "Un objectif précis",
-          description:
-            "Je vise la sécurité du cloud : Mastère en 2027, puis les certifications AZ-500 et SC-200.",
         },
       ],
     },
@@ -232,11 +227,11 @@ export const translations = {
     hero: {
       status: "Work-study",
       role: "System & Network Administrator | Cloud Security",
-      badge: "Aiming for a Master's in cloud cybersecurity, September 2027",
+      badge: "Looking for a cloud security work-study position, September 2027",
       intro:
-        "Since 2023, I have been working in the IT department of ISC Paris as a work-study student: Windows and Linux servers, Cisco networking, Active Directory. I worked on the migration to Microsoft 365 and set up Wazuh to monitor security across the network. I am now moving into cloud security.",
+        "Since 2023, I have been working in the IT department of ISC Paris as a work-study student: Windows and Linux servers, Cisco networking, Active Directory. I worked on the migration to Microsoft 365 and deployed Wazuh to monitor security across the network. I now want to bring this hands-on experience to cloud security.",
       location: "Noisy-le-Sec, France",
-      cta: "View my background",
+      cta: "Get in touch",
     },
     experience: {
       title: "Professional",
@@ -249,10 +244,10 @@ export const translations = {
           title: "System & Network Administrator",
           organization: "ISC Paris (work-study)",
           highlights: [
-            "Windows/Linux infrastructure security (hardening, GPO)",
-            "Wazuh SIEM deployment and operation (logs, alerts, correlation)",
-            "Secure cloud migration from Google Workspace → Microsoft 365 (Entra ID, IAM, MFA)",
-            "Disaster recovery plan and business continuity procedures",
+            "Migration from Google Workspace to Microsoft 365: Entra ID accounts, MFA, access rights",
+            "Wazuh deployment and operation: log collection, detection rules, alerts",
+            "Hardening of Windows and Linux servers, group policies (GPO)",
+            "Writing the disaster recovery plan and business continuity procedures",
             "Security incident handling and documentation",
           ],
         },
@@ -388,7 +383,7 @@ export const translations = {
       ],
       diffTitle: "What",
       diffTitleAccent: "I bring",
-      diffSubtitle: "What three years of work-study and five years in the army taught me.",
+      diffSubtitle: "Three years of work-study in production and five years in the army.",
       differentiators: [
         {
           title: "Security from the start",
@@ -405,11 +400,6 @@ export const translations = {
         {
           title: "Autonomy in production",
           description: "I handle incidents and production changes day to day, following procedures and documenting what I do.",
-        },
-        {
-          title: "A clear goal",
-          description:
-            "I am heading for cloud security: a Master's degree in 2027, then the AZ-500 and SC-200 certifications.",
         },
       ],
     },

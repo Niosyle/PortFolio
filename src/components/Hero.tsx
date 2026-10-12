@@ -21,7 +21,7 @@ const Hero = () => {
             </div>
             {/* Status indicator */}
             <div className="absolute -bottom-2 -right-2 flex items-center gap-2 bg-card px-3 py-1.5 rounded-full border border-border">
-              <span className="w-2 h-2 bg-accent rounded-full" />
+              <span className="w-2 h-2 bg-accent rounded-full" aria-hidden="true" />
               <span className="text-xs font-medium text-muted-foreground">{t.hero.status}</span>
             </div>
           </div>
@@ -66,7 +66,7 @@ const Hero = () => {
             {/* CTA */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-4">
               <a
-                href="#experience"
+                href="mailto:nicolas.nhelt@gmail.com"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:opacity-90 transition-opacity"
               >
                 {t.hero.cta}

@@ -1,4 +1,4 @@
-import { Mail, MapPin, ExternalLink } from "lucide-react";
+import { Mail, MapPin, Github } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
 
 const Hero = () => {
@@ -52,7 +52,7 @@ const Hero = () => {
             </h1>
             
             <h2 className="text-xl lg:text-2xl text-muted-foreground font-medium mb-2 animate-slide-up" style={{ animationDelay: '0.1s' }}>
-              Administrateur Systèmes & Réseaux
+              Administrateur Systèmes & Réseaux · Sécurité Cloud
             </h2>
             
             {/* Trajectory badge */}
@@ -64,9 +64,9 @@ const Hero = () => {
             </div>
 
             <p className="text-muted-foreground max-w-2xl mb-8 leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
-              Profil orienté sécurisation d'infrastructures Windows/Linux, durcissement systèmes, 
-              gestion des identités (IAM) et supervision SIEM. Parcours structuré vers la cybersécurité 
-              opérationnelle : protection des infrastructures, sécurité cloud et continuité de service.
+              Profil orienté sécurité des environnements cloud et hybrides : gestion des identités
+              (Entra ID, IAM, MFA), sécurisation Microsoft 365, durcissement des infrastructures
+              Windows/Linux et supervision SIEM. Objectif : ingénieur sécurité cloud.
             </p>
 
             {/* Contact info */}
@@ -93,13 +93,13 @@ const Hero = () => {
                 Voir mon parcours
               </a>
               <a 
-                href="https://app.hackthebox.com/profile/NyOne"
+                href="https://github.com/Niosyle"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground font-medium rounded-lg border border-border hover:border-primary/50 transition-colors"
               >
-                <ExternalLink className="w-4 h-4" />
-                Profil HTB
+                <Github className="w-4 h-4" />
+                GitHub
               </a>
             </div>
           </div>

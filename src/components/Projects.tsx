@@ -1,6 +1,15 @@
-import { Server, Target, ExternalLink, Users } from "lucide-react";
+import { Server, ExternalLink, Cloud, type LucideIcon } from "lucide-react";
 
-const projects = [
+type Project = {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  details: string[];
+  tech?: string[];
+  link?: string;
+};
+
+const projects: Project[] = [
   {
     icon: Server,
     title: "Homelab Sécurisé",
@@ -9,23 +18,16 @@ const projects = [
     tech: ["Proxmox", "Windows Server", "Linux", "Wazuh"],
   },
   {
-icon: Users,
-title: "Kernel Club",
-description: "Création et animation d’une association étudiante orientée pratique IT (systèmes, réseaux, cybersécurité)",
-details: [
-  "Structuration d’une organisation étudiante (rôles, fonctionnement, gouvernance)",
-  "Mise en place et administration d’outils collaboratifs",
-  "Conception et animation de labs pratiques (systèmes, réseau, cyber)",
-  "Coordination d’activités techniques et travail en équipe",
-],
-tech: ["Linux", "Réseau", "Cybersécurité", "Active Directory", "Discord", "Labs"],
-  },
-  {
-    icon: Target,
-    title: "CTF & Labs Blue Team",
-    description: "Pratique régulière sur des environnements de détection et d'analyse défensive",
-    details: ["Profil HTB : NyOne", "Labs Blue Team", "Détection & supervision", "Analyse d'incidents"],
-    link: "https://app.hackthebox.com/profile/NyOne",
+    icon: Cloud,
+    title: "Services auto-hébergés & accès Zero Trust",
+    description: "Services conteneurisés exposés sans ouverture de ports, accès distant par réseau maillé chiffré",
+    details: [
+      "Accès distant via Tailscale et WireGuard",
+      "Gestion des secrets avec Vaultwarden",
+      "Conteneurisation et gestion via Docker / Portainer",
+      "Automatisation de workflows avec n8n",
+    ],
+    tech: ["Docker", "Tailscale", "WireGuard", "Vaultwarden", "n8n"],
   },
 ];
 
@@ -37,8 +39,8 @@ const differentiators = [
   },
   {
     number: "02",
-    title: "Expérience Microsoft 365 / Azure AD",
-    description: "Migration et sécurisation d'environnements M365 en production. Notions sécurité GCP.",
+    title: "Expérience cloud Microsoft 365 / Entra ID",
+    description: "Migration et sécurisation d'un environnement M365 en production (IAM, MFA). Notions sécurité GCP.",
   },
   {
     number: "03",
@@ -53,7 +55,7 @@ const differentiators = [
   {
     number: "05",
     title: "Trajectoire claire",
-    description: "Montée en compétences structurée vers un Master Cybersécurité – Infrastructure & Cloud.",
+    description: "Montée en compétences vers la sécurité cloud : Master Cybersécurité Cloud, certifications AZ-500 et SC-200.",
   },
 ];
 
@@ -69,7 +71,7 @@ const Projects = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-20">
+        <div className="grid md:grid-cols-2 gap-6 mb-20 max-w-4xl mx-auto">
           {projects.map((project, index) => (
             <div
               key={project.title}

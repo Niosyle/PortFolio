@@ -10,7 +10,7 @@ const experiences = [
     highlights: [
       "Sécurisation d'infrastructures Windows/Linux (durcissement, GPO)",
       "Déploiement et exploitation SIEM Wazuh (logs, alertes, corrélation)",
-      "Migration sécurisée Google Workspace → Microsoft 365 (IAM, MFA)",
+      "Migration cloud sécurisée Google Workspace → Microsoft 365 (Entra ID, IAM, MFA)",
       "Mise en place PRA et procédures de continuité de service",
       "Gestion des incidents de sécurité et documentation",
     ],
@@ -43,10 +43,16 @@ const experiences = [
 
 const formations = [
   {
-    title: "Master Cybersécurité – Infrastructure & Cloud",
+    title: "Mastère Cybersécurité Cloud",
     organization: "Objectif 2027-2029",
     status: "Visé",
-    description: "Formation en alternance orientée sécurisation d'infrastructures, protection cloud et opérations SOC/blue team",
+    description: "Formation en alternance (RNCP 7) orientée sécurité cloud : IAM, protection des workloads, architectures hybrides et conformité",
+  },
+  {
+    title: "Certifications Microsoft AZ-500 & SC-200",
+    organization: "Azure Security Engineer · Security Operations Analyst",
+    status: "Visé",
+    description: "Sécurité Azure et Microsoft 365 : identités, réseau, données et détection via Defender / Sentinel",
   },
   {
     title: "Administrateur Systèmes & Réseaux",

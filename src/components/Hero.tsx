@@ -52,14 +52,14 @@ const Hero = () => {
             </h1>
             
             <h2 className="text-xl lg:text-2xl text-muted-foreground font-medium mb-2 animate-slide-up" style={{ animationDelay: '0.1s' }}>
-              Administrateur Systèmes & Réseaux · Sécurité Cloud
+              Administrateur Systèmes & Réseaux | Sécurité Cloud
             </h2>
             
             {/* Trajectory badge */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-2 mb-6 animate-slide-up" style={{ animationDelay: '0.15s' }}>
               <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 border border-primary/30 rounded-full text-sm font-medium text-primary">
                 <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse-glow" />
-                Incoming: Master Cybersecurity – Infrastructure & Cloud
+                Objectif : Mastère Cybersécurité Cloud
               </span>
             </div>
 
@@ -80,7 +80,7 @@ const Hero = () => {
               </a>
               <span className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4" />
-                91230 Montgeron
+                93130 Noisy-le-Sec
               </span>
             </div>
 

@@ -1,16 +1,48 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Shield } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
+import type { Lang } from "@/i18n/translations";
 
-const navLinks = [
-  { href: "#experience", label: "Parcours" },
-  { href: "#competences", label: "Compétences" },
-  { href: "#projets", label: "Projets" },
-  { href: "#contact", label: "Contact" },
-];
+const LanguageSwitch = () => {
+  const { lang, setLang, t } = useLanguage();
+  const options: Lang[] = ["fr", "en"];
+
+  return (
+    <div
+      role="group"
+      aria-label={t.nav.switchLabel}
+      className="flex items-center rounded-lg border border-border bg-secondary/50 p-0.5 text-xs font-medium"
+    >
+      {options.map((option) => (
+        <button
+          key={option}
+          type="button"
+          onClick={() => setLang(option)}
+          aria-pressed={lang === option}
+          className={`px-2.5 py-1 rounded-md uppercase transition-colors ${
+            lang === option
+              ? "bg-primary text-primary-foreground"
+              : "text-muted-foreground hover:text-foreground"
+          }`}
+        >
+          {option}
+        </button>
+      ))}
+    </div>
+  );
+};
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t } = useLanguage();
+
+  const navLinks = [
+    { href: "#experience", label: t.nav.experience },
+    { href: "#competences", label: t.nav.skills },
+    { href: "#projets", label: t.nav.projects },
+    { href: "#contact", label: t.nav.contact },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,25 +71,32 @@ const Header = () => {
           </a>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
+          <div className="hidden md:flex items-center gap-8">
+            <nav className="flex items-center gap-8">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+            <LanguageSwitch />
+          </div>
 
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-muted-foreground hover:text-foreground"
-          >
-            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
+          {/* Mobile: language + menu button */}
+          <div className="md:hidden flex items-center gap-2">
+            <LanguageSwitch />
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 text-muted-foreground hover:text-foreground"
+              aria-label="Menu"
+            >
+              {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile nav */}

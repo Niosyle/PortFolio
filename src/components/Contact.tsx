@@ -1,21 +1,25 @@
 import { Mail, Linkedin } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const Contact = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="contact" className="py-20 px-6 bg-card/30">
       <div className="max-w-4xl mx-auto text-center">
         <span className="terminal-text mb-4 block">&gt; contact --init</span>
         <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-          Prenons <span className="text-gradient">contact</span>
+          {t.contact.title} <span className="text-gradient">{t.contact.titleAccent}</span>
         </h2>
-        
+
         <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-          Je recherche une alternance en sécurité cloud dans le cadre d'un Master Cybersécurité Cloud, à partir de septembre 2027.
-          Objectif : sécuriser les identités, les workloads et les environnements cloud et hybrides.
+          {t.contact.text1}
+          <br />
+          {t.contact.text2}
         </p>
 
         {/* Main CTA */}
-        <a 
+        <a
           href="mailto:nicolas.nhelt@gmail.com"
           className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-lg hover:opacity-90 transition-opacity glow-primary mb-10"
         >
@@ -39,7 +43,7 @@ const Contact = () => {
         {/* Footer quote */}
         <div className="mt-16 pt-8 border-t border-border">
           <blockquote className="text-muted-foreground italic">
-            "De l'infrastructure on-premise à la sécurité cloud : une trajectoire claire vers l'ingénierie sécurité cloud."
+            "{t.contact.quote}"
           </blockquote>
         </div>
       </div>

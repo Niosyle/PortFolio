@@ -4,6 +4,7 @@ import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
+import Strengths from "@/components/Strengths";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const Index = () => {
@@ -14,6 +15,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <Strengths />
         <Experience />
         <Skills />
         <Projects />

@@ -22,7 +22,7 @@ const Projects = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-20 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {t.projects.items.map((project, index) => {
             const { icon: Icon, tech } = projectMeta[index];
             const status = "status" in project ? project.status : undefined;
@@ -65,30 +65,6 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Differentiators */}
-        <div className="text-center mb-12">
-          <h2 className="text-2xl lg:text-3xl font-semibold mb-3">
-            {t.projects.diffTitle} {t.projects.diffTitleAccent}
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            {t.projects.diffSubtitle}
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {t.projects.differentiators.map((diff) => {
-            return (
-              <div
-                key={diff.title}
-                className="group p-5 rounded-lg border border-border hover:border-primary/30 bg-card/50 hover:bg-card transition-all duration-300"
-              >
-                <h3 className="font-semibold text-foreground mb-1">{diff.title}</h3>
-                <p className="text-sm text-muted-foreground">{diff.description}</p>
               </div>
             );
           })}

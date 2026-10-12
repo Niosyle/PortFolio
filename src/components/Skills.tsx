@@ -21,9 +21,6 @@ const Skills = () => {
           <h2 className="text-2xl lg:text-3xl font-semibold mb-3">
             {t.skills.title} {t.skills.titleAccent}
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            {t.skills.subtitle}
-          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -19,11 +19,6 @@ const Hero = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            {/* Status indicator */}
-            <div className="absolute -bottom-2 -right-2 flex items-center gap-2 bg-card px-3 py-1.5 rounded-full border border-border">
-              <span className="w-2 h-2 bg-accent rounded-full" aria-hidden="true" />
-              <span className="text-xs font-medium text-muted-foreground">{t.hero.status}</span>
-            </div>
           </div>
 
           {/* Content */}

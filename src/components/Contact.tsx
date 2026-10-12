@@ -12,9 +12,7 @@ const Contact = () => {
         </h2>
 
         <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-          {t.contact.text1}
-          <br />
-          {t.contact.text2}
+          {t.contact.text}
         </p>
 
         {/* Main CTA */}

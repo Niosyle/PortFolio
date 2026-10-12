@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github } from "lucide-react";
+import { Mail, Linkedin } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -33,15 +33,6 @@ const Contact = () => {
           >
             <Linkedin className="w-5 h-5" />
             <span className="text-sm font-medium">LinkedIn</span>
-          </a>
-          <a
-            href="https://github.com/Niosyle"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-3 bg-secondary rounded-lg border border-border hover:border-accent/50 text-muted-foreground hover:text-foreground transition-all"
-          >
-            <Github className="w-5 h-5" />
-            <span className="text-sm font-medium">GitHub</span>
           </a>
         </div>
 

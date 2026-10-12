@@ -1,4 +1,4 @@
-import { Mail, MapPin, Github } from "lucide-react";
+import { Mail, MapPin, Linkedin } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
 
 const Hero = () => {
@@ -93,13 +93,13 @@ const Hero = () => {
                 Voir mon parcours
               </a>
               <a 
-                href="https://github.com/Niosyle"
+                href="https://www.linkedin.com/in/nicolas-h-03b75438b/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground font-medium rounded-lg border border-border hover:border-primary/50 transition-colors"
               >
-                <Github className="w-4 h-4" />
-                GitHub
+                <Linkedin className="w-4 h-4" />
+                LinkedIn
               </a>
             </div>
           </div>

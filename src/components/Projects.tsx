@@ -1,4 +1,4 @@
-import { Server, ExternalLink, Cloud, type LucideIcon } from "lucide-react";
+import { Server, ExternalLink, Cloud, Activity, Wifi, type LucideIcon } from "lucide-react";
 
 type Project = {
   icon: LucideIcon;
@@ -7,6 +7,7 @@ type Project = {
   details: string[];
   tech?: string[];
   link?: string;
+  status?: string;
 };
 
 const projects: Project[] = [
@@ -14,20 +15,45 @@ const projects: Project[] = [
     icon: Server,
     title: "Homelab Sécurisé",
     description: "Infrastructure personnelle avec focus sécurité et durcissement",
-    details: ["Active Directory durci", "Segmentation réseau (VLAN)", "Supervision Wazuh", "Gestion centralisée des logs"],
-    tech: ["Proxmox", "Windows Server", "Linux", "Wazuh"],
+    details: ["Active Directory durci", "Segmentation réseau (VLAN)", "Virtualisation Proxmox", "Politiques de sécurité (GPO)"],
+    tech: ["Proxmox", "Windows Server", "Linux", "Active Directory"],
+  },
+  {
+    icon: Activity,
+    title: "Supervision & SIEM",
+    description: "Mise en place d'une supervision complète : disponibilité des services et détection des événements de sécurité",
+    details: [
+      "Déploiement Wazuh (agents, règles, alertes)",
+      "Supervision Zabbix (hôtes, services, seuils)",
+      "Centralisation et analyse des logs",
+      "Tableaux de bord et alerting",
+    ],
+    tech: ["Wazuh", "Zabbix", "Linux", "Windows"],
+  },
+  {
+    icon: Wifi,
+    title: "Sécurisation d'un réseau Wi-Fi",
+    description: "Durcissement d'un réseau sans fil : authentification forte et cloisonnement des usages",
+    details: [
+      "Authentification 802.1X via RADIUS (NPS)",
+      "Séparation des SSID par VLAN",
+      "Isolation du réseau invités",
+      "Chiffrement WPA2/WPA3-Enterprise",
+    ],
+    tech: ["RADIUS", "NPS", "802.1X", "VLAN"],
   },
   {
     icon: Cloud,
-    title: "Services auto-hébergés & accès Zero Trust",
-    description: "Services conteneurisés exposés sans ouverture de ports, accès distant par réseau maillé chiffré",
+    title: "Cloud privé en local",
+    status: "À venir",
+    description: "Déploiement d'un cloud privé sur le homelab pour comprendre le fonctionnement d'une plateforme cloud de l'intérieur",
     details: [
-      "Accès distant via Tailscale et WireGuard",
-      "Gestion des secrets avec Vaultwarden",
-      "Conteneurisation et gestion via Docker / Portainer",
-      "Automatisation de workflows avec n8n",
+      "Provisionnement d'instances à la demande (IaaS)",
+      "Réseaux virtuels et groupes de sécurité",
+      "Gestion des identités et des accès",
+      "Application des bonnes pratiques de sécurité cloud",
     ],
-    tech: ["Docker", "Tailscale", "WireGuard", "Vaultwarden", "n8n"],
+    tech: ["Proxmox", "Linux", "IaaS"],
   },
 ];
 
@@ -83,6 +109,11 @@ const Projects = () => {
               
               <h3 className="text-lg font-semibold mb-2 text-foreground flex items-center gap-2">
                 {project.title}
+                {project.status && (
+                  <span className="text-xs font-medium px-2 py-0.5 rounded bg-primary/10 text-primary">
+                    {project.status}
+                  </span>
+                )}
                 {project.link && (
                   <a 
                     href={project.link}

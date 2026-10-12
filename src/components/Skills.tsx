@@ -1,72 +1,20 @@
-import { Server, Network, Shield, Cloud, Monitor, Database } from "lucide-react";
+import Section from "@/components/Section";
 import { useLanguage } from "@/i18n/LanguageContext";
-
-// Icônes et mise en avant, alignées par index sur les catégories traduites
-const categoryMeta = [
-  { icon: Cloud, highlight: true },
-  { icon: Shield, highlight: true },
-  { icon: Monitor, highlight: true },
-  { icon: Server, highlight: false },
-  { icon: Network, highlight: false },
-  { icon: Database, highlight: false },
-];
 
 const Skills = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="competences" className="py-20 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <span className="terminal-text mb-4 block">&gt; cat /skills</span>
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            {t.skills.title} <span className="text-gradient">{t.skills.titleAccent}</span>
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            {t.skills.subtitle}
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {t.skills.categories.map((category, index) => {
-            const { icon: Icon, highlight } = categoryMeta[index];
-            return (
-              <div
-                key={index}
-                className={`card-elevated p-6 rounded-xl border transition-all duration-300 hover:border-primary/30 group ${
-                  highlight ? 'border-primary/20' : 'border-border'
-                }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className={`inline-flex p-3 rounded-lg mb-4 ${
-                  highlight
-                    ? 'bg-primary/10 text-primary'
-                    : 'bg-secondary text-muted-foreground group-hover:text-primary group-hover:bg-primary/10'
-                } transition-colors`}>
-                  <Icon className="w-6 h-6" />
-                </div>
-
-                <h3 className="text-lg font-semibold mb-3 text-foreground">
-                  {category.title}
-                </h3>
-
-                <ul className="space-y-2">
-                  {category.skills.map((skill) => (
-                    <li
-                      key={skill}
-                      className="text-sm text-muted-foreground flex items-center gap-2"
-                    >
-                      <span className="w-1 h-1 bg-primary/60 rounded-full" />
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </section>
+    <Section id="competences" label={t.skills.label}>
+      <dl className="grid gap-x-6 gap-y-3 sm:grid-cols-[7rem_1fr] text-[0.95rem]">
+        {t.skills.categories.map((category) => (
+          <div key={category.title} className="contents">
+            <dt className="font-medium text-foreground">{category.title}</dt>
+            <dd className="text-foreground/85 mb-2 sm:mb-0">{category.skills}</dd>
+          </div>
+        ))}
+      </dl>
+    </Section>
   );
 };
 

@@ -3,429 +3,279 @@ export type Lang = "fr" | "en";
 export const translations = {
   fr: {
     meta: {
-      title: "Nicolas HELT | Admin Sys & Réseaux, Sécurité Cloud",
+      title: "Nicolas Helt, administrateur systèmes et réseaux",
       description:
-        "Nicolas HELT, Administrateur Systèmes & Réseaux en alternance, orienté sécurité cloud : Entra ID, Microsoft 365, IAM, durcissement et supervision SIEM.",
+        "Administrateur systèmes et réseaux en alternance, je me spécialise en sécurité du cloud : Microsoft 365, Entra ID, durcissement et supervision.",
     },
     nav: {
       experience: "Parcours",
-      skills: "Compétences",
       projects: "Projets",
+      skills: "Compétences",
       contact: "Contact",
-      switchLabel: "Switch to English",
+      switchLabel: "Choix de la langue",
     },
     hero: {
-      status: "En alternance",
-      role: "Administrateur Systèmes & Réseaux | Sécurité Cloud",
-      badge: "Objectif : Mastère Cybersécurité Cloud",
-      intro:
-        "Profil orienté sécurité des environnements cloud et hybrides : gestion des identités (Entra ID, IAM, MFA), sécurisation Microsoft 365, durcissement des infrastructures Windows/Linux et supervision SIEM. Objectif : ingénieur sécurité cloud.",
-      location: "93130 Noisy-le-Sec",
-      cta: "Voir mon parcours",
+      role: "Administrateur systèmes et réseaux, en route vers la sécurité du cloud.",
+      intro1:
+        "Depuis 2023, je travaille en alternance au service informatique d'ISC Paris : serveurs Windows et Linux, réseau Cisco, Active Directory. J'ai participé à la migration de Google Workspace vers Microsoft 365 et mis en place Wazuh pour surveiller la sécurité du parc. Avant l'informatique, j'ai passé cinq ans dans l'Armée de Terre.",
+      intro2:
+        "Je vise un Mastère en cybersécurité cloud à partir de septembre 2027, avec les certifications AZ-500 et SC-200 en parallèle.",
+      location: "Noisy-le-Sec",
     },
     experience: {
-      title: "Parcours",
-      titleAccent: "Professionnel",
-      jobsTitle: "Expériences",
-      educationTitle: "Formations",
-      targetStatus: "Visé",
+      label: "Parcours",
       jobs: [
         {
-          title: "Administrateur Systèmes & Réseaux",
-          organization: "ISC Paris (alternance)",
+          title: "Administrateur systèmes et réseaux",
+          organization: "ISC Paris, en alternance",
           highlights: [
-            "Sécurisation d'infrastructures Windows/Linux (durcissement, GPO)",
-            "Déploiement et exploitation SIEM Wazuh (logs, alertes, corrélation)",
-            "Migration cloud sécurisée Google Workspace → Microsoft 365 (Entra ID, IAM, MFA)",
-            "Mise en place PRA et procédures de continuité de service",
-            "Gestion des incidents de sécurité et documentation",
+            "Durcissement des serveurs Windows et Linux, stratégies de groupe",
+            "Déploiement et exploitation de Wazuh : collecte des logs, règles, alertes",
+            "Migration de Google Workspace vers Microsoft 365 : comptes Entra ID, MFA, droits d'accès",
+            "Rédaction du plan de reprise d'activité et des procédures de continuité",
+            "Traitement des incidents de sécurité et documentation",
           ],
         },
         {
-          title: "Technicien Supérieur en Technologies Numériques",
-          organization: "ISC Paris (alternance)",
+          title: "Technicien informatique",
+          organization: "ISC Paris, en alternance",
           highlights: [
-            "Maintenance et administration d'infrastructures",
-            "Configuration réseau Cisco",
-            "Virtualisation vSphere",
-            "Mise en production de serveurs (SysPass, NetAlertX, Evoko)",
-            "Participation à la supervision et sécurité du SI",
+            "Maintenance et administration de l'infrastructure",
+            "Configuration des équipements réseau Cisco",
+            "Administration de l'environnement vSphere",
+            "Mise en service de SysPass, NetAlertX et Evoko",
           ],
         },
         {
           title: "Militaire du rang",
           organization: "Armée de Terre",
           highlights: [
-            "Application stricte des procédures et consignes de sécurité",
-            "Travail en environnement opérationnel exigeant",
-            "Rigueur, fiabilité et sens des responsabilités",
+            "Cinq ans de service en environnement opérationnel exigeant",
+            "Application stricte des procédures et des consignes de sécurité",
           ],
-        },
-      ],
-      education: [
-        {
-          title: "Mastère Cybersécurité Cloud",
-          organization: "Objectif 2027-2029",
-          status: "Visé",
-          description:
-            "Formation en alternance (RNCP 7) orientée sécurité cloud : IAM, protection des workloads, architectures hybrides et conformité",
-        },
-        {
-          title: "Certifications Microsoft AZ-500 & SC-200",
-          organization: "Azure Security Engineer, Security Operations Analyst",
-          status: "Visé",
-          description:
-            "Sécurité Azure et Microsoft 365 : identités, réseau, données et détection via Defender / Sentinel",
-        },
-        {
-          title: "Administrateur Systèmes & Réseaux",
-          organization: "IPI Groupe IGENSIA",
-          status: "RNCP 6",
-        },
-        {
-          title: "Technicien Système Réseaux et Sécurité",
-          organization: "IPI Groupe IGENSIA",
-          status: "RNCP 5",
         },
       ],
     },
-    skills: {
-      title: "Compétences",
-      titleAccent: "Cloud & Sécurité",
-      subtitle:
-        "Focus sur la sécurité des environnements cloud et hybrides : identités, infrastructures et supervision.",
-      categories: [
+    education: {
+      label: "Formation",
+      target: "objectif",
+      items: [
         {
-          title: "Sécurité Cloud",
-          skills: ["Microsoft 365 Security", "Entra ID (IAM, MFA)", "Migration cloud sécurisée", "Notions sécurité GCP"],
+          title: "Mastère Cybersécurité Cloud (RNCP 7)",
+          organization: "En alternance, à partir de septembre 2027",
         },
         {
-          title: "Sécurité Infrastructure",
-          skills: [
-            "Durcissement systèmes",
-            "Gestion des accès (IAM)",
-            "Politiques de sécurité (GPO)",
-            "Accès distant chiffré (WireGuard, IPSec)",
-          ],
+          title: "Certifications Microsoft AZ-500 et SC-200",
+          organization: "Sécurité Azure et Microsoft 365",
         },
         {
-          title: "SIEM & Supervision",
-          skills: ["Wazuh (déploiement & exploitation)", "Analyse de logs", "Détection d'incidents", "Alerting & corrélation"],
+          title: "Administrateur systèmes et réseaux (RNCP 6)",
+          organization: "IPI, groupe IGENSIA",
         },
         {
-          title: "Systèmes",
-          skills: [
-            "Windows Server",
-            "Linux (Debian, Fedora)",
-            "Active Directory",
-            "Virtualisation & conteneurs (Proxmox, vSphere, Docker)",
-          ],
-        },
-        {
-          title: "Réseaux",
-          skills: ["LAN / VLAN", "DHCP / DNS", "Équipements Cisco", "Segmentation réseau"],
-        },
-        {
-          title: "Continuité & PRA",
-          skills: ["Plan de reprise d'activité", "Sauvegardes & restauration", "Haute disponibilité", "Documentation technique"],
+          title: "Technicien systèmes, réseaux et sécurité (RNCP 5)",
+          organization: "IPI, groupe IGENSIA",
         },
       ],
     },
     projects: {
-      title: "Projets",
-      titleAccent: "Personnels",
+      label: "Projets",
+      upcoming: "à venir",
       items: [
         {
-          title: "Homelab Sécurisé",
-          description: "Infrastructure personnelle avec focus sécurité et durcissement",
-          details: ["Active Directory durci", "Segmentation réseau (VLAN)", "Virtualisation Proxmox", "Politiques de sécurité (GPO)"],
+          title: "Homelab",
+          description:
+            "Mon labo personnel sous Proxmox, qui me sert à tester ce que je n'ai pas le droit de casser au travail.",
+          details: [
+            "Domaine Active Directory durci, stratégies de groupe",
+            "Réseau découpé en VLAN",
+          ],
         },
         {
-          title: "Supervision & SIEM",
-          description:
-            "Mise en place d'une supervision complète : disponibilité des services et détection des événements de sécurité",
+          title: "Supervision et SIEM",
+          description: "Surveiller à la fois la disponibilité des services et les événements de sécurité.",
           details: [
-            "Déploiement Wazuh (agents, règles, alertes)",
-            "Supervision Zabbix (hôtes, services, seuils)",
-            "Centralisation et analyse des logs",
-            "Tableaux de bord et alerting",
+            "Wazuh : agents, règles de détection, alertes",
+            "Zabbix : supervision des hôtes et des services, seuils d'alerte",
+            "Centralisation des logs et tableaux de bord",
           ],
         },
         {
           title: "Sécurisation d'un réseau Wi-Fi",
-          description: "Durcissement d'un réseau sans fil : authentification forte et cloisonnement des usages",
+          description: "Authentification forte et séparation des usages sur le réseau sans fil.",
           details: [
-            "Authentification 802.1X via RADIUS (NPS)",
-            "Séparation des SSID par VLAN",
-            "Isolation du réseau invités",
-            "Chiffrement WPA2/WPA3-Enterprise",
+            "Authentification 802.1X avec RADIUS (NPS)",
+            "Un SSID par usage, chacun dans son VLAN",
+            "Réseau invités isolé, chiffrement WPA2/WPA3-Enterprise",
           ],
         },
         {
           title: "Cloud privé en local",
-          status: "À venir",
+          upcoming: true,
           description:
-            "Déploiement d'un cloud privé sur le homelab pour comprendre le fonctionnement d'une plateforme cloud de l'intérieur",
+            "Monter un cloud privé sur le homelab pour comprendre ce qui se passe sous le capot d'une plateforme cloud.",
           details: [
-            "Provisionnement d'instances à la demande (IaaS)",
+            "Création d'instances à la demande",
             "Réseaux virtuels et groupes de sécurité",
             "Gestion des identités et des accès",
-            "Application des bonnes pratiques de sécurité cloud",
           ],
         },
       ],
-      diffTitle: "Ce qui",
-      diffTitleAccent: "me différencie",
-      diffSubtitle: "Profil avec une expérience concrète en environnement de production",
-      differentiators: [
-        {
-          title: "Sécurité infrastructure intégrée",
-          description: "Approche sécurité dès la conception : durcissement, IAM, logs, supervision SIEM.",
-        },
-        {
-          title: "Expérience cloud Microsoft 365 / Entra ID",
-          description: "Migration et sécurisation d'un environnement M365 en production (IAM, MFA). Notions sécurité GCP.",
-        },
-        {
-          title: "Rigueur militaire",
-          description: "Fiabilité sous pression, respect strict des procédures et consignes de sécurité.",
-        },
-        {
-          title: "Autonomie en environnement de production",
-          description:
-            "Capacité à intervenir rapidement sur des infrastructures sécurisées, dans un cadre défini et documenté.",
-        },
-        {
-          title: "Trajectoire claire",
-          description:
-            "Montée en compétences vers la sécurité cloud : Master Cybersécurité Cloud, certifications AZ-500 et SC-200.",
-        },
+    },
+    skills: {
+      label: "Compétences",
+      categories: [
+        { title: "Cloud", skills: "Microsoft 365, Entra ID (IAM, MFA), notions de sécurité GCP" },
+        { title: "Sécurité", skills: "Durcissement, stratégies de groupe, VPN (WireGuard, IPSec), RADIUS" },
+        { title: "Supervision", skills: "Wazuh, Zabbix, analyse de logs, gestion des alertes" },
+        { title: "Systèmes", skills: "Windows Server, Active Directory, Linux (Debian, Fedora), Proxmox, vSphere, Docker" },
+        { title: "Réseau", skills: "Cisco, VLAN, routage (OSPF, EIGRP), DHCP, DNS" },
+        { title: "Continuité", skills: "PRA, sauvegardes et restauration, documentation" },
+        { title: "Scripts", skills: "PowerShell, Python" },
       ],
     },
     contact: {
-      title: "Prenons",
-      titleAccent: "contact",
-      text1:
-        "Je recherche une alternance en sécurité cloud dans le cadre d'un Master Cybersécurité Cloud, à partir de septembre 2027.",
-      text2: "Objectif : sécuriser les identités, les workloads et les environnements cloud et hybrides.",
-      quote:
-        "De l'infrastructure on-premise à la sécurité cloud : une trajectoire claire vers l'ingénierie sécurité cloud.",
+      label: "Contact",
+      text: "Je cherche une alternance en sécurité du cloud à partir de septembre 2027. Le plus simple pour me joindre, c'est par mail.",
+      linkedin: "Profil LinkedIn",
     },
-    footer: "Administrateur Systèmes & Réseaux",
     notFound: {
-      message: "Page introuvable",
+      message: "Cette page n'existe pas.",
       back: "Retour à l'accueil",
     },
   },
 
   en: {
     meta: {
-      title: "Nicolas HELT | System & Network Admin, Cloud Security",
+      title: "Nicolas Helt, system and network administrator",
       description:
-        "Nicolas HELT, System & Network Administrator (work-study), focused on cloud security: Entra ID, Microsoft 365, IAM, hardening and SIEM monitoring.",
+        "System and network administrator (work-study), specializing in cloud security: Microsoft 365, Entra ID, hardening and monitoring.",
     },
     nav: {
-      experience: "Background",
-      skills: "Skills",
+      experience: "Experience",
       projects: "Projects",
+      skills: "Skills",
       contact: "Contact",
-      switchLabel: "Passer en français",
+      switchLabel: "Language",
     },
     hero: {
-      status: "Work-study",
-      role: "System & Network Administrator | Cloud Security",
-      badge: "Goal: Master's degree in Cloud Cybersecurity",
-      intro:
-        "Focused on securing cloud and hybrid environments: identity management (Entra ID, IAM, MFA), Microsoft 365 security, Windows/Linux infrastructure hardening and SIEM monitoring. Goal: cloud security engineer.",
+      role: "System and network administrator, moving into cloud security.",
+      intro1:
+        "Since 2023, I have been working in the IT department of ISC Paris as a work-study student: Windows and Linux servers, Cisco networking, Active Directory. I worked on the migration from Google Workspace to Microsoft 365 and set up Wazuh to monitor security across the network. Before IT, I served five years in the French Army.",
+      intro2:
+        "I am aiming for a Master's degree in cloud cybersecurity starting September 2027, alongside the AZ-500 and SC-200 certifications.",
       location: "Noisy-le-Sec, France",
-      cta: "View my background",
     },
     experience: {
-      title: "Professional",
-      titleAccent: "Background",
-      jobsTitle: "Experience",
-      educationTitle: "Education",
-      targetStatus: "Target",
+      label: "Experience",
       jobs: [
         {
-          title: "System & Network Administrator",
-          organization: "ISC Paris (work-study)",
+          title: "System and network administrator",
+          organization: "ISC Paris, work-study",
           highlights: [
-            "Windows/Linux infrastructure security (hardening, GPO)",
-            "Wazuh SIEM deployment and operation (logs, alerts, correlation)",
-            "Secure cloud migration from Google Workspace → Microsoft 365 (Entra ID, IAM, MFA)",
-            "Disaster recovery plan and business continuity procedures",
+            "Hardening of Windows and Linux servers, group policies",
+            "Wazuh deployment and operation: log collection, rules, alerts",
+            "Migration from Google Workspace to Microsoft 365: Entra ID accounts, MFA, access rights",
+            "Writing the disaster recovery plan and business continuity procedures",
             "Security incident handling and documentation",
           ],
         },
         {
-          title: "IT Technician",
-          organization: "ISC Paris (work-study)",
+          title: "IT technician",
+          organization: "ISC Paris, work-study",
           highlights: [
             "Infrastructure maintenance and administration",
-            "Cisco network configuration",
-            "vSphere virtualization",
-            "Server deployment (SysPass, NetAlertX, Evoko)",
-            "Contribution to IT monitoring and security",
+            "Cisco network equipment configuration",
+            "vSphere administration",
+            "Deployment of SysPass, NetAlertX and Evoko",
           ],
         },
         {
           title: "Soldier",
           organization: "French Army",
           highlights: [
-            "Strict compliance with security procedures and instructions",
-            "Work in demanding operational environments",
-            "Discipline, reliability and sense of responsibility",
+            "Five years of service in demanding operational environments",
+            "Strict application of procedures and safety rules",
           ],
-        },
-      ],
-      education: [
-        {
-          title: "Master's degree in Cloud Cybersecurity",
-          organization: "Target 2027-2029",
-          status: "Target",
-          description:
-            "Work-study program (RNCP level 7, EQF 7) focused on cloud security: IAM, workload protection, hybrid architectures and compliance",
-        },
-        {
-          title: "Microsoft AZ-500 & SC-200 certifications",
-          organization: "Azure Security Engineer, Security Operations Analyst",
-          status: "Target",
-          description:
-            "Azure and Microsoft 365 security: identity, network, data and threat detection with Defender / Sentinel",
-        },
-        {
-          title: "System & Network Administrator",
-          organization: "IPI Groupe IGENSIA",
-          status: "RNCP 6 (Bachelor's level)",
-        },
-        {
-          title: "Systems, Networks & Security Technician",
-          organization: "IPI Groupe IGENSIA",
-          status: "RNCP 5 (Associate level)",
         },
       ],
     },
-    skills: {
-      title: "Cloud & Security",
-      titleAccent: "Skills",
-      subtitle: "Focused on securing cloud and hybrid environments: identity, infrastructure and monitoring.",
-      categories: [
+    education: {
+      label: "Education",
+      target: "target",
+      items: [
         {
-          title: "Cloud Security",
-          skills: ["Microsoft 365 Security", "Entra ID (IAM, MFA)", "Secure cloud migration", "GCP security basics"],
+          title: "Master's degree in Cloud Cybersecurity (RNCP 7, EQF 7)",
+          organization: "Work-study, starting September 2027",
         },
         {
-          title: "Infrastructure Security",
-          skills: [
-            "System hardening",
-            "Access management (IAM)",
-            "Security policies (GPO)",
-            "Encrypted remote access (WireGuard, IPSec)",
-          ],
+          title: "Microsoft AZ-500 and SC-200 certifications",
+          organization: "Azure and Microsoft 365 security",
         },
         {
-          title: "SIEM & Monitoring",
-          skills: ["Wazuh (deployment & operation)", "Log analysis", "Incident detection", "Alerting & correlation"],
+          title: "System and Network Administrator (RNCP 6, bachelor's level)",
+          organization: "IPI, IGENSIA group",
         },
         {
-          title: "Systems",
-          skills: [
-            "Windows Server",
-            "Linux (Debian, Fedora)",
-            "Active Directory",
-            "Virtualization & containers (Proxmox, vSphere, Docker)",
-          ],
-        },
-        {
-          title: "Networking",
-          skills: ["LAN / VLAN", "DHCP / DNS", "Cisco equipment", "Network segmentation"],
-        },
-        {
-          title: "Continuity & DRP",
-          skills: ["Disaster recovery plan", "Backup & restore", "High availability", "Technical documentation"],
+          title: "Systems, Networks and Security Technician (RNCP 5)",
+          organization: "IPI, IGENSIA group",
         },
       ],
     },
     projects: {
-      title: "Personal",
-      titleAccent: "Projects",
+      label: "Projects",
+      upcoming: "upcoming",
       items: [
         {
-          title: "Secure Homelab",
-          description: "Personal infrastructure built with a focus on security and hardening",
-          details: ["Hardened Active Directory", "Network segmentation (VLAN)", "Proxmox virtualization", "Security policies (GPO)"],
+          title: "Homelab",
+          description: "My personal lab running on Proxmox, where I test what I am not allowed to break at work.",
+          details: ["Hardened Active Directory domain, group policies", "Network split into VLANs"],
         },
         {
-          title: "Monitoring & SIEM",
-          description: "End-to-end monitoring: service availability and security event detection",
+          title: "Monitoring and SIEM",
+          description: "Watching both service availability and security events.",
           details: [
-            "Wazuh deployment (agents, rules, alerts)",
-            "Zabbix monitoring (hosts, services, thresholds)",
-            "Log centralization and analysis",
-            "Dashboards and alerting",
+            "Wazuh: agents, detection rules, alerts",
+            "Zabbix: host and service monitoring, alert thresholds",
+            "Centralized logs and dashboards",
           ],
         },
         {
-          title: "Wi-Fi Network Security",
-          description: "Wireless network hardening: strong authentication and traffic isolation",
+          title: "Securing a Wi-Fi network",
+          description: "Strong authentication and separated uses on the wireless network.",
           details: [
             "802.1X authentication with RADIUS (NPS)",
-            "SSIDs separated by VLAN",
-            "Guest network isolation",
-            "WPA2/WPA3-Enterprise encryption",
+            "One SSID per use, each in its own VLAN",
+            "Isolated guest network, WPA2/WPA3-Enterprise encryption",
           ],
         },
         {
-          title: "On-premises Private Cloud",
-          status: "Upcoming",
-          description: "Deploying a private cloud on the homelab to understand how a cloud platform works from the inside",
-          details: [
-            "On-demand instance provisioning (IaaS)",
-            "Virtual networks and security groups",
-            "Identity and access management",
-            "Applying cloud security best practices",
-          ],
+          title: "On-premises private cloud",
+          upcoming: true,
+          description: "Building a private cloud on the homelab to understand what happens under the hood of a cloud platform.",
+          details: ["On-demand instances", "Virtual networks and security groups", "Identity and access management"],
         },
       ],
-      diffTitle: "What",
-      diffTitleAccent: "sets me apart",
-      diffSubtitle: "Hands-on experience in production environments",
-      differentiators: [
-        {
-          title: "Security built into infrastructure",
-          description: "Security by design: hardening, IAM, logging, SIEM monitoring.",
-        },
-        {
-          title: "Microsoft 365 / Entra ID cloud experience",
-          description: "Migration and security of a production M365 environment (IAM, MFA). GCP security basics.",
-        },
-        {
-          title: "Military discipline",
-          description: "Reliable under pressure, strict compliance with procedures and security instructions.",
-        },
-        {
-          title: "Autonomy in production",
-          description: "Able to act quickly on secured infrastructures, within a defined and documented framework.",
-        },
-        {
-          title: "Clear career path",
-          description:
-            "Building skills toward cloud security: Master's in Cloud Cybersecurity, AZ-500 and SC-200 certifications.",
-        },
+    },
+    skills: {
+      label: "Skills",
+      categories: [
+        { title: "Cloud", skills: "Microsoft 365, Entra ID (IAM, MFA), GCP security basics" },
+        { title: "Security", skills: "Hardening, group policies, VPN (WireGuard, IPSec), RADIUS" },
+        { title: "Monitoring", skills: "Wazuh, Zabbix, log analysis, alert handling" },
+        { title: "Systems", skills: "Windows Server, Active Directory, Linux (Debian, Fedora), Proxmox, vSphere, Docker" },
+        { title: "Networking", skills: "Cisco, VLAN, routing (OSPF, EIGRP), DHCP, DNS" },
+        { title: "Continuity", skills: "Disaster recovery, backup and restore, documentation" },
+        { title: "Scripting", skills: "PowerShell, Python" },
       ],
     },
     contact: {
-      title: "Get in",
-      titleAccent: "touch",
-      text1:
-        "I am looking for a cloud security work-study position as part of a Master's degree in Cloud Cybersecurity, starting September 2027.",
-      text2: "Goal: securing identities, workloads, and cloud and hybrid environments.",
-      quote: "From on-premises infrastructure to cloud security: a clear path toward cloud security engineering.",
+      label: "Contact",
+      text: "I am looking for a cloud security work-study position starting September 2027. Email is the easiest way to reach me.",
+      linkedin: "LinkedIn profile",
     },
-    footer: "System & Network Administrator",
     notFound: {
-      message: "Page not found",
+      message: "This page does not exist.",
       back: "Back to home",
     },
   },

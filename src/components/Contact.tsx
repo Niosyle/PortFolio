@@ -1,53 +1,26 @@
-import { Mail, Linkedin } from "lucide-react";
+import Section from "@/components/Section";
 import { useLanguage } from "@/i18n/LanguageContext";
+
+const LINKEDIN_URL = "https://www.linkedin.com/in/nicolas-h-03b75438b/";
+const EMAIL = "nicolas.nhelt@gmail.com";
 
 const Contact = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="contact" className="py-20 px-6 bg-card/30">
-      <div className="max-w-4xl mx-auto text-center">
-        <span className="terminal-text mb-4 block">&gt; contact --init</span>
-        <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-          {t.contact.title} <span className="text-gradient">{t.contact.titleAccent}</span>
-        </h2>
-
-        <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-          {t.contact.text1}
-          <br />
-          {t.contact.text2}
-        </p>
-
-        {/* Main CTA */}
-        <a
-          href="mailto:nicolas.nhelt@gmail.com"
-          className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-lg hover:opacity-90 transition-opacity glow-primary mb-10"
-        >
-          <Mail className="w-5 h-5" />
-          nicolas.nhelt@gmail.com
+    <Section id="contact" label={t.contact.label}>
+      <p className="text-foreground/85 max-w-[56ch]">{t.contact.text}</p>
+      <p className="mt-5 text-xl md:text-2xl">
+        <a href={`mailto:${EMAIL}`} className="text-link break-all">
+          {EMAIL}
         </a>
-
-        {/* Social links */}
-        <div className="flex justify-center gap-4">
-          <a
-            href="https://www.linkedin.com/in/nicolas-h-03b75438b/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-3 bg-secondary rounded-lg border border-border hover:border-primary/50 text-muted-foreground hover:text-foreground transition-all"
-          >
-            <Linkedin className="w-5 h-5" />
-            <span className="text-sm font-medium">LinkedIn</span>
-          </a>
-        </div>
-
-        {/* Footer quote */}
-        <div className="mt-16 pt-8 border-t border-border">
-          <blockquote className="text-muted-foreground italic">
-            "{t.contact.quote}"
-          </blockquote>
-        </div>
-      </div>
-    </section>
+      </p>
+      <p className="mt-3 text-[0.95rem]">
+        <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-link">
+          {t.contact.linkedin}
+        </a>
+      </p>
+    </Section>
   );
 };
 

@@ -7,9 +7,8 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 px-6 bg-card/30">
       <div className="max-w-4xl mx-auto text-center">
-        <span className="terminal-text mb-4 block">&gt; contact --init</span>
-        <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-          {t.contact.title} <span className="text-gradient">{t.contact.titleAccent}</span>
+        <h2 className="text-2xl lg:text-3xl font-semibold mb-3">
+          {t.contact.title} {t.contact.titleAccent}
         </h2>
 
         <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
@@ -21,7 +20,7 @@ const Contact = () => {
         {/* Main CTA */}
         <a
           href="mailto:nicolas.nhelt@gmail.com"
-          className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-lg hover:opacity-90 transition-opacity glow-primary mb-10"
+          className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-lg hover:opacity-90 transition-opacity mb-10"
         >
           <Mail className="w-5 h-5" />
           nicolas.nhelt@gmail.com
@@ -38,13 +37,6 @@ const Contact = () => {
             <Linkedin className="w-5 h-5" />
             <span className="text-sm font-medium">LinkedIn</span>
           </a>
-        </div>
-
-        {/* Footer quote */}
-        <div className="mt-16 pt-8 border-t border-border">
-          <blockquote className="text-muted-foreground italic">
-            "{t.contact.quote}"
-          </blockquote>
         </div>
       </div>
     </section>

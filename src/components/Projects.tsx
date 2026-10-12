@@ -17,9 +17,8 @@ const Projects = () => {
       <div className="max-w-6xl mx-auto">
         {/* Projects */}
         <div className="text-center mb-12">
-          <span className="terminal-text mb-4 block">&gt; ls -la /projects</span>
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            {t.projects.title} <span className="text-gradient">{t.projects.titleAccent}</span>
+          <h2 className="text-2xl lg:text-3xl font-semibold mb-3">
+            {t.projects.title} {t.projects.titleAccent}
           </h2>
         </div>
 
@@ -73,9 +72,8 @@ const Projects = () => {
 
         {/* Differentiators */}
         <div className="text-center mb-12">
-          <span className="terminal-text mb-4 block">&gt; diff --from=junior</span>
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            {t.projects.diffTitle} <span className="text-gradient">{t.projects.diffTitleAccent}</span>
+          <h2 className="text-2xl lg:text-3xl font-semibold mb-3">
+            {t.projects.diffTitle} {t.projects.diffTitleAccent}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             {t.projects.diffSubtitle}
@@ -83,17 +81,13 @@ const Projects = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {t.projects.differentiators.map((diff, index) => {
-            const number = String(index + 1).padStart(2, "0");
+          {t.projects.differentiators.map((diff) => {
             return (
               <div
-                key={number}
+                key={diff.title}
                 className="group p-5 rounded-lg border border-border hover:border-primary/30 bg-card/50 hover:bg-card transition-all duration-300"
               >
-                <span className="text-3xl font-bold text-primary/20 group-hover:text-primary/40 transition-colors">
-                  {number}
-                </span>
-                <h3 className="font-semibold text-foreground mt-2 mb-1">{diff.title}</h3>
+                <h3 className="font-semibold text-foreground mb-1">{diff.title}</h3>
                 <p className="text-sm text-muted-foreground">{diff.description}</p>
               </div>
             );

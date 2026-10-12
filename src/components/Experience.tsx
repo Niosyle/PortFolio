@@ -22,9 +22,8 @@ const Experience = () => {
     <section id="experience" className="py-20 px-6 bg-card/30">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <span className="terminal-text mb-4 block">&gt; history --all</span>
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            {t.experience.title} <span className="text-gradient">{t.experience.titleAccent}</span>
+          <h2 className="text-2xl lg:text-3xl font-semibold mb-3">
+            {t.experience.title} {t.experience.titleAccent}
           </h2>
         </div>
 
@@ -105,7 +104,7 @@ const Experience = () => {
                     key={index}
                     className={`card-elevated p-5 rounded-lg border transition-colors ${
                       meta.target
-                        ? 'border-primary/30 bg-gradient-to-r from-primary/5 to-transparent'
+                        ? 'border-primary/30'
                         : 'border-border hover:border-accent/20'
                     }`}
                   >

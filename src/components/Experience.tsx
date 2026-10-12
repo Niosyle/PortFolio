@@ -4,13 +4,13 @@ const experiences = [
   {
     type: "work",
     title: "Administrateur Systèmes & Réseaux",
-    organization: "ISC Paris – Alternance",
-    period: "2025 – 2027",
+    organization: "ISC Paris (alternance)",
+    period: "2025-2027",
     current: true,
     highlights: [
       "Sécurisation d'infrastructures Windows/Linux (durcissement, GPO)",
       "Déploiement et exploitation SIEM Wazuh (logs, alertes, corrélation)",
-      "Migration sécurisée Google Workspace → Microsoft 365 (IAM, MFA)",
+      "Migration cloud sécurisée Google Workspace → Microsoft 365 (Entra ID, IAM, MFA)",
       "Mise en place PRA et procédures de continuité de service",
       "Gestion des incidents de sécurité et documentation",
     ],
@@ -18,8 +18,8 @@ const experiences = [
   {
     type: "work",
     title: "Technicien Supérieur en Technologies Numériques",
-    organization: "ISC Paris – Alternance",
-    period: "2023 – 2025",
+    organization: "ISC Paris (alternance)",
+    period: "2023-2025",
     highlights: [
       "Maintenance et administration d'infrastructures",
       "Configuration réseau Cisco",
@@ -32,7 +32,7 @@ const experiences = [
     type: "military",
     title: "Militaire du rang",
     organization: "Armée de Terre",
-    period: "2016 – 2021",
+    period: "2016-2021",
     highlights: [
       "Application stricte des procédures et consignes de sécurité",
       "Travail en environnement opérationnel exigeant",
@@ -43,21 +43,27 @@ const experiences = [
 
 const formations = [
   {
-    title: "Master Cybersécurité – Infrastructure & Cloud",
+    title: "Mastère Cybersécurité Cloud",
     organization: "Objectif 2027-2029",
     status: "Visé",
-    description: "Formation en alternance orientée sécurisation d'infrastructures, protection cloud et opérations SOC/blue team",
+    description: "Formation en alternance (RNCP 7) orientée sécurité cloud : IAM, protection des workloads, architectures hybrides et conformité",
+  },
+  {
+    title: "Certifications Microsoft AZ-500 & SC-200",
+    organization: "Azure Security Engineer, Security Operations Analyst",
+    status: "Visé",
+    description: "Sécurité Azure et Microsoft 365 : identités, réseau, données et détection via Defender / Sentinel",
   },
   {
     title: "Administrateur Systèmes & Réseaux",
     organization: "IPI Groupe IGENSIA",
-    period: "2025 – 2027",
+    period: "2025-2027",
     status: "RNCP 6",
   },
   {
     title: "Technicien Système Réseaux et Sécurité",
     organization: "IPI Groupe IGENSIA",
-    period: "2023 – 2025",
+    period: "2023-2025",
     status: "RNCP 5",
   },
 ];

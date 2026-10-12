@@ -2,9 +2,15 @@ import { Server, Network, Shield, Cloud, Monitor, Database } from "lucide-react"
 
 const skillCategories = [
   {
+    icon: Cloud,
+    title: "Sécurité Cloud",
+    skills: ["Microsoft 365 Security", "Entra ID (IAM, MFA)", "Migration cloud sécurisée", "Notions sécurité GCP"],
+    highlight: true,
+  },
+  {
     icon: Shield,
     title: "Sécurité Infrastructure",
-    skills: ["Durcissement systèmes", "Gestion des accès (IAM)", "Politiques de sécurité (GPO)", "Audit & conformité"],
+    skills: ["Durcissement systèmes", "Gestion des accès (IAM)", "Politiques de sécurité (GPO)", "Accès distant chiffré (WireGuard, IPSec)"],
     highlight: true,
   },
   {
@@ -14,15 +20,9 @@ const skillCategories = [
     highlight: true,
   },
   {
-    icon: Cloud,
-    title: "Sécurité Cloud",
-    skills: ["Microsoft 365 Security", "Azure AD / Entra ID", "Migration sécurisée", "Notions sécurité GCP"],
-    highlight: true,
-  },
-  {
     icon: Server,
     title: "Systèmes",
-    skills: ["Windows Server", "Linux (Debian, Ubuntu)", "Active Directory", "Virtualisation (Proxmox, vSphere)"],
+    skills: ["Windows Server", "Linux (Debian, Fedora)", "Active Directory", "Virtualisation & conteneurs (Proxmox, vSphere, Docker)"],
   },
   {
     icon: Network,
@@ -43,10 +43,10 @@ const Skills = () => {
         <div className="text-center mb-12">
           <span className="terminal-text mb-4 block">&gt; cat /skills</span>
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            Compétences <span className="text-gradient">Sécurité & Infra</span>
+            Compétences <span className="text-gradient">Cloud & Sécurité</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Focus sur la sécurisation des infrastructures, la supervision et la protection des environnements cloud.
+            Focus sur la sécurité des environnements cloud et hybrides : identités, infrastructures et supervision.
           </p>
         </div>
 

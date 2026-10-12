@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github, FileText } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -10,8 +10,8 @@ const Contact = () => {
         </h2>
         
         <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-          Je recherche une alternance Master en Cybersécurité – Infrastructure & Cloud à partir de 2027.
-          Objectif : contribuer à la sécurisation des infrastructures et environnements cloud.
+          Je recherche une alternance en sécurité cloud dans le cadre d'un Master Cybersécurité Cloud, à partir de septembre 2027.
+          Objectif : sécuriser les identités, les workloads et les environnements cloud et hybrides.
         </p>
 
         {/* Main CTA */}
@@ -35,20 +35,20 @@ const Contact = () => {
             <span className="text-sm font-medium">LinkedIn</span>
           </a>
           <a
-            href="https://app.hackthebox.com/profile/NyOne"
+            href="https://github.com/Niosyle"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-5 py-3 bg-secondary rounded-lg border border-border hover:border-accent/50 text-muted-foreground hover:text-foreground transition-all"
           >
             <Github className="w-5 h-5" />
-            <span className="text-sm font-medium">Hack The Box</span>
+            <span className="text-sm font-medium">GitHub</span>
           </a>
         </div>
 
         {/* Footer quote */}
         <div className="mt-16 pt-8 border-t border-border">
           <blockquote className="text-muted-foreground italic">
-            "Sécuriser les infrastructures et les environnements cloud : une trajectoire claire vers un Master Cybersécurité – Infrastructure & Cloud."
+            "De l'infrastructure on-premise à la sécurité cloud : une trajectoire claire vers l'ingénierie sécurité cloud."
           </blockquote>
         </div>
       </div>

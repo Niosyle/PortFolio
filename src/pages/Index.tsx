@@ -20,7 +20,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-6 px-6 border-t border-border text-center">
         <p className="text-sm text-muted-foreground">
-          © 2025 Nicolas HELT — Administrateur Systèmes & Réseaux
+          © 2025 Nicolas HELT | Administrateur Systèmes & Réseaux
         </p>
       </footer>
     </div>

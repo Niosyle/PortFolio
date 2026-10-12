@@ -64,7 +64,7 @@ const Experience = () => {
                           <h4 className="font-semibold text-foreground">{exp.title}</h4>
                           <p className="text-sm text-muted-foreground">{exp.organization}</p>
                         </div>
-                        <span className={`text-xs font-medium px-2 py-1 rounded ${
+                        <span className={`text-xs font-medium px-2 py-1 rounded whitespace-nowrap ${
                           meta.current
                             ? 'bg-primary/10 text-primary'
                             : 'bg-secondary text-muted-foreground'

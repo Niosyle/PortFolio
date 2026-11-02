@@ -1,5 +1,6 @@
 import { Mail, Linkedin } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import CvButton from "@/components/CvButton";
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -25,7 +26,8 @@ const Contact = () => {
         </a>
 
         {/* Social links */}
-        <div className="flex justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
+          <CvButton variant="secondary" />
           <a
             href="https://www.linkedin.com/in/nicolas-h-03b75438b/"
             target="_blank"

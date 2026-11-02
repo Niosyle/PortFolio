@@ -2,7 +2,7 @@ export type Lang = "fr" | "en";
 
 // Règle : chaque information n'apparaît qu'à un seul endroit.
 // En-tête = qui je suis et ce que je cherche. Expériences = réalisations chiffrées.
-// Compétences = outils. Projets = ce que je fais en dehors du travail. Contact = comment me joindre.
+// Compétences = outils. Réalisations = projets et missions avec preuves (src/content/realisations.ts). Contact = comment me joindre.
 
 export const translations = {
   fr: {
@@ -14,7 +14,7 @@ export const translations = {
     nav: {
       experience: "Parcours",
       skills: "Compétences",
-      projects: "Projets",
+      projects: "Réalisations",
       contact: "Contact",
       switchLabel: "Switch to English",
     },
@@ -125,44 +125,28 @@ export const translations = {
         },
       ],
     },
-    projects: {
-      title: "Projets",
-      titleAccent: "personnels",
-      items: [
-        {
-          title: "Homelab",
-          description: "Mon labo perso sous Proxmox, pour tester ce que je n'ai pas le droit de casser au travail.",
-          details: ["Domaine Active Directory de test", "Réseau découpé en VLAN", "Machines Windows et Linux pour tester le durcissement"],
-        },
-        {
-          title: "Supervision & SIEM",
-          description: "Surveiller à la fois la disponibilité des services et les événements de sécurité.",
-          details: [
-            "Wazuh : agents, règles, alertes",
-            "Zabbix : hôtes, services, seuils",
-            "Tableaux de bord communs",
-          ],
-        },
-        {
-          title: "Sécurisation d'un réseau Wi-Fi",
-          description: "Authentification forte et séparation des usages sur le réseau sans fil.",
-          details: [
-            "Authentification 802.1X via RADIUS (NPS)",
-            "Un SSID par usage, chacun dans son VLAN",
-            "Réseau invités isolé, WPA2/WPA3-Enterprise",
-          ],
-        },
-        {
-          title: "Cloud privé en local",
-          status: "À venir",
-          description: "Monter un cloud privé sur le homelab pour voir comment fonctionne une plateforme cloud de l'intérieur.",
-          details: [
-            "Création d'instances à la demande",
-            "Réseaux virtuels et groupes de sécurité",
-            "Gestion des identités et des accès",
-          ],
-        },
-      ],
+    work: {
+      title: "Réalisations",
+      subtitle: "Ce que j'ai monté, au travail et chez moi. Cliquez sur une fiche pour le détail et les captures.",
+      tabs: { projects: "Projets", missions: "Missions" },
+      all: "Tout",
+      categories: {
+        infra: "Infrastructure",
+        cloud: "Cloud",
+        securite: "Sécurité",
+        reseau: "Réseau",
+        supervision: "Supervision",
+      },
+      status: { ongoing: "En cours", upcoming: "À venir" },
+      seeDetail: "Voir le détail",
+      proofs: "captures",
+      context: "Contexte",
+      actions: "Ce que j'ai fait",
+      result: "Résultat",
+    },
+    cv: {
+      download: "Télécharger mon CV",
+      short: "CV",
     },
     contact: {
       title: "Prenons",
@@ -185,7 +169,7 @@ export const translations = {
     nav: {
       experience: "Background",
       skills: "Skills",
-      projects: "Projects",
+      projects: "Work",
       contact: "Contact",
       switchLabel: "Passer en français",
     },
@@ -296,36 +280,28 @@ export const translations = {
         },
       ],
     },
-    projects: {
-      title: "Personal",
-      titleAccent: "projects",
-      items: [
-        {
-          title: "Homelab",
-          description: "My personal lab on Proxmox, where I test what I am not allowed to break at work.",
-          details: ["Test Active Directory domain", "Network split into VLANs", "Windows and Linux machines to test hardening"],
-        },
-        {
-          title: "Monitoring & SIEM",
-          description: "Watching both service availability and security events.",
-          details: ["Wazuh: agents, rules, alerts", "Zabbix: hosts, services, thresholds", "Shared dashboards"],
-        },
-        {
-          title: "Securing a Wi-Fi network",
-          description: "Strong authentication and separated uses on the wireless network.",
-          details: [
-            "802.1X authentication with RADIUS (NPS)",
-            "One SSID per use, each in its own VLAN",
-            "Isolated guest network, WPA2/WPA3-Enterprise",
-          ],
-        },
-        {
-          title: "On-premises private cloud",
-          status: "Upcoming",
-          description: "Building a private cloud on the homelab to see how a cloud platform works from the inside.",
-          details: ["On-demand instances", "Virtual networks and security groups", "Identity and access management"],
-        },
-      ],
+    work: {
+      title: "Work",
+      subtitle: "What I have built, at work and at home. Click a card for details and screenshots.",
+      tabs: { projects: "Projects", missions: "Tasks" },
+      all: "All",
+      categories: {
+        infra: "Infrastructure",
+        cloud: "Cloud",
+        securite: "Security",
+        reseau: "Networking",
+        supervision: "Monitoring",
+      },
+      status: { ongoing: "In progress", upcoming: "Upcoming" },
+      seeDetail: "See details",
+      proofs: "screenshots",
+      context: "Context",
+      actions: "What I did",
+      result: "Result",
+    },
+    cv: {
+      download: "Download my resume",
+      short: "Resume",
     },
     contact: {
       title: "Get in",

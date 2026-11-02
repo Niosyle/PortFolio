@@ -1,6 +1,7 @@
 import { Mail, MapPin, Linkedin } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
+import CvButton from "@/components/CvButton";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -66,6 +67,7 @@ const Hero = () => {
               >
                 {t.hero.cta}
               </a>
+              <CvButton variant="secondary" />
               <a
                 href="https://www.linkedin.com/in/nicolas-h-03b75438b/"
                 target="_blank"

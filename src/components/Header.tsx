@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Shield } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import type { Lang } from "@/i18n/translations";
+import CvButton from "@/components/CvButton";
 
 const LanguageSwitch = () => {
   const { lang, setLang, t } = useLanguage();
@@ -83,6 +84,7 @@ const Header = () => {
                 </a>
               ))}
             </nav>
+            <CvButton variant="compact" />
             <LanguageSwitch />
           </div>
 

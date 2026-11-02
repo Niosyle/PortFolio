@@ -11,6 +11,7 @@ const jobMeta = [
 const educationMeta: { period?: string; target: boolean }[] = [
   { target: true },
   { target: true },
+  { target: true },
   { period: "2025-2027", target: false },
   { period: "2023-2025", target: false },
 ];

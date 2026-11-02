@@ -72,6 +72,12 @@ export const translations = {
           description: "Titre RNCP 7 : gestion des identités, protection des workloads, architectures hybrides, conformité",
         },
         {
+          title: "Certification Microsoft AZ-900",
+          organization: "Azure Fundamentals",
+          status: "Novembre 2026",
+          description: "Bases du cloud Azure : services, sécurité, identités, gouvernance et coûts",
+        },
+        {
           title: "Certifications Microsoft AZ-500 & SC-200",
           organization: "Azure Security Engineer, Security Operations Analyst",
           status: "Visé",
@@ -235,6 +241,12 @@ export const translations = {
           organization: "Work-study, 2027-2029",
           status: "Target",
           description: "RNCP level 7 (EQF 7): identity management, workload protection, hybrid architectures, compliance",
+        },
+        {
+          title: "Microsoft AZ-900 certification",
+          organization: "Azure Fundamentals",
+          status: "November 2026",
+          description: "Azure cloud fundamentals: services, security, identity, governance and pricing",
         },
         {
           title: "Microsoft AZ-500 & SC-200 certifications",

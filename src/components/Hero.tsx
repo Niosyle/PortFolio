@@ -46,11 +46,11 @@ const Hero = () => {
             {/* Contact info */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
               <a
-                href="mailto:nicolas.nhelt@gmail.com"
+                href="mailto:Nicolas@helt.fr"
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                nicolas.nhelt@gmail.com
+                Nicolas@helt.fr
               </a>
               <span className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4" />
@@ -61,7 +61,7 @@ const Hero = () => {
             {/* CTA */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-4">
               <a
-                href="mailto:nicolas.nhelt@gmail.com"
+                href="mailto:Nicolas@helt.fr"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:opacity-90 transition-opacity"
               >
                 {t.hero.cta}

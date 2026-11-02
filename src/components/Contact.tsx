@@ -17,11 +17,11 @@ const Contact = () => {
 
         {/* Main CTA */}
         <a
-          href="mailto:nicolas.nhelt@gmail.com"
+          href="mailto:Nicolas@helt.fr"
           className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-lg hover:opacity-90 transition-opacity mb-10"
         >
           <Mail className="w-5 h-5" />
-          nicolas.nhelt@gmail.com
+          Nicolas@helt.fr
         </a>
 
         {/* Social links */}

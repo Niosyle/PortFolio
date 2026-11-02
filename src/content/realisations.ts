@@ -1,17 +1,10 @@
 /*
-  CONTENU DES RÉALISATIONS
-  ========================
-  C'est le seul fichier à modifier pour ajouter un projet ou une mission.
+  Chargement du contenu des réalisations.
 
-  Images : déposer les captures dans public/realisations/<slug>/
-  puis les référencer avec le chemin "/realisations/<slug>/fichier.webp".
-  Format conseillé : .webp ou .png, 1600 px de large maximum.
-
-  AVANT DE PUBLIER UNE CAPTURE : masquer les adresses IP publiques, noms de
-  serveurs, noms d'utilisateurs, adresses mail et tout ce qui identifie l'école.
-
-  Les sections vides ne s'affichent pas : tant qu'il n'y a aucune mission,
-  l'onglet « Missions » reste caché.
+  Le contenu se modifie depuis l'espace admin (nhelt.fr/admin) :
+  chaque projet est un fichier de src/content/projects/,
+  chaque mission un fichier de src/content/missions/.
+  Les captures sont enregistrées dans public/realisations/.
 */
 
 export type Text = { fr: string; en: string };
@@ -19,15 +12,11 @@ export type TextList = { fr: string[]; en: string[] };
 
 export type Category = "infra" | "cloud" | "securite" | "reseau" | "supervision";
 
-export type Proof = {
-  /** Chemin de l'image, par exemple "/realisations/wazuh/dashboard.webp" */
-  src: string;
-  /** Légende courte affichée sous l'image */
-  caption: Text;
-};
+export type Proof = { src: string; caption: Text };
 
 export type Project = {
   slug: string;
+  order: number;
   category: Category;
   icon: "server" | "activity" | "wifi" | "cloud" | "shield" | "network";
   status?: "ongoing" | "upcoming";
@@ -35,7 +24,6 @@ export type Project = {
   summary: Text;
   highlights: TextList;
   tech: string[];
-  /** Détail affiché en cliquant sur la carte (facultatif) */
   context?: Text;
   actions?: TextList;
   result?: Text;
@@ -45,114 +33,106 @@ export type Project = {
 export type Mission = {
   slug: string;
   category: Category;
-  /** Format AAAA-MM, par exemple "2026-03" */
   date: string;
-  /** Où la mission a été réalisée : "ISC Paris", "Homelab"... */
   where: Text;
   title: Text;
   context: Text;
   action: Text;
   result: Text;
   tech: string[];
-  /** Au moins une capture : c'est la preuve */
   proofs: Proof[];
 };
 
-/* ------------------------------------------------------------------ */
-/* PROJETS : les gros sujets, présentés comme des études de cas        */
-/* ------------------------------------------------------------------ */
+/* ---------- Normalisation : l'admin peut laisser des champs vides ---------- */
 
-export const projects: Project[] = [
-  {
-    slug: "homelab",
-    category: "infra",
-    icon: "server",
-    title: { fr: "Homelab", en: "Homelab" },
-    summary: {
-      fr: "Mon labo perso sous Proxmox, pour tester ce que je n'ai pas le droit de casser au travail.",
-      en: "My personal lab on Proxmox, where I test what I am not allowed to break at work.",
-    },
-    highlights: {
-      fr: ["Domaine Active Directory de test", "Réseau découpé en VLAN", "Machines Windows et Linux pour tester le durcissement"],
-      en: ["Test Active Directory domain", "Network split into VLANs", "Windows and Linux machines to test hardening"],
-    },
-    tech: ["Proxmox", "Windows Server", "Linux", "Active Directory"],
-  },
-  {
-    slug: "supervision-siem",
-    category: "supervision",
-    icon: "activity",
-    title: { fr: "Supervision & SIEM", en: "Monitoring & SIEM" },
-    summary: {
-      fr: "Surveiller à la fois la disponibilité des services et les événements de sécurité.",
-      en: "Watching both service availability and security events.",
-    },
-    highlights: {
-      fr: ["Wazuh : agents, règles, alertes", "Zabbix : hôtes, services, seuils", "Tableaux de bord communs"],
-      en: ["Wazuh: agents, rules, alerts", "Zabbix: hosts, services, thresholds", "Shared dashboards"],
-    },
-    tech: ["Wazuh", "Zabbix", "Linux", "Windows"],
-  },
-  {
-    slug: "wifi",
-    category: "reseau",
-    icon: "wifi",
-    title: { fr: "Sécurisation d'un réseau Wi-Fi", en: "Securing a Wi-Fi network" },
-    summary: {
-      fr: "Authentification forte et séparation des usages sur le réseau sans fil.",
-      en: "Strong authentication and separated uses on the wireless network.",
-    },
-    highlights: {
-      fr: [
-        "Authentification 802.1X via RADIUS (NPS)",
-        "Un SSID par usage, chacun dans son VLAN",
-        "Réseau invités isolé, WPA2/WPA3-Enterprise",
-      ],
-      en: [
-        "802.1X authentication with RADIUS (NPS)",
-        "One SSID per use, each in its own VLAN",
-        "Isolated guest network, WPA2/WPA3-Enterprise",
-      ],
-    },
-    tech: ["RADIUS", "NPS", "802.1X", "VLAN"],
-  },
-  {
-    slug: "cloud-prive",
-    category: "cloud",
-    icon: "cloud",
-    status: "upcoming",
-    title: { fr: "Cloud privé en local", en: "On-premises private cloud" },
-    summary: {
-      fr: "Monter un cloud privé sur le homelab pour voir comment fonctionne une plateforme cloud de l'intérieur.",
-      en: "Building a private cloud on the homelab to see how a cloud platform works from the inside.",
-    },
-    highlights: {
-      fr: ["Création d'instances à la demande", "Réseaux virtuels et groupes de sécurité", "Gestion des identités et des accès"],
-      en: ["On-demand instances", "Virtual networks and security groups", "Identity and access management"],
-    },
-    tech: ["Proxmox", "Linux", "IaaS"],
-  },
-];
+type Raw = Record<string, unknown>;
 
-/* ------------------------------------------------------------------ */
-/* MISSIONS : les petites tâches concrètes, chacune avec sa preuve     */
-/* Modèle à copier :                                                   */
-/*
-  {
-    slug: "gpo-ecran-verrouillage",
-    category: "securite",
-    date: "2026-02",
-    where: { fr: "ISC Paris", en: "ISC Paris" },
-    title: { fr: "Verrouillage automatique des postes", en: "Automatic workstation lock" },
-    context: { fr: "Postes laissés ouverts en salle des profs.", en: "Unattended open sessions in the staff room." },
-    action: { fr: "GPO de verrouillage après 10 min, déployée sur l'OU des postes.", en: "Lock GPO after 10 min, deployed to the workstations OU." },
-    result: { fr: "200 postes couverts, aucun ticket de régression.", en: "200 workstations covered, no regression ticket." },
-    tech: ["Active Directory", "GPO"],
-    proofs: [
-      { src: "/realisations/gpo-ecran-verrouillage/gpo.webp", caption: { fr: "Paramètre de la GPO", en: "GPO setting" } },
-    ],
-  },
-*/
-/* ------------------------------------------------------------------ */
+const str = (value: unknown) => (typeof value === "string" ? value.trim() : "");
 
-export const missions: Mission[] = [];
+const text = (value: unknown): Text => {
+  const v = (value ?? {}) as Raw;
+  const fr = str(v.fr);
+  const en = str(v.en);
+  // Si une langue manque, on affiche l'autre plutôt qu'un vide
+  return { fr: fr || en, en: en || fr };
+};
+
+const optionalText = (value: unknown): Text | undefined => {
+  const t = text(value);
+  return t.fr ? t : undefined;
+};
+
+const list = (value: unknown): string[] =>
+  Array.isArray(value) ? value.map(str).filter(Boolean) : [];
+
+const textList = (value: unknown): TextList => {
+  const v = (value ?? {}) as Raw;
+  const fr = list(v.fr);
+  const en = list(v.en);
+  return { fr: fr.length ? fr : en, en: en.length ? en : fr };
+};
+
+const optionalTextList = (value: unknown): TextList | undefined => {
+  const t = textList(value);
+  return t.fr.length ? t : undefined;
+};
+
+const proofs = (value: unknown): Proof[] =>
+  Array.isArray(value)
+    ? value
+        .map((p) => ({ src: str((p as Raw)?.src), caption: text((p as Raw)?.caption) }))
+        .filter((p) => p.src)
+    : [];
+
+const slugFromPath = (path: string) => path.split("/").pop()!.replace(/\.json$/, "");
+
+/* ---------- Projets ---------- */
+
+const projectFiles = import.meta.glob("./projects/*.json", { eager: true, import: "default" });
+
+export const projects: Project[] = Object.entries(projectFiles)
+  .map(([path, data]) => {
+    const raw = data as Raw;
+    const status = str(raw.status);
+    const p = proofs(raw.proofs);
+    return {
+      slug: str(raw.id) || slugFromPath(path),
+      order: Number(raw.order) || 99,
+      category: (str(raw.category) || "infra") as Category,
+      icon: (str(raw.icon) || "server") as Project["icon"],
+      status: status === "ongoing" || status === "upcoming" ? status : undefined,
+      title: text(raw.title),
+      summary: text(raw.summary),
+      highlights: textList(raw.highlights),
+      tech: list(raw.tech),
+      context: optionalText(raw.context),
+      actions: optionalTextList(raw.actions),
+      result: optionalText(raw.result),
+      proofs: p.length ? p : undefined,
+    } satisfies Project;
+  })
+  .filter((p) => p.title.fr)
+  .sort((a, b) => a.order - b.order);
+
+/* ---------- Missions ---------- */
+
+const missionFiles = import.meta.glob("./missions/*.json", { eager: true, import: "default" });
+
+export const missions: Mission[] = Object.entries(missionFiles)
+  .map(([path, data]) => {
+    const raw = data as Raw;
+    return {
+      slug: str(raw.id) || slugFromPath(path),
+      category: (str(raw.category) || "infra") as Category,
+      date: str(raw.date).slice(0, 7),
+      where: text(raw.where),
+      title: text(raw.title),
+      context: text(raw.context),
+      action: text(raw.action),
+      result: text(raw.result),
+      tech: list(raw.tech),
+      proofs: proofs(raw.proofs),
+    } satisfies Mission;
+  })
+  // Une mission sans capture n'est pas une preuve : elle n'est pas affichée
+  .filter((m) => m.title.fr && m.proofs.length > 0);

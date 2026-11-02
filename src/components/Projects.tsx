@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Server, Cloud, Activity, Wifi, Shield, Network, ImageIcon, type LucideIcon } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { track } from "@/content/site";
 import {
   projects,
   missions,
@@ -109,6 +110,7 @@ const Projects = () => {
 
   const open = (next: Exclude<Selected, null>) => {
     setSelected(next);
+    track(next.kind === "project" ? "open-project" : "open-mission", { slug: next.item.slug });
     const prefix = next.kind === "project" ? "projet" : "mission";
     history.replaceState(null, "", `#${prefix}-${next.item.slug}`);
   };
@@ -128,7 +130,10 @@ const Projects = () => {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-8">
           <h2 className="text-2xl lg:text-3xl font-semibold mb-3">{t.work.title}</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">{t.work.subtitle}</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            {t.work.subtitle}
+            {(missions.length > 0 || projects.some(hasDetail)) && ` ${t.work.clickHint}`}
+          </p>
         </div>
 
         {/* Onglets : l'onglet Missions n'apparaît que s'il y a au moins une mission */}

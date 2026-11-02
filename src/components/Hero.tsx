@@ -48,6 +48,7 @@ const Hero = () => {
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
               <a
                 href="mailto:Nicolas@helt.fr"
+                data-umami-event="email-click"
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="w-4 h-4" />
@@ -63,6 +64,7 @@ const Hero = () => {
             <div className="flex flex-wrap justify-center lg:justify-start gap-4">
               <a
                 href="mailto:Nicolas@helt.fr"
+                data-umami-event="email-click"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:opacity-90 transition-opacity"
               >
                 {t.hero.cta}
@@ -70,6 +72,7 @@ const Hero = () => {
               <CvButton variant="secondary" />
               <a
                 href="https://www.linkedin.com/in/nicolas-h-03b75438b/"
+                data-umami-event="linkedin-click"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground font-medium rounded-lg border border-border hover:border-primary/50 transition-colors"

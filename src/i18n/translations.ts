@@ -127,7 +127,8 @@ export const translations = {
     },
     work: {
       title: "Réalisations",
-      subtitle: "Ce que j'ai monté, au travail et chez moi. Cliquez sur une fiche pour le détail et les captures.",
+      subtitle: "Ce que j'ai monté, au travail et chez moi.",
+      clickHint: "Cliquez sur une fiche pour le détail et les captures.",
       tabs: { projects: "Projets", missions: "Missions" },
       all: "Tout",
       categories: {
@@ -282,7 +283,8 @@ export const translations = {
     },
     work: {
       title: "Work",
-      subtitle: "What I have built, at work and at home. Click a card for details and screenshots.",
+      subtitle: "What I have built, at work and at home.",
+      clickHint: "Click a card for details and screenshots.",
       tabs: { projects: "Projects", missions: "Tasks" },
       all: "All",
       categories: {

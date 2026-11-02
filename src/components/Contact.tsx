@@ -19,6 +19,7 @@ const Contact = () => {
         {/* Main CTA */}
         <a
           href="mailto:Nicolas@helt.fr"
+                data-umami-event="email-click"
           className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-lg hover:opacity-90 transition-opacity mb-10"
         >
           <Mail className="w-5 h-5" />
@@ -30,6 +31,7 @@ const Contact = () => {
           <CvButton variant="secondary" />
           <a
             href="https://www.linkedin.com/in/nicolas-h-03b75438b/"
+                data-umami-event="linkedin-click"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-5 py-3 bg-secondary rounded-lg border border-border hover:border-primary/50 text-muted-foreground hover:text-foreground transition-all"

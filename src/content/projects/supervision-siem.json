@@ -1,0 +1,33 @@
+{
+  "id": "supervision-siem",
+  "order": 2,
+  "category": "supervision",
+  "icon": "activity",
+  "status": "",
+  "title": {
+    "fr": "Supervision & SIEM",
+    "en": "Monitoring & SIEM"
+  },
+  "summary": {
+    "fr": "Surveiller à la fois la disponibilité des services et les événements de sécurité.",
+    "en": "Watching both service availability and security events."
+  },
+  "highlights": {
+    "fr": [
+      "Wazuh : agents, règles, alertes",
+      "Zabbix : hôtes, services, seuils",
+      "Tableaux de bord communs"
+    ],
+    "en": [
+      "Wazuh: agents, rules, alerts",
+      "Zabbix: hosts, services, thresholds",
+      "Shared dashboards"
+    ]
+  },
+  "tech": [
+    "Wazuh",
+    "Zabbix",
+    "Linux",
+    "Windows"
+  ]
+}

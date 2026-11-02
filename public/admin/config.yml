@@ -1,0 +1,227 @@
+# Espace admin de nhelt.fr (Sveltia CMS)
+# Connexion : « Sign In Using Access Token » avec un jeton GitHub limité au dépôt PortFolio.
+# Chaque enregistrement crée un commit sur main, puis GitHub Actions redéploie le site (2 min environ).
+
+backend:
+  name: github
+  repo: Niosyle/PortFolio
+  branch: main
+  commit_messages:
+    create: "Admin : ajout de {{collection}} « {{slug}} »"
+    update: "Admin : modification de {{collection}} « {{slug}} »"
+    delete: "Admin : suppression de {{collection}} « {{slug}} »"
+    uploadMedia: "Admin : ajout du fichier {{path}}"
+    deleteMedia: "Admin : suppression du fichier {{path}}"
+
+site_url: https://nhelt.fr
+display_url: https://nhelt.fr
+
+# Captures et CV
+media_folder: public/realisations
+public_folder: /realisations
+
+collections:
+  # ------------------------------------------------------------------
+  - name: missions
+    label: Missions
+    label_singular: Mission
+    description: >
+      Petites tâches concrètes, chacune avec au moins une capture comme preuve.
+      Une mission sans capture n'est pas affichée sur le site.
+      Pensez à masquer IP publiques, noms de serveurs, utilisateurs et adresses mail.
+    folder: src/content/missions
+    format: json
+    extension: json
+    create: true
+    delete: true
+    identifier_field: id
+    slug: "{{slug}}"
+    summary: "{{date}} | {{title.fr}}"
+    sortable_fields: [date]
+    fields:
+      - { name: id, label: "Identifiant (minuscules et tirets, sert pour le lien direct)", widget: string, pattern: ["^[a-z0-9-]+$", "Minuscules, chiffres et tirets uniquement"] }
+      - name: date
+        label: Mois
+        widget: datetime
+        format: "YYYY-MM"
+        date_format: "YYYY-MM"
+        time_format: false
+      - name: category
+        label: Domaine
+        widget: select
+        options:
+          - { label: Infrastructure, value: infra }
+          - { label: Cloud, value: cloud }
+          - { label: Sécurité, value: securite }
+          - { label: Réseau, value: reseau }
+          - { label: Supervision, value: supervision }
+      - name: where
+        label: Lieu
+        widget: object
+        fields:
+          - { name: fr, label: Français, widget: string, default: "ISC Paris" }
+          - { name: en, label: Anglais, widget: string, default: "ISC Paris" }
+      - name: title
+        label: Titre
+        widget: object
+        fields:
+          - { name: fr, label: Français, widget: string }
+          - { name: en, label: Anglais, widget: string, required: false }
+      - name: context
+        label: Contexte (le problème, une phrase)
+        widget: object
+        fields:
+          - { name: fr, label: Français, widget: text }
+          - { name: en, label: Anglais, widget: text, required: false }
+      - name: action
+        label: Ce que j'ai fait
+        widget: object
+        fields:
+          - { name: fr, label: Français, widget: text }
+          - { name: en, label: Anglais, widget: text, required: false }
+      - name: result
+        label: Résultat (avec un chiffre si possible)
+        widget: object
+        fields:
+          - { name: fr, label: Français, widget: text }
+          - { name: en, label: Anglais, widget: text, required: false }
+      - { name: tech, label: Technologies, widget: list, required: false }
+      - name: proofs
+        label: Captures
+        label_singular: Capture
+        widget: list
+        min: 1
+        fields:
+          - { name: src, label: Image, widget: image }
+          - name: caption
+            label: Légende
+            widget: object
+            fields:
+              - { name: fr, label: Français, widget: string }
+              - { name: en, label: Anglais, widget: string, required: false }
+
+  # ------------------------------------------------------------------
+  - name: projects
+    label: Projets
+    label_singular: Projet
+    description: Les gros sujets, présentés comme des études de cas. Le détail (contexte, actions, résultat, captures) est facultatif.
+    folder: src/content/projects
+    format: json
+    extension: json
+    create: true
+    delete: true
+    identifier_field: id
+    slug: "{{slug}}"
+    summary: "{{order}}. {{title.fr}}"
+    sortable_fields: [order]
+    fields:
+      - { name: id, label: "Identifiant (minuscules et tirets)", widget: string, pattern: ["^[a-z0-9-]+$", "Minuscules, chiffres et tirets uniquement"] }
+      - { name: order, label: "Ordre d'affichage", widget: number, value_type: int, default: 10 }
+      - name: category
+        label: Domaine
+        widget: select
+        options:
+          - { label: Infrastructure, value: infra }
+          - { label: Cloud, value: cloud }
+          - { label: Sécurité, value: securite }
+          - { label: Réseau, value: reseau }
+          - { label: Supervision, value: supervision }
+      - name: icon
+        label: Icône
+        widget: select
+        options:
+          - { label: Serveur, value: server }
+          - { label: Supervision, value: activity }
+          - { label: Wi-Fi, value: wifi }
+          - { label: Cloud, value: cloud }
+          - { label: Bouclier, value: shield }
+          - { label: Réseau, value: network }
+      - name: status
+        label: Statut
+        widget: select
+        required: false
+        default: ""
+        options:
+          - { label: Terminé, value: "" }
+          - { label: En cours, value: ongoing }
+          - { label: À venir, value: upcoming }
+      - name: title
+        label: Titre
+        widget: object
+        fields:
+          - { name: fr, label: Français, widget: string }
+          - { name: en, label: Anglais, widget: string, required: false }
+      - name: summary
+        label: Résumé (une phrase, visible sur la carte)
+        widget: object
+        fields:
+          - { name: fr, label: Français, widget: text }
+          - { name: en, label: Anglais, widget: text, required: false }
+      - name: highlights
+        label: Points clés (visibles sur la carte, 3 maximum conseillé)
+        widget: object
+        fields:
+          - { name: fr, label: Français, widget: list }
+          - { name: en, label: Anglais, widget: list, required: false }
+      - { name: tech, label: Technologies, widget: list, required: false }
+      - name: context
+        label: "Détail : contexte"
+        widget: object
+        required: false
+        fields:
+          - { name: fr, label: Français, widget: text, required: false }
+          - { name: en, label: Anglais, widget: text, required: false }
+      - name: actions
+        label: "Détail : ce que j'ai fait"
+        widget: object
+        required: false
+        fields:
+          - { name: fr, label: Français, widget: list, required: false }
+          - { name: en, label: Anglais, widget: list, required: false }
+      - name: result
+        label: "Détail : résultat"
+        widget: object
+        required: false
+        fields:
+          - { name: fr, label: Français, widget: text, required: false }
+          - { name: en, label: Anglais, widget: text, required: false }
+      - name: proofs
+        label: Captures et schémas
+        label_singular: Capture
+        widget: list
+        required: false
+        fields:
+          - { name: src, label: Image, widget: image }
+          - name: caption
+            label: Légende
+            widget: object
+            fields:
+              - { name: fr, label: Français, widget: string }
+              - { name: en, label: Anglais, widget: string, required: false }
+
+  # ------------------------------------------------------------------
+  - name: settings
+    label: Réglages
+    files:
+      - name: site
+        label: CV et statistiques
+        file: src/content/settings.json
+        format: json
+        fields:
+          - name: cv_fr
+            label: CV en français (PDF)
+            widget: file
+            required: false
+            media_folder: /public/cv
+            public_folder: /cv
+          - name: cv_en
+            label: CV en anglais (PDF)
+            widget: file
+            required: false
+            media_folder: /public/cv
+            public_folder: /cv
+          - name: umami_website_id
+            label: Identifiant Umami (statistiques de visite)
+            widget: string
+            required: false
+            hint: "Dans Umami : Settings > Websites > Edit > Website ID"

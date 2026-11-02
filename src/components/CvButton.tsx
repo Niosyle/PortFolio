@@ -1,5 +1,5 @@
 import { Download } from "lucide-react";
-import { cv } from "@/content/cv";
+import { cv } from "@/content/site";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 type CvButtonProps = {
@@ -15,14 +15,14 @@ const styles = {
     "inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium rounded-lg border border-primary/40 text-primary hover:bg-primary/10 transition-colors",
 };
 
-/** Affiche le bouton seulement si un CV est configuré dans src/content/cv.ts */
+/** Affiche le bouton seulement si un CV est configuré dans l'admin (Réglages) */
 const CvButton = ({ variant = "secondary" }: CvButtonProps) => {
   const { lang, t } = useLanguage();
   const href = cv[lang] ?? cv.fr ?? cv.en;
   if (!href) return null;
 
   return (
-    <a href={href} download className={styles[variant]}>
+    <a href={href} download className={styles[variant]} data-umami-event="cv-download" data-umami-event-lang={lang}>
       <Download className="w-4 h-4" aria-hidden="true" />
       {variant === "compact" ? t.cv.short : t.cv.download}
     </a>

@@ -1,5 +1,11 @@
 {
   "cv_fr": "",
   "cv_en": "",
-  "umami_website_id": ""
+  "umami_website_id": "",
+  "letter_mode": "hidden",
+  "letter_author": "",
+  "letter_date": "",
+  "letter_pages": [],
+  "letter_pdf": "",
+  "form_endpoint": ""
 }

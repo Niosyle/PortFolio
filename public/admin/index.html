@@ -3,11 +3,31 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex, nofollow" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="referrer" content="no-referrer" />
+    <!--
+      Politique de sécurité du contenu :
+      - scripts uniquement depuis ce site et le paquet Sveltia sur unpkg (aucun script inline)
+      - connexions réseau limitées à l'API GitHub et à unpkg : un script injecté ne peut pas exfiltrer le jeton ailleurs
+      - images limitées à ce site et à GitHub
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com; font-src 'self' data: https://cdn.jsdelivr.net; img-src 'self' data: blob: https://avatars.githubusercontent.com https://raw.githubusercontent.com https://github.com; media-src 'self' blob:; connect-src 'self' data: https://api.github.com https://unpkg.com https://raw.githubusercontent.com https://www.githubstatus.com; worker-src 'self' blob:; frame-src 'self' blob:; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests"
+    />
     <title>Admin | nhelt.fr</title>
+    <script src="/admin/guard.js"></script>
   </head>
   <body>
-    <!-- Sveltia CMS : édite les fichiers du dépôt GitHub, chaque enregistrement redéploie le site -->
-    <script src="https://unpkg.com/@sveltia/cms@0.256.1/dist/sveltia-cms.js"></script>
+    <!--
+      Sveltia CMS, version figée. L'empreinte SRI garantit que le fichier servi par unpkg
+      est exactement celui qui a été vérifié : s'il est modifié, le navigateur refuse de l'exécuter.
+      Mise à jour : changer la version ET recalculer l'empreinte (voir SECURITE.md).
+    -->
+    <script
+      src="https://unpkg.com/@sveltia/cms@0.256.1/dist/sveltia-cms.js"
+      integrity="sha384-LPT86oZkLhmoF84O1jKZBSaFJOVvKv8sjXDKap1SOaSwzbC8F6HH7rTJWekmAzG9"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

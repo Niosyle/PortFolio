@@ -74,3 +74,13 @@ Script : `public/js/canary.js`, chargé en premier sur toutes les pages.
 Limites : les robots qui n'exécutent pas JavaScript ne déclenchent rien (ce qui filtre le bruit des scanners).
 Un attaquant attentif peut retirer le script de sa copie. Le sujet ntfy est lisible par quiconque lit le code :
 il ne contient que des informations sur les visiteurs des pages piégées, jamais de secret.
+
+## Lettre de recommandation et recommandations
+
+- **Lettre** : en mode « Consultation seule », les pages sont affichées en images avec un filigrane, sans lien de
+  téléchargement. C'est dissuasif, pas infaillible (capture d'écran, accès direct à l'URL de l'image).
+  Avant publication : masquer la signature, les coordonnées personnelles et obtenir l'accord de l'auteur.
+  Le bouton « Demander l'original » permet de transmettre la version signée par mail, à un recruteur identifié.
+- **Recommandations** : le formulaire (nhelt.fr/#recommander) ne publie rien. Le texte arrive par mail, puis est
+  ajouté et validé dans l'admin. Affichage seulement si « Publiée » et « Accord de publication » sont cochés.
+  Protection anti-robots par champ piège ; notification push sans donnée personnelle.

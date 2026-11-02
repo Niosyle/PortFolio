@@ -200,6 +200,52 @@ collections:
               - { name: en, label: Anglais, widget: string, required: false }
 
   # ------------------------------------------------------------------
+  - name: recommendations
+    label: Recommandations
+    label_singular: Recommandation
+    description: >
+      Les recommandations reçues par le formulaire (lien nhelt.fr/#recommander) arrivent par mail.
+      Copiez-les ici. Elles ne s'affichent que si « Publiée » ET « Accord de publication » sont cochés.
+    folder: src/content/recommendations
+    format: json
+    extension: json
+    create: true
+    delete: true
+    identifier_field: id
+    slug: "{{slug}}"
+    summary: "{{name}}, {{company}} | publiée : {{published}}"
+    sortable_fields: [date, name]
+    fields:
+      - { name: id, label: "Identifiant (minuscules et tirets)", widget: string, pattern: ["^[a-z0-9-]+$", "Minuscules, chiffres et tirets uniquement"] }
+      - { name: published, label: Publiée, widget: boolean, default: false }
+      - { name: consent, label: "Accord de publication donné par l'auteur", widget: boolean, default: false }
+      - { name: name, label: Nom, widget: string }
+      - { name: role, label: Poste, widget: string }
+      - { name: company, label: Entreprise, widget: string }
+      - name: relation
+        label: Relation
+        widget: select
+        options:
+          - { label: Responsable, value: manager }
+          - { label: Collègue, value: colleague }
+          - { label: Formateur, value: teacher }
+          - { label: Utilisateur ou client, value: client }
+          - { label: Autre, value: other }
+      - name: date
+        label: Mois
+        widget: datetime
+        format: "YYYY-MM"
+        date_format: "YYYY-MM"
+        time_format: false
+      - name: text
+        label: Texte
+        widget: object
+        fields:
+          - { name: fr, label: Français, widget: text }
+          - { name: en, label: "Anglais (facultatif)", widget: text, required: false }
+      - { name: linkedin, label: "Profil LinkedIn (facultatif, permet la vérification)", widget: string, required: false, pattern: ["^(https://([a-z]+\\.)?linkedin\\.com/.*)?$", "Adresse LinkedIn en https://"] }
+
+  # ------------------------------------------------------------------
   - name: settings
     label: Réglages
     files:
@@ -225,3 +271,29 @@ collections:
             widget: string
             required: false
             hint: "Dans Umami : Settings > Websites > Edit > Website ID"
+          - name: letter_mode
+            label: Lettre de recommandation, affichage
+            widget: select
+            default: hidden
+            options:
+              - { label: "Masquée", value: hidden }
+              - { label: "Consultation seule, avec filigrane (recommandé)", value: view }
+              - { label: "Consultation et téléchargement du PDF", value: download }
+          - { name: letter_author, label: "Lettre : auteur (ex. Prénom Nom, DSI)", widget: string, required: false }
+          - { name: letter_date, label: "Lettre : date (ex. octobre 2026)", widget: string, required: false }
+          - name: letter_pages
+            label: "Lettre : pages en image (signature et coordonnées masquées)"
+            widget: list
+            required: false
+            field: { name: src, label: Page, widget: image, media_folder: /public/lettre, public_folder: /lettre }
+          - name: letter_pdf
+            label: "Lettre : PDF (utilisé seulement en mode téléchargement)"
+            widget: file
+            required: false
+            media_folder: /public/lettre
+            public_folder: /lettre
+          - name: form_endpoint
+            label: "Formulaire de recommandation : URL Formspree (facultatif)"
+            widget: string
+            required: false
+            hint: "Vide = le collaborateur envoie le texte depuis sa messagerie. Avec Formspree : https://formspree.io/f/xxxxxxx"

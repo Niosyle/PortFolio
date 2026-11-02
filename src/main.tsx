@@ -3,11 +3,12 @@ import App from "./App.tsx";
 import "./index.css";
 import { umamiWebsiteId } from "./content/site";
 
-// Statistiques de visite (Umami, sans cookies). Ignoré en local et tant qu'aucun identifiant n'est configuré.
+// Statistiques de visite (Umami, sans cookies). Le script est une copie figée hébergée sur le site
+// (public/js/stats.js) : aucun code tiers ne s'exécute sur nhelt.fr. Les données partent vers gateway.umami.is.
 if (umamiWebsiteId) {
   const script = document.createElement("script");
   script.defer = true;
-  script.src = "https://cloud.umami.is/script.js";
+  script.src = "/js/stats.js";
   script.dataset.websiteId = umamiWebsiteId;
   script.dataset.domains = "nhelt.fr,www.nhelt.fr";
   document.head.appendChild(script);

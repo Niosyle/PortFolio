@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Menu, X, Shield } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import type { Lang } from "@/i18n/translations";
+import CvButton from "@/components/CvButton";
+import { track } from "@/content/site";
 
 const LanguageSwitch = () => {
   const { lang, setLang, t } = useLanguage();
@@ -17,7 +19,10 @@ const LanguageSwitch = () => {
         <button
           key={option}
           type="button"
-          onClick={() => setLang(option)}
+          onClick={() => {
+            setLang(option);
+            track("lang-switch", { lang: option });
+          }}
           aria-pressed={lang === option}
           className={`px-2.5 py-1 rounded-md uppercase transition-colors ${
             lang === option
@@ -83,6 +88,7 @@ const Header = () => {
                 </a>
               ))}
             </nav>
+            <CvButton variant="compact" />
             <LanguageSwitch />
           </div>
 

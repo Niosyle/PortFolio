@@ -56,3 +56,21 @@ curl -s https://cloud.umami.is/script.js -o public/js/stats.js
 ```
 
 Relire le diff avant de committer : c'est du code qui s'exécute sur le site.
+
+## Détection de clone et pièges
+
+Script : `public/js/canary.js`, chargé en premier sur toutes les pages.
+
+- **Clone** : si une page du site est affichée sur un autre domaine que nhelt.fr, elle devient blanche
+  (y compris l'admin) et une alerte « Clone détecté » est envoyée avec le domaine fautif, l'URL et la provenance.
+  Les services légitimes (Google Traduction, Web Archive, archive.today) sont ignorés.
+- **Pièges** : `/wp-admin/`, `/wp-login/`, `/administrator/`, `/login/`, `/phpmyadmin/`, `/admin-panel/`
+  sont des pages blanches qui envoient une alerte « Piège déclenché » à chaque ouverture.
+  `/administrator/` et `/admin-panel/` sont volontairement cités dans `robots.txt` pour attirer les curieux.
+- **Alertes** : notifications push via ntfy.sh, sujet `nhelt-alerte-2686e6ec3fda`
+  (application ntfy, Android ou iOS, ou https://ntfy.sh/nhelt-alerte-2686e6ec3fda dans un navigateur).
+  Une seule alerte par visiteur et par session.
+
+Limites : les robots qui n'exécutent pas JavaScript ne déclenchent rien (ce qui filtre le bruit des scanners).
+Un attaquant attentif peut retirer le script de sa copie. Le sujet ntfy est lisible par quiconque lit le code :
+il ne contient que des informations sur les visiteurs des pages piégées, jamais de secret.

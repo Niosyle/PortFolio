@@ -37,12 +37,10 @@ export const translations = {
           title: "Administrateur Systèmes & Réseaux",
           organization: "ISC Paris (alternance)",
           highlights: [
-            "Premier de l'équipe à repérer des comptes de messagerie compromis et une connexion suspecte à l'administration Microsoft 365. Après la campagne de phishing qui a suivi depuis des comptes étudiants, participation active à la gestion de crise avec le DSI pendant 6 jours",
-            "Migration de Google Workspace vers Microsoft 365 pour 150 collaborateurs et 3 000 étudiants : comptes Entra ID, MFA, gestion des droits",
-            "Preuve de concept Wazuh sur 30 machines : collecte des logs, règles de détection, alertes",
-            "Exploitation de l'infrastructure : Active Directory (contrôleurs principal et secondaire), DNS, DHCP, téléphonie sur site",
-            "Réseau de 20 switchs Cisco, supervision du Wi-Fi, outils open source de ticketing et de gestion des impressions",
-            "Durcissement des serveurs Windows et Linux, stratégies de groupe, plan de reprise d'activité",
+            "Incident de sécurité : premier de l'équipe à repérer les comptes compromis, puis 6 jours de gestion de crise avec le DSI",
+            "Migration de Google Workspace vers Microsoft 365 : 150 collaborateurs, 3 000 étudiants, Entra ID et MFA",
+            "Preuve de concept Wazuh sur 30 machines : logs, règles de détection, alertes",
+            "Exploitation et durcissement : Active Directory, stratégies de groupe, DNS, DHCP, 20 switchs Cisco, Wi-Fi, plan de reprise d'activité",
           ],
         },
         {
@@ -237,12 +235,10 @@ export const translations = {
           title: "System & Network Administrator",
           organization: "ISC Paris (work-study)",
           highlights: [
-            "First on the team to spot compromised mailboxes and a suspicious sign-in to the Microsoft 365 admin center. After the phishing campaign that followed from student accounts, played an active part in the 6-day crisis response alongside the IT director",
-            "Migration from Google Workspace to Microsoft 365 for 150 staff and 3,000 students: Entra ID accounts, MFA, access rights",
-            "Wazuh proof of concept on 30 machines: log collection, detection rules, alerts",
-            "Infrastructure operations: Active Directory (primary and secondary domain controllers), DNS, DHCP, on-premises telephony",
-            "Network of 20 Cisco switches, Wi-Fi monitoring, open source ticketing and print management tools",
-            "Hardening of Windows and Linux servers, group policies, disaster recovery plan",
+            "Security incident: first on the team to spot the compromised accounts, then 6 days of crisis response alongside the IT director",
+            "Migration from Google Workspace to Microsoft 365: 150 staff, 3,000 students, Entra ID and MFA",
+            "Wazuh proof of concept on 30 machines: logs, detection rules, alerts",
+            "Operations and hardening: Active Directory, group policies, DNS, DHCP, 20 Cisco switches, Wi-Fi, disaster recovery plan",
           ],
         },
         {

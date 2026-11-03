@@ -25,10 +25,13 @@ const Index = () => {
       <RecommendForm />
 
       {/* Footer */}
-      <footer className="py-6 px-6 border-t border-border text-center">
-        <p className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Nicolas HELT | {t.footer}
-        </p>
+      <footer className="px-6 py-10 border-t border-border/60">
+        <div className="max-w-5xl mx-auto flex flex-wrap justify-between gap-4 text-sm text-muted-foreground">
+          <p className="font-serif text-base text-foreground/80">Nicolas HELT</p>
+          <p>
+            © {new Date().getFullYear()} | {t.footer}
+          </p>
+        </div>
       </footer>
     </div>
   );

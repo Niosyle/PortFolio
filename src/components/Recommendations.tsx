@@ -3,6 +3,7 @@ import { recommendations } from "@/content/recommendations";
 import { letter } from "@/content/site";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LetterViewer from "@/components/LetterViewer";
+import SectionHeading from "@/components/SectionHeading";
 
 const formatDate = (value: string, lang: "fr" | "en") => {
   const [y, m] = value.split("-").map(Number);
@@ -16,15 +17,12 @@ const Recommendations = () => {
   if (recommendations.length === 0 && letter.mode === "hidden") return null;
 
   return (
-    <section id="recommandations" className="py-20 px-6 bg-card/30">
+    <section id="recommandations" className="px-6 py-24 lg:py-32 border-t border-border/60">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-10">
-          <h2 className="text-2xl lg:text-3xl font-semibold mb-3">{t.recommendations.title}</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">{t.recommendations.subtitle}</p>
-        </div>
+        <SectionHeading title={t.recommendations.title} subtitle={t.recommendations.subtitle} />
 
         {letter.mode !== "hidden" && (
-          <div className="flex justify-center mb-10">
+          <div className="flex mb-12">
             <LetterViewer />
           </div>
         )}
@@ -34,7 +32,7 @@ const Recommendations = () => {
             {recommendations.map((r) => (
               <figure key={r.slug} className="card-elevated p-6 rounded-xl border border-border flex flex-col">
                 <Quote className="w-5 h-5 text-primary/60 mb-3" aria-hidden="true" />
-                <blockquote className="text-sm text-foreground/90 leading-relaxed whitespace-pre-line flex-1">
+                <blockquote className="font-serif italic text-xl text-foreground/90 leading-relaxed whitespace-pre-line flex-1">
                   {r.text[lang]}
                 </blockquote>
                 <figcaption className="mt-5 pt-4 border-t border-border flex items-start justify-between gap-3">

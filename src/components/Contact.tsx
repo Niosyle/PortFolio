@@ -1,43 +1,39 @@
-import { Mail, Linkedin } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import CvButton from "@/components/CvButton";
+
+const EMAIL = "Nicolas@helt.fr";
+const LINKEDIN_URL = "https://www.linkedin.com/in/nicolas-h-03b75438b/";
 
 const Contact = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="contact" className="py-20 px-6 bg-card/30">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-2xl lg:text-3xl font-semibold mb-3">
+    <section id="contact" className="px-6 py-28 lg:py-40 border-t border-border/60">
+      <div className="max-w-5xl mx-auto">
+        <span aria-hidden="true" className="block w-10 h-px bg-primary mb-6" />
+        <h2 className="text-5xl md:text-6xl font-normal tracking-tight text-foreground">
           {t.contact.title} {t.contact.titleAccent}
         </h2>
+        <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">{t.contact.text}</p>
 
-        <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-          {t.contact.text}
-        </p>
-
-        {/* Main CTA */}
         <a
-          href="mailto:Nicolas@helt.fr"
-                data-umami-event="email-click"
-          className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-lg hover:opacity-90 transition-opacity mb-10"
+          href={`mailto:${EMAIL}`}
+          data-umami-event="email-click"
+          className="inline-block mt-12 font-serif text-3xl md:text-5xl text-primary underline decoration-primary/30 underline-offset-[10px] decoration-1 hover:decoration-primary transition-colors break-all"
         >
-          <Mail className="w-5 h-5" />
-          Nicolas@helt.fr
+          {EMAIL}
         </a>
 
-        {/* Social links */}
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="mt-12 flex flex-wrap items-center gap-4">
           <CvButton variant="secondary" />
           <a
-            href="https://www.linkedin.com/in/nicolas-h-03b75438b/"
-                data-umami-event="linkedin-click"
+            href={LINKEDIN_URL}
+            data-umami-event="linkedin-click"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-3 bg-secondary rounded-lg border border-border hover:border-primary/50 text-muted-foreground hover:text-foreground transition-all"
+            className="inline-flex items-center px-6 py-3 rounded-full border border-border text-foreground hover:border-primary/60 transition-colors"
           >
-            <Linkedin className="w-5 h-5" />
-            <span className="text-sm font-medium">LinkedIn</span>
+            LinkedIn
           </a>
         </div>
       </div>

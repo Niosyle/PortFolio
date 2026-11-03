@@ -8,11 +8,11 @@ type CvButtonProps = {
 
 const styles = {
   primary:
-    "inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:opacity-90 transition-opacity",
+    "inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-full hover:opacity-90 transition-opacity",
   secondary:
-    "inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground font-medium rounded-lg border border-border hover:border-primary/50 transition-colors",
+    "inline-flex items-center gap-2 px-6 py-3 text-foreground font-medium rounded-full border border-border hover:border-primary/60 transition-colors",
   compact:
-    "inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium rounded-lg border border-primary/40 text-primary hover:bg-primary/10 transition-colors",
+    "inline-flex items-center gap-1.5 px-4 py-1.5 text-sm font-medium rounded-full border border-primary/50 text-primary hover:bg-primary/10 transition-colors",
 };
 
 /** Affiche le bouton seulement si un CV est configuré dans l'admin (Réglages) */

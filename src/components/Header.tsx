@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Shield } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import type { Lang } from "@/i18n/translations";
 import CvButton from "@/components/CvButton";
@@ -13,7 +13,7 @@ const LanguageSwitch = () => {
     <div
       role="group"
       aria-label={t.nav.switchLabel}
-      className="flex items-center rounded-lg border border-border bg-secondary/50 p-0.5 text-xs font-medium"
+      className="flex items-center gap-1 text-xs font-medium tracking-wide"
     >
       {options.map((option) => (
         <button
@@ -24,9 +24,9 @@ const LanguageSwitch = () => {
             track("lang-switch", { lang: option });
           }}
           aria-pressed={lang === option}
-          className={`px-2.5 py-1 rounded-md uppercase transition-colors ${
+          className={`px-1.5 py-1 uppercase transition-colors ${
             lang === option
-              ? "bg-primary text-primary-foreground"
+              ? "text-primary"
               : "text-muted-foreground hover:text-foreground"
           }`}
         >
@@ -65,14 +65,11 @@ const Header = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4">
+      <div className="max-w-5xl mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-              <Shield className="w-5 h-5 text-primary" />
-            </div>
-            <span className="font-semibold text-foreground">Nicolas HELT</span>
+          <a href="#" className="font-serif text-xl text-foreground hover:text-primary transition-colors">
+            Nicolas HELT
           </a>
 
           {/* Desktop nav */}

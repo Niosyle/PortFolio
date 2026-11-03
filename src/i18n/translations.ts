@@ -7,7 +7,7 @@ export type Lang = "fr" | "en";
 export const translations = {
   fr: {
     meta: {
-      title: "Nicolas HELT | Admin Sys & Réseaux, Sécurité Cloud",
+      title: "Nicolas HELT | Admin systèmes et réseaux, orienté sécurité cloud",
       description:
         "Nicolas HELT, administrateur systèmes et réseaux en alternance, orienté sécurité cloud. Recherche une alternance en sécurité cloud pour septembre 2027.",
     },
@@ -19,10 +19,10 @@ export const translations = {
       switchLabel: "Switch to English",
     },
     hero: {
-      role: "Administrateur Systèmes & Réseaux | Sécurité Cloud",
+      role: "Administrateur systèmes et réseaux, orienté sécurité cloud",
       badge: "Je cherche une alternance en sécurité cloud pour septembre 2027",
       intro:
-        "Trois ans d'alternance au service informatique d'ISC Paris, sur un parc de 200 postes pour 150 collaborateurs et 3 000 étudiants. Avant ça, cinq ans dans l'Armée de Terre. Quand je monte ou reprends un service, je commence par la sécurité : durcissement, droits d'accès, logs. Prochaine étape : le cloud.",
+        "Trois ans d'alternance au service informatique d'ISC Paris : 200 postes, 150 collaborateurs, 3 000 étudiants. Lors d'un incident de sécurité, j'ai repéré les premiers signes de compromission. Avant l'informatique, cinq ans dans l'Armée de Terre. Prochaine étape : la sécurité du cloud.",
       location: "93130 Noisy-le-Sec",
       cta: "Me contacter",
     },
@@ -37,12 +37,10 @@ export const translations = {
           title: "Administrateur Systèmes & Réseaux",
           organization: "ISC Paris (alternance)",
           highlights: [
-            "Premier de l'équipe à repérer des comptes de messagerie compromis et une connexion suspecte à l'administration Microsoft 365. Après la campagne de phishing qui a suivi depuis des comptes étudiants, participation active à la gestion de crise avec le DSI pendant 6 jours",
-            "Migration de Google Workspace vers Microsoft 365 pour 150 collaborateurs et 3 000 étudiants : comptes Entra ID, MFA, gestion des droits",
-            "Preuve de concept Wazuh sur 30 machines : collecte des logs, règles de détection, alertes",
-            "Exploitation de l'infrastructure : Active Directory (contrôleurs principal et secondaire), DNS, DHCP, téléphonie sur site",
-            "Réseau de 20 switchs Cisco, supervision du Wi-Fi, outils open source de ticketing et de gestion des impressions",
-            "Durcissement des serveurs Windows et Linux, stratégies de groupe, plan de reprise d'activité",
+            "Incident de sécurité : détection des premiers comptes compromis, puis 6 jours de gestion de crise avec le DSI",
+            "Migration de Google Workspace vers Microsoft 365 : 150 collaborateurs, 3 000 étudiants, Entra ID et MFA",
+            "Preuve de concept Wazuh sur 30 machines : logs, règles de détection, alertes",
+            "Exploitation et durcissement : Active Directory, stratégies de groupe, DNS, DHCP, 20 switchs Cisco, Wi-Fi, plan de reprise d'activité",
           ],
         },
         {
@@ -207,7 +205,7 @@ export const translations = {
 
   en: {
     meta: {
-      title: "Nicolas HELT | System & Network Admin, Cloud Security",
+      title: "Nicolas HELT | System and network admin, moving into cloud security",
       description:
         "Nicolas HELT, system and network administrator (work-study), focused on cloud security. Looking for a cloud security work-study position from September 2027.",
     },
@@ -219,10 +217,10 @@ export const translations = {
       switchLabel: "Passer en français",
     },
     hero: {
-      role: "System & Network Administrator | Cloud Security",
+      role: "System and network administrator, moving into cloud security",
       badge: "Looking for a cloud security work-study position, September 2027",
       intro:
-        "Three years as a work-study student in the IT department of ISC Paris, running 200 workstations for 150 staff and 3,000 students. Before that, five years in the French Army. When I set up or take over a service, I start with security: hardening, access rights, logs. Next step: the cloud.",
+        "Three years as a work-study student in the IT department of ISC Paris: 200 workstations, 150 staff, 3,000 students. During a security incident, I spotted the early signs of compromise. Before IT, five years in the French Army. Next step: cloud security.",
       location: "Noisy-le-Sec, France",
       cta: "Get in touch",
     },
@@ -237,12 +235,10 @@ export const translations = {
           title: "System & Network Administrator",
           organization: "ISC Paris (work-study)",
           highlights: [
-            "First on the team to spot compromised mailboxes and a suspicious sign-in to the Microsoft 365 admin center. After the phishing campaign that followed from student accounts, played an active part in the 6-day crisis response alongside the IT director",
-            "Migration from Google Workspace to Microsoft 365 for 150 staff and 3,000 students: Entra ID accounts, MFA, access rights",
-            "Wazuh proof of concept on 30 machines: log collection, detection rules, alerts",
-            "Infrastructure operations: Active Directory (primary and secondary domain controllers), DNS, DHCP, on-premises telephony",
-            "Network of 20 Cisco switches, Wi-Fi monitoring, open source ticketing and print management tools",
-            "Hardening of Windows and Linux servers, group policies, disaster recovery plan",
+            "Security incident: detected the first compromised accounts, then 6 days of crisis response alongside the IT director",
+            "Migration from Google Workspace to Microsoft 365: 150 staff, 3,000 students, Entra ID and MFA",
+            "Wazuh proof of concept on 30 machines: logs, detection rules, alerts",
+            "Operations and hardening: Active Directory, group policies, DNS, DHCP, 20 Cisco switches, Wi-Fi, disaster recovery plan",
           ],
         },
         {

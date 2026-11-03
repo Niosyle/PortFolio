@@ -1,13 +1,8 @@
-import { Briefcase, GraduationCap, Shield } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import SectionHeading from "@/components/SectionHeading";
 
-// Données non traduites (dates, type), alignées par index sur les traductions
-const jobMeta = [
-  { type: "work", period: "2025-2027", current: true },
-  { type: "work", period: "2023-2025", current: false },
-  { type: "military", period: "2016-2021", current: false },
-];
-
+// Données non traduites (dates), alignées par index sur les traductions
+const jobPeriods = ["2025-2027", "2023-2025", "2016-2021"];
 const educationMeta: { period?: string; target: boolean }[] = [
   { target: true },
   { target: true },
@@ -20,121 +15,53 @@ const Experience = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="experience" className="py-20 px-6 bg-card/30">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl lg:text-3xl font-semibold mb-3">
-            {t.experience.title} {t.experience.titleAccent}
-          </h2>
-        </div>
+    <section id="experience" className="px-6 py-24 lg:py-32 border-t border-border/60">
+      <div className="max-w-5xl mx-auto">
+        <SectionHeading title={`${t.experience.title} ${t.experience.titleAccent}`} />
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Expériences */}
-          <div>
-            <h3 className="flex items-center gap-3 text-xl font-semibold mb-6">
-              <Briefcase className="w-5 h-5 text-primary" />
-              {t.experience.jobsTitle}
-            </h3>
+        <ol className="divide-y divide-border/70">
+          {t.experience.jobs.map((job, index) => (
+            <li key={job.title} className="grid gap-3 md:grid-cols-[180px_1fr] md:gap-10 py-10 first:pt-0">
+              <p className="font-serif italic text-lg text-primary">{jobPeriods[index]}</p>
+              <div>
+                <h3 className="text-2xl font-normal text-foreground">{job.title}</h3>
+                <p className="mt-1 text-muted-foreground">{job.organization}</p>
+                <ul className="mt-5 space-y-2.5 max-w-[42rem]">
+                  {job.highlights.map((item) => (
+                    <li key={item} className="relative pl-5 text-foreground/80 leading-relaxed">
+                      <span aria-hidden="true" className="absolute left-0 top-[0.8em] w-2 h-px bg-primary/70" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
+          ))}
+        </ol>
 
-            <div className="relative space-y-6">
-              {/* Timeline line */}
-              <div className="absolute left-[11px] top-3 bottom-3 w-px bg-border" />
-
-              {t.experience.jobs.map((exp, index) => {
-                const meta = jobMeta[index];
-                return (
-                  <div key={index} className="relative pl-8">
-                    {/* Timeline dot */}
-                    <div className={`absolute left-0 top-2 w-6 h-6 rounded-full border-2 flex items-center justify-center ${
-                      meta.current
-                        ? 'bg-primary/20 border-primary'
-                        : meta.type === 'military'
-                          ? 'bg-accent/20 border-accent'
-                          : 'bg-secondary border-border'
-                    }`}>
-                      {meta.type === 'military' ? (
-                        <Shield className="w-3 h-3 text-accent" />
-                      ) : (
-                        <div className={`w-2 h-2 rounded-full ${meta.current ? 'bg-primary' : 'bg-muted-foreground'}`} />
-                      )}
-                    </div>
-
-                    <div className="card-elevated p-5 rounded-lg border border-border hover:border-primary/20 transition-colors">
-                      <div className="flex items-start justify-between gap-4 mb-3">
-                        <div>
-                          <h4 className="font-semibold text-foreground">{exp.title}</h4>
-                          <p className="text-sm text-muted-foreground">{exp.organization}</p>
-                        </div>
-                        <span className={`text-xs font-medium px-2 py-1 rounded whitespace-nowrap ${
-                          meta.current
-                            ? 'bg-primary/10 text-primary'
-                            : 'bg-secondary text-muted-foreground'
-                        }`}>
-                          {meta.period}
-                        </span>
-                      </div>
-
-                      <ul className="space-y-1.5">
-                        {exp.highlights.map((item, i) => (
-                          <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
-                            <span className="w-1 h-1 bg-primary/60 rounded-full mt-2 flex-shrink-0" />
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+        <div className="mt-24">
+          <h3 className="text-3xl font-normal text-foreground mb-8">{t.experience.educationTitle}</h3>
+          <ul className="divide-y divide-border/70 border-t border-border/70">
+            {t.experience.education.map((item, index) => {
+              const meta = educationMeta[index];
+              const description = "description" in item ? item.description : undefined;
+              return (
+                <li key={item.title} className="grid gap-2 md:grid-cols-[180px_1fr] md:gap-10 py-6">
+                  <p className={`text-sm ${meta.target ? "font-serif italic text-base text-primary" : "text-muted-foreground"}`}>
+                    {meta.period ?? item.status}
+                  </p>
+                  <div>
+                    <p className="text-lg text-foreground">
+                      {item.title}
+                      {meta.period && <span className="ml-3 text-sm text-muted-foreground">{item.status}</span>}
+                    </p>
+                    <p className="text-sm text-muted-foreground">{item.organization}</p>
+                    {description && <p className="mt-2 text-sm text-foreground/70 max-w-[40rem]">{description}</p>}
                   </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Formations */}
-          <div>
-            <h3 className="flex items-center gap-3 text-xl font-semibold mb-6">
-              <GraduationCap className="w-5 h-5 text-accent" />
-              {t.experience.educationTitle}
-            </h3>
-
-            <div className="space-y-4">
-              {t.experience.education.map((formation, index) => {
-                const meta = educationMeta[index];
-                const description = "description" in formation ? formation.description : undefined;
-                return (
-                  <div
-                    key={index}
-                    className={`card-elevated p-5 rounded-lg border transition-colors ${
-                      meta.target
-                        ? 'border-primary/30'
-                        : 'border-border hover:border-accent/20'
-                    }`}
-                  >
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                          <h4 className="font-semibold text-foreground">{formation.title}</h4>
-                          <span className={`text-xs font-medium px-2 py-0.5 rounded ${
-                            meta.target
-                              ? 'bg-primary/10 text-primary'
-                              : 'bg-accent/10 text-accent'
-                          }`}>
-                            {formation.status}
-                          </span>
-                        </div>
-                        <p className="text-sm text-muted-foreground">{formation.organization}</p>
-                        {description && (
-                          <p className="text-sm text-muted-foreground mt-2">{description}</p>
-                        )}
-                      </div>
-                      {meta.period && (
-                        <span className="text-xs text-muted-foreground">{meta.period}</span>
-                      )}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
     </section>

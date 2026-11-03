@@ -38,8 +38,7 @@ export const translations = {
           organization: "ISC Paris (alternance)",
           highlights: [
             "Incident de sécurité : détection des premiers comptes compromis, puis 6 jours de gestion de crise avec le DSI",
-            "Migration de Google Workspace vers Microsoft 365 : 150 collaborateurs, 3 000 étudiants, Entra ID et MFA",
-            "Preuve de concept Wazuh sur 30 machines : logs, règles de détection, alertes",
+            "Participation à la migration de Google Workspace vers Microsoft 365 : 150 collaborateurs, 3 000 étudiants, Entra ID et MFA",
             "Exploitation et durcissement : Active Directory, stratégies de groupe, DNS, DHCP, 20 switchs Cisco, Wi-Fi, plan de reprise d'activité",
           ],
         },
@@ -107,7 +106,7 @@ export const translations = {
         },
         {
           title: "Supervision",
-          skills: ["Wazuh", "Zabbix", "Analyse de logs", "Gestion d'incidents"],
+          skills: ["Analyse de logs", "Gestion d'incidents", "Wazuh, Zabbix (homelab, à venir)"],
         },
         {
           title: "Systèmes",
@@ -236,8 +235,7 @@ export const translations = {
           organization: "ISC Paris (work-study)",
           highlights: [
             "Security incident: detected the first compromised accounts, then 6 days of crisis response alongside the IT director",
-            "Migration from Google Workspace to Microsoft 365: 150 staff, 3,000 students, Entra ID and MFA",
-            "Wazuh proof of concept on 30 machines: logs, detection rules, alerts",
+            "Took part in the migration from Google Workspace to Microsoft 365: 150 staff, 3,000 students, Entra ID and MFA",
             "Operations and hardening: Active Directory, group policies, DNS, DHCP, 20 Cisco switches, Wi-Fi, disaster recovery plan",
           ],
         },
@@ -305,7 +303,7 @@ export const translations = {
         },
         {
           title: "Monitoring",
-          skills: ["Wazuh", "Zabbix", "Log analysis", "Incident response"],
+          skills: ["Log analysis", "Incident response", "Wazuh, Zabbix (homelab, upcoming)"],
         },
         {
           title: "Systems",

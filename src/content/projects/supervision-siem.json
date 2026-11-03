@@ -3,23 +3,23 @@
   "order": 2,
   "category": "supervision",
   "icon": "activity",
-  "status": "",
+  "status": "upcoming",
   "title": {
     "fr": "Supervision & SIEM",
     "en": "Monitoring & SIEM"
   },
   "summary": {
-    "fr": "Surveiller à la fois la disponibilité des services et les événements de sécurité.",
-    "en": "Watching both service availability and security events."
+    "fr": "Dans mon homelab, sur 5 machines : surveiller à la fois la disponibilité des services et les événements de sécurité.",
+    "en": "In my homelab, on 5 machines: watching both service availability and security events."
   },
   "highlights": {
     "fr": [
-      "Wazuh : agents, règles, alertes",
+      "Wazuh : agents sur les 5 machines, règles, alertes",
       "Zabbix : hôtes, services, seuils",
       "Tableaux de bord communs"
     ],
     "en": [
-      "Wazuh: agents, rules, alerts",
+      "Wazuh: agents on all 5 machines, rules, alerts",
       "Zabbix: hosts, services, thresholds",
       "Shared dashboards"
     ]

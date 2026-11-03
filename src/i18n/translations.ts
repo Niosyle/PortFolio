@@ -22,7 +22,7 @@ export const translations = {
       role: "Administrateur Systèmes & Réseaux | Sécurité Cloud",
       badge: "Je cherche une alternance en sécurité cloud pour septembre 2027",
       intro:
-        "Trois ans d'alternance au service informatique d'ISC Paris, sur un parc de 200 postes pour 150 collaborateurs et 3 000 étudiants. Avant ça, cinq ans dans l'Armée de Terre. Quand je monte ou reprends un service, je commence par la sécurité : durcissement, droits d'accès, logs. Prochaine étape : le cloud.",
+        "Trois ans d'alternance au service informatique d'ISC Paris : 200 postes, 150 collaborateurs, 3 000 étudiants. Lors d'un incident de sécurité, j'ai été le premier de l'équipe à repérer les comptes compromis. Avant l'informatique, cinq ans dans l'Armée de Terre. Prochaine étape : la sécurité du cloud.",
       location: "93130 Noisy-le-Sec",
       cta: "Me contacter",
     },
@@ -222,7 +222,7 @@ export const translations = {
       role: "System & Network Administrator | Cloud Security",
       badge: "Looking for a cloud security work-study position, September 2027",
       intro:
-        "Three years as a work-study student in the IT department of ISC Paris, running 200 workstations for 150 staff and 3,000 students. Before that, five years in the French Army. When I set up or take over a service, I start with security: hardening, access rights, logs. Next step: the cloud.",
+        "Three years as a work-study student in the IT department of ISC Paris: 200 workstations, 150 staff, 3,000 students. During a security incident, I was the first on the team to spot the compromised accounts. Before IT, five years in the French Army. Next step: cloud security.",
       location: "Noisy-le-Sec, France",
       cta: "Get in touch",
     },

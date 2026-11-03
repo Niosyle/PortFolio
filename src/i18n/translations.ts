@@ -22,7 +22,7 @@ export const translations = {
       role: "Administrateur systèmes et réseaux, orienté sécurité cloud",
       badge: "Je cherche une alternance en sécurité cloud pour septembre 2027",
       intro:
-        "Trois ans d'alternance au service informatique d'ISC Paris : 200 postes, 150 collaborateurs, 3 000 étudiants. Lors d'un incident de sécurité, j'ai été le premier de l'équipe à repérer les comptes compromis. Avant l'informatique, cinq ans dans l'Armée de Terre. Prochaine étape : la sécurité du cloud.",
+        "Trois ans d'alternance au service informatique d'ISC Paris : 200 postes, 150 collaborateurs, 3 000 étudiants. Lors d'un incident de sécurité, j'ai repéré les premiers signes de compromission. Avant l'informatique, cinq ans dans l'Armée de Terre. Prochaine étape : la sécurité du cloud.",
       location: "93130 Noisy-le-Sec",
       cta: "Me contacter",
     },
@@ -37,7 +37,7 @@ export const translations = {
           title: "Administrateur Systèmes & Réseaux",
           organization: "ISC Paris (alternance)",
           highlights: [
-            "Incident de sécurité : premier de l'équipe à repérer les comptes compromis, puis 6 jours de gestion de crise avec le DSI",
+            "Incident de sécurité : détection des premiers comptes compromis, puis 6 jours de gestion de crise avec le DSI",
             "Migration de Google Workspace vers Microsoft 365 : 150 collaborateurs, 3 000 étudiants, Entra ID et MFA",
             "Preuve de concept Wazuh sur 30 machines : logs, règles de détection, alertes",
             "Exploitation et durcissement : Active Directory, stratégies de groupe, DNS, DHCP, 20 switchs Cisco, Wi-Fi, plan de reprise d'activité",
@@ -220,7 +220,7 @@ export const translations = {
       role: "System and network administrator, moving into cloud security",
       badge: "Looking for a cloud security work-study position, September 2027",
       intro:
-        "Three years as a work-study student in the IT department of ISC Paris: 200 workstations, 150 staff, 3,000 students. During a security incident, I was the first on the team to spot the compromised accounts. Before IT, five years in the French Army. Next step: cloud security.",
+        "Three years as a work-study student in the IT department of ISC Paris: 200 workstations, 150 staff, 3,000 students. During a security incident, I spotted the early signs of compromise. Before IT, five years in the French Army. Next step: cloud security.",
       location: "Noisy-le-Sec, France",
       cta: "Get in touch",
     },
@@ -235,7 +235,7 @@ export const translations = {
           title: "System & Network Administrator",
           organization: "ISC Paris (work-study)",
           highlights: [
-            "Security incident: first on the team to spot the compromised accounts, then 6 days of crisis response alongside the IT director",
+            "Security incident: detected the first compromised accounts, then 6 days of crisis response alongside the IT director",
             "Migration from Google Workspace to Microsoft 365: 150 staff, 3,000 students, Entra ID and MFA",
             "Wazuh proof of concept on 30 machines: logs, detection rules, alerts",
             "Operations and hardening: Active Directory, group policies, DNS, DHCP, 20 Cisco switches, Wi-Fi, disaster recovery plan",

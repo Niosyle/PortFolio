@@ -7,7 +7,7 @@ export type Lang = "fr" | "en";
 export const translations = {
   fr: {
     meta: {
-      title: "Nicolas HELT | Admin Sys & Réseaux, Sécurité Cloud",
+      title: "Nicolas HELT | Admin systèmes et réseaux, orienté sécurité cloud",
       description:
         "Nicolas HELT, administrateur systèmes et réseaux en alternance, orienté sécurité cloud. Recherche une alternance en sécurité cloud pour septembre 2027.",
     },
@@ -19,7 +19,7 @@ export const translations = {
       switchLabel: "Switch to English",
     },
     hero: {
-      role: "Administrateur Systèmes & Réseaux | Sécurité Cloud",
+      role: "Administrateur systèmes et réseaux, orienté sécurité cloud",
       badge: "Je cherche une alternance en sécurité cloud pour septembre 2027",
       intro:
         "Trois ans d'alternance au service informatique d'ISC Paris : 200 postes, 150 collaborateurs, 3 000 étudiants. Lors d'un incident de sécurité, j'ai été le premier de l'équipe à repérer les comptes compromis. Avant l'informatique, cinq ans dans l'Armée de Terre. Prochaine étape : la sécurité du cloud.",
@@ -205,7 +205,7 @@ export const translations = {
 
   en: {
     meta: {
-      title: "Nicolas HELT | System & Network Admin, Cloud Security",
+      title: "Nicolas HELT | System and network admin, moving into cloud security",
       description:
         "Nicolas HELT, system and network administrator (work-study), focused on cloud security. Looking for a cloud security work-study position from September 2027.",
     },
@@ -217,7 +217,7 @@ export const translations = {
       switchLabel: "Passer en français",
     },
     hero: {
-      role: "System & Network Administrator | Cloud Security",
+      role: "System and network administrator, moving into cloud security",
       badge: "Looking for a cloud security work-study position, September 2027",
       intro:
         "Three years as a work-study student in the IT department of ISC Paris: 200 workstations, 150 staff, 3,000 students. During a security incident, I was the first on the team to spot the compromised accounts. Before IT, five years in the French Army. Next step: cloud security.",

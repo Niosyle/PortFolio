@@ -21,7 +21,7 @@ const Hero = () => {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight leading-[1.02] text-foreground">
             Nicolas HELT
           </h1>
-          <p className="mt-5 font-serif italic text-2xl md:text-[1.7rem] leading-snug text-muted-foreground max-w-xl">
+          <p className="mt-5 font-serif italic text-2xl md:text-[1.7rem] leading-snug text-muted-foreground max-w-xl [text-wrap:balance]">
             {t.hero.role}
           </p>
 

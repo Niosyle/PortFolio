@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Server, Cloud, Activity, Wifi, Shield, Network, ImageIcon, type LucideIcon } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useLanguage } from "@/i18n/LanguageContext";
+import SectionHeading from "@/components/SectionHeading";
 import { track } from "@/content/site";
 import {
   projects,
@@ -40,7 +41,7 @@ const formatDate = (value: string, lang: "fr" | "en") => {
 const Tags = ({ items }: { items: string[] }) => (
   <div className="flex flex-wrap gap-2">
     {items.map((item) => (
-      <span key={item} className="text-xs px-2 py-1 bg-secondary rounded text-muted-foreground">
+      <span key={item} className="text-xs px-2.5 py-1 border border-border/80 rounded-full text-muted-foreground">
         {item}
       </span>
     ))}
@@ -126,19 +127,16 @@ const Projects = () => {
   };
 
   return (
-    <section id="projets" className="py-20 px-6">
+    <section id="projets" className="px-6 py-24 lg:py-32 border-t border-border/60">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-8">
-          <h2 className="text-2xl lg:text-3xl font-semibold mb-3">{t.work.title}</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            {t.work.subtitle}
-            {(missions.length > 0 || projects.some(hasDetail)) && ` ${t.work.clickHint}`}
-          </p>
-        </div>
+        <SectionHeading
+          title={t.work.title}
+          subtitle={`${t.work.subtitle}${missions.length > 0 || projects.some(hasDetail) ? ` ${t.work.clickHint}` : ""}`}
+        />
 
         {/* Onglets : l'onglet Missions n'apparaît que s'il y a au moins une mission */}
         {missions.length > 0 && (
-          <div role="tablist" className="flex justify-center gap-2 mb-6">
+          <div role="tablist" className="flex gap-8 mb-8 border-b border-border/70">
             {(["projects", "missions"] as Tab[]).map((value) => (
               <button
                 key={value}
@@ -146,10 +144,10 @@ const Projects = () => {
                 type="button"
                 aria-selected={tab === value}
                 onClick={() => switchTab(value)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                className={`-mb-px pb-3 border-b text-base transition-colors ${
                   tab === value
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-secondary text-muted-foreground hover:text-foreground"
+                    ? "border-primary text-foreground"
+                    : "border-transparent text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {t.work.tabs[value]}
@@ -161,16 +159,16 @@ const Projects = () => {
 
         {/* Filtres par domaine */}
         {categories.length > 1 && (
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
+          <div className="flex flex-wrap gap-2 mb-10">
             {(["all", ...categories] as (Category | "all")[]).map((value) => (
               <button
                 key={value}
                 type="button"
                 aria-pressed={filter === value}
                 onClick={() => setFilter(value)}
-                className={`px-3 py-1 rounded-full text-xs font-medium border transition-colors ${
+                className={`px-4 py-1.5 rounded-full text-sm border transition-colors ${
                   filter === value
-                    ? "border-primary text-primary bg-primary/10"
+                    ? "border-primary/70 text-primary"
                     : "border-border text-muted-foreground hover:text-foreground"
                 }`}
               >
@@ -181,7 +179,7 @@ const Projects = () => {
         )}
 
         {tab === "projects" ? (
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-px bg-border/70 border border-border/70 rounded-sm overflow-hidden">
             {(visible as Project[]).map((project) => {
               const Icon = icons[project.icon];
               const clickable = hasDetail(project);
@@ -190,32 +188,30 @@ const Projects = () => {
                 <Card
                   key={project.slug}
                   {...(clickable ? { type: "button" as const, onClick: () => open({ kind: "project", item: project }) } : {})}
-                  className={`text-left card-elevated p-6 rounded-xl border border-border transition-colors ${
-                    clickable ? "hover:border-primary/40 cursor-pointer" : ""
+                  className={`text-left bg-background p-8 lg:p-10 transition-colors ${
+                    clickable ? "hover:bg-card cursor-pointer" : ""
                   }`}
                 >
-                  <div className="flex items-start justify-between gap-3 mb-4">
-                    <div className="inline-flex p-3 rounded-lg bg-secondary text-muted-foreground">
-                      <Icon className="w-6 h-6" />
-                    </div>
-                    <span className="text-xs text-muted-foreground">{t.work.categories[project.category]}</span>
-                  </div>
+                  <p className="flex items-center gap-2 text-sm text-muted-foreground mb-5">
+                    <Icon className="w-4 h-4 text-primary/80" aria-hidden="true" />
+                    {t.work.categories[project.category]}
+                  </p>
 
-                  <h3 className="text-lg font-semibold mb-2 text-foreground flex items-center gap-2">
+                  <h3 className="text-2xl font-normal mb-3 text-foreground flex flex-wrap items-baseline gap-3">
                     {tx(project.title)}
                     {project.status && (
-                      <span className="text-xs font-medium px-2 py-0.5 rounded bg-primary/10 text-primary">
+                      <span className="font-serif italic text-base text-primary">
                         {t.work.status[project.status]}
                       </span>
                     )}
                   </h3>
 
-                  <p className="text-sm text-muted-foreground mb-4">{tx(project.summary)}</p>
+                  <p className="text-foreground/75 leading-relaxed mb-5">{tx(project.summary)}</p>
 
                   <ul className="space-y-1.5 mb-4">
                     {tl(project.highlights).map((detail) => (
-                      <li key={detail} className="text-sm text-muted-foreground flex items-center gap-2">
-                        <span className="w-1 h-1 bg-primary/60 rounded-full" />
+                      <li key={detail} className="text-sm text-muted-foreground flex items-center gap-3">
+                        <span className="w-2 h-px bg-primary/70" />
                         {detail}
                       </li>
                     ))}

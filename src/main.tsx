@@ -1,5 +1,9 @@
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
+// Polices hébergées sur le site (aucune requête vers Google Fonts)
+import "@fontsource-variable/inter";
+import "@fontsource-variable/newsreader/opsz.css";
+import "@fontsource-variable/newsreader/opsz-italic.css";
 import "./index.css";
 import { umamiWebsiteId } from "./content/site";
 

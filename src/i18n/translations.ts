@@ -98,30 +98,44 @@ export const translations = {
     skills: {
       title: "Compétences",
       titleAccent: "techniques",
-      categories: [
+      levels: [
         {
-          title: "Cloud",
-          skills: [{ name: "Microsoft 365", featured: true }, { name: "Entra ID (IAM, MFA)", featured: true }, "Notions de sécurité GCP"],
+          title: "Au quotidien",
+          note: "En alternance à ISC Paris",
+          items: [
+            "Microsoft 365, Entra ID (IAM, MFA)",
+            "Windows Server, Active Directory",
+            "Stratégies de groupe (GPO)",
+            "Durcissement Windows",
+            "DHCP, DNS",
+            "Switchs Cisco, VLAN",
+            "Gestion d'incidents",
+            "Plan de reprise d'activité, sauvegardes",
+            "vSphere",
+          ],
         },
         {
-          title: "Sécurité",
-          skills: [{ name: "Durcissement Windows et Linux", featured: true }, "Stratégies de groupe (GPO)", "VPN (WireGuard, IPSec)", "RADIUS, 802.1X"],
+          title: "Pratiqué",
+          note: "En formation et dans mon homelab",
+          items: [
+            "Linux (Debian, Fedora), durcissement",
+            "Proxmox, Docker",
+            "Cisco (OSPF, EIGRP, NAT)",
+            "VPN (WireGuard, IPSec)",
+            "RADIUS, 802.1X",
+            "PowerShell, Python",
+            "Notions de sécurité GCP",
+          ],
         },
         {
-          title: "Supervision",
-          skills: ["Analyse de logs", { name: "Gestion d'incidents", featured: true }, { name: "Wazuh, Zabbix (homelab)", upcoming: true }],
-        },
-        {
-          title: "Systèmes",
-          skills: [{ name: "Windows Server, Active Directory", featured: true }, "Linux (Debian, Fedora)", "Proxmox, vSphere", "Docker"],
-        },
-        {
-          title: "Réseau",
-          skills: ["Cisco (OSPF, EIGRP, NAT)", "VLAN et segmentation", "DHCP, DNS"],
-        },
-        {
-          title: "Continuité et scripts",
-          skills: ["Plan de reprise d'activité", "Sauvegardes et restauration", "PowerShell, Python"],
+          title: "En cours",
+          note: "Prochaines étapes",
+          soon: true,
+          items: [
+            "Azure (AZ-900 en novembre)",
+            "Wazuh, Zabbix dans le homelab",
+            "Cloud privé en local",
+          ],
         },
       ],
     },
@@ -298,30 +312,44 @@ export const translations = {
     skills: {
       title: "Technical",
       titleAccent: "skills",
-      categories: [
+      levels: [
         {
-          title: "Cloud",
-          skills: [{ name: "Microsoft 365", featured: true }, { name: "Entra ID (IAM, MFA)", featured: true }, "GCP security basics"],
+          title: "Day to day",
+          note: "Work-study at ISC Paris",
+          items: [
+            "Microsoft 365, Entra ID (IAM, MFA)",
+            "Windows Server, Active Directory",
+            "Group policies (GPO)",
+            "Windows hardening",
+            "DHCP, DNS",
+            "Cisco switches, VLANs",
+            "Incident response",
+            "Disaster recovery plan, backups",
+            "vSphere",
+          ],
         },
         {
-          title: "Security",
-          skills: [{ name: "Windows and Linux hardening", featured: true }, "Group policies (GPO)", "VPN (WireGuard, IPSec)", "RADIUS, 802.1X"],
+          title: "Hands-on",
+          note: "In training and in my homelab",
+          items: [
+            "Linux (Debian, Fedora), hardening",
+            "Proxmox, Docker",
+            "Cisco (OSPF, EIGRP, NAT)",
+            "VPN (WireGuard, IPSec)",
+            "RADIUS, 802.1X",
+            "PowerShell, Python",
+            "GCP security basics",
+          ],
         },
         {
-          title: "Monitoring",
-          skills: ["Log analysis", { name: "Incident response", featured: true }, { name: "Wazuh, Zabbix (homelab)", upcoming: true }],
-        },
-        {
-          title: "Systems",
-          skills: [{ name: "Windows Server, Active Directory", featured: true }, "Linux (Debian, Fedora)", "Proxmox, vSphere", "Docker"],
-        },
-        {
-          title: "Networking",
-          skills: ["Cisco (OSPF, EIGRP, NAT)", "VLANs and segmentation", "DHCP, DNS"],
-        },
-        {
-          title: "Continuity and scripting",
-          skills: ["Disaster recovery plan", "Backup and restore", "PowerShell, Python"],
+          title: "In progress",
+          note: "Next steps",
+          soon: true,
+          items: [
+            "Azure (AZ-900 in November)",
+            "Wazuh, Zabbix in the homelab",
+            "Private cloud at home",
+          ],
         },
       ],
     },

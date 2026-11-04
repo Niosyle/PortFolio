@@ -101,19 +101,19 @@ export const translations = {
       categories: [
         {
           title: "Cloud",
-          skills: ["Microsoft 365", "Entra ID (IAM, MFA)", "Notions de sécurité GCP"],
+          skills: [{ name: "Microsoft 365", featured: true }, { name: "Entra ID (IAM, MFA)", featured: true }, "Notions de sécurité GCP"],
         },
         {
           title: "Sécurité",
-          skills: ["Durcissement Windows et Linux", "Stratégies de groupe (GPO)", "VPN (WireGuard, IPSec)", "RADIUS, 802.1X"],
+          skills: [{ name: "Durcissement Windows et Linux", featured: true }, "Stratégies de groupe (GPO)", "VPN (WireGuard, IPSec)", "RADIUS, 802.1X"],
         },
         {
           title: "Supervision",
-          skills: ["Analyse de logs", "Gestion d'incidents", "Wazuh, Zabbix (homelab, à venir)"],
+          skills: ["Analyse de logs", { name: "Gestion d'incidents", featured: true }, { name: "Wazuh, Zabbix (homelab)", upcoming: true }],
         },
         {
           title: "Systèmes",
-          skills: ["Windows Server, Active Directory", "Linux (Debian, Fedora)", "Proxmox, vSphere", "Docker"],
+          skills: [{ name: "Windows Server, Active Directory", featured: true }, "Linux (Debian, Fedora)", "Proxmox, vSphere", "Docker"],
         },
         {
           title: "Réseau",
@@ -127,7 +127,7 @@ export const translations = {
     },
     work: {
       title: "Réalisations",
-      subtitle: "Ce que j'ai monté, au travail et chez moi.",
+      subtitle: "Ce que j'ai monté et ce que je prépare, au travail et chez moi.",
       clickHint: "Cliquez sur une fiche pour le détail et les captures.",
       tabs: { projects: "Projets", missions: "Missions" },
       all: "Tout",
@@ -301,19 +301,19 @@ export const translations = {
       categories: [
         {
           title: "Cloud",
-          skills: ["Microsoft 365", "Entra ID (IAM, MFA)", "GCP security basics"],
+          skills: [{ name: "Microsoft 365", featured: true }, { name: "Entra ID (IAM, MFA)", featured: true }, "GCP security basics"],
         },
         {
           title: "Security",
-          skills: ["Windows and Linux hardening", "Group policies (GPO)", "VPN (WireGuard, IPSec)", "RADIUS, 802.1X"],
+          skills: [{ name: "Windows and Linux hardening", featured: true }, "Group policies (GPO)", "VPN (WireGuard, IPSec)", "RADIUS, 802.1X"],
         },
         {
           title: "Monitoring",
-          skills: ["Log analysis", "Incident response", "Wazuh, Zabbix (homelab, upcoming)"],
+          skills: ["Log analysis", { name: "Incident response", featured: true }, { name: "Wazuh, Zabbix (homelab)", upcoming: true }],
         },
         {
           title: "Systems",
-          skills: ["Windows Server, Active Directory", "Linux (Debian, Fedora)", "Proxmox, vSphere", "Docker"],
+          skills: [{ name: "Windows Server, Active Directory", featured: true }, "Linux (Debian, Fedora)", "Proxmox, vSphere", "Docker"],
         },
         {
           title: "Networking",
@@ -327,7 +327,7 @@ export const translations = {
     },
     work: {
       title: "Work",
-      subtitle: "What I have built, at work and at home.",
+      subtitle: "What I have built and what I am working towards, at work and at home.",
       clickHint: "Click a card for details and screenshots.",
       tabs: { projects: "Projects", missions: "Tasks" },
       all: "All",

@@ -3,7 +3,7 @@
   "order": 3,
   "category": "reseau",
   "icon": "wifi",
-  "status": "",
+  "status": "upcoming",
   "title": {
     "fr": "Sécurisation d'un réseau Wi-Fi",
     "en": "Securing a Wi-Fi network"

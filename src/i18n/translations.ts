@@ -30,7 +30,7 @@ export const translations = {
       title: "Parcours",
       titleAccent: "professionnel",
       jobsTitle: "Expériences",
-      educationTitle: "Formations",
+      educationTitle: "Formations et certifications",
       targetStatus: "Visé",
       jobs: [
         {
@@ -64,18 +64,21 @@ export const translations = {
       education: [
         {
           title: "Mastère Cybersécurité Cloud",
+          highlight: "Cybersécurité Cloud",
           organization: "En alternance, 2027-2029",
           status: "Visé",
           description: "Titre RNCP 7 : gestion des identités, protection des workloads, architectures hybrides, conformité",
         },
         {
           title: "Certification Microsoft AZ-900",
+          highlight: "AZ-900",
           organization: "Azure Fundamentals",
           status: "Novembre 2026",
           description: "Bases du cloud Azure : services, sécurité, identités, gouvernance et coûts",
         },
         {
           title: "Certifications Microsoft AZ-500 & SC-200",
+          highlight: "AZ-500 & SC-200",
           organization: "Azure Security Engineer, Security Operations Analyst",
           status: "Visé",
           description: "Sécurité Azure et Microsoft 365 : identités, réseau, données, détection avec Defender et Sentinel",
@@ -227,7 +230,7 @@ export const translations = {
       title: "Professional",
       titleAccent: "background",
       jobsTitle: "Experience",
-      educationTitle: "Education",
+      educationTitle: "Education and certifications",
       targetStatus: "Target",
       jobs: [
         {
@@ -261,18 +264,21 @@ export const translations = {
       education: [
         {
           title: "Master's degree in Cloud Cybersecurity",
+          highlight: "Cloud Cybersecurity",
           organization: "Work-study, 2027-2029",
           status: "Target",
           description: "RNCP level 7 (EQF 7): identity management, workload protection, hybrid architectures, compliance",
         },
         {
           title: "Microsoft AZ-900 certification",
+          highlight: "AZ-900",
           organization: "Azure Fundamentals",
           status: "November 2026",
           description: "Azure cloud fundamentals: services, security, identity, governance and pricing",
         },
         {
           title: "Microsoft AZ-500 & SC-200 certifications",
+          highlight: "AZ-500 & SC-200",
           organization: "Azure Security Engineer, Security Operations Analyst",
           status: "Target",
           description: "Azure and Microsoft 365 security: identity, network, data, detection with Defender and Sentinel",

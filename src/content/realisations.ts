@@ -1,11 +1,3 @@
-/*
-  Chargement du contenu des réalisations.
-
-  Le contenu se modifie depuis l'espace admin (nhelt.fr/admin) :
-  chaque projet est un fichier de src/content/projects/,
-  chaque mission un fichier de src/content/missions/.
-  Les captures sont enregistrées dans public/realisations/.
-*/
 
 export type Text = { fr: string; en: string };
 export type TextList = { fr: string[]; en: string[] };
@@ -43,8 +35,6 @@ export type Mission = {
   proofs: Proof[];
 };
 
-/* ---------- Normalisation : l'admin peut laisser des champs vides ---------- */
-
 type Raw = Record<string, unknown>;
 
 const str = (value: unknown) => (typeof value === "string" ? value.trim() : "");
@@ -53,7 +43,6 @@ const text = (value: unknown): Text => {
   const v = (value ?? {}) as Raw;
   const fr = str(v.fr);
   const en = str(v.en);
-  // Si une langue manque, on affiche l'autre plutôt qu'un vide
   return { fr: fr || en, en: en || fr };
 };
 
@@ -86,8 +75,6 @@ const proofs = (value: unknown): Proof[] =>
 
 const slugFromPath = (path: string) => path.split("/").pop()!.replace(/\.json$/, "");
 
-/* ---------- Projets ---------- */
-
 const projectFiles = import.meta.glob("./projects/*.json", { eager: true, import: "default" });
 
 export const projects: Project[] = Object.entries(projectFiles)
@@ -114,8 +101,6 @@ export const projects: Project[] = Object.entries(projectFiles)
   .filter((p) => p.title.fr)
   .sort((a, b) => a.order - b.order);
 
-/* ---------- Missions ---------- */
-
 const missionFiles = import.meta.glob("./missions/*.json", { eager: true, import: "default" });
 
 export const missions: Mission[] = Object.entries(missionFiles)
@@ -134,5 +119,4 @@ export const missions: Mission[] = Object.entries(missionFiles)
       proofs: proofs(raw.proofs),
     } satisfies Mission;
   })
-  // Une mission sans capture n'est pas une preuve : elle n'est pas affichée
   .filter((m) => m.title.fr && m.proofs.length > 0);

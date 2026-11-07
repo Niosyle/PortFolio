@@ -1,8 +1,4 @@
-export type Lang = "fr" | "en";
-
-// Règle : chaque information n'apparaît qu'à un seul endroit.
-// En-tête = qui je suis et ce que je cherche. Expériences = réalisations chiffrées.
-// Compétences = outils. Réalisations = projets et missions avec preuves (src/content/realisations.ts). Contact = comment me joindre.
+export type Lang = "fr";
 
 export const translations = {
   fr: {
@@ -16,13 +12,12 @@ export const translations = {
       skills: "Compétences",
       projects: "Réalisations",
       contact: "Contact",
-      switchLabel: "Switch to English",
     },
     hero: {
       role: "Administrateur systèmes et réseaux, orienté sécurité cloud",
       badge: "Je cherche une alternance en sécurité cloud pour septembre 2027",
       intro:
-        "Trois ans d'alternance au service informatique d'ISC Paris : 200 postes, 150 collaborateurs, 3 000 étudiants. Lors d'un incident de sécurité, j'ai repéré les premiers signes de compromission. Avant l'informatique, cinq ans dans l'Armée de Terre. Prochaine étape : la sécurité du cloud.",
+        "En alternance depuis trois ans au service informatique d'ISC Paris, qui gère 200 postes pour 150 collaborateurs et 3 000 étudiants. Lors d'un incident de sécurité, j'ai repéré les premiers signes de compromission. Avant l'informatique, j'ai passé cinq ans dans l'Armée de Terre. Je veux maintenant me spécialiser dans la sécurité du cloud.",
       location: "93130 Noisy-le-Sec",
       cta: "Me contacter",
       certBadge: "Certifié Microsoft Azure Fundamentals (AZ-900), voir les certifications",
@@ -38,9 +33,9 @@ export const translations = {
           title: "Administrateur Systèmes & Réseaux",
           organization: "ISC Paris (alternance)",
           highlights: [
-            "Incident de sécurité : détection des premiers comptes compromis, puis 6 jours de gestion de crise avec le DSI",
-            "Participation à la migration de Google Workspace vers Microsoft 365 : 150 collaborateurs, 3 000 étudiants, Entra ID et MFA",
-            "Exploitation et durcissement : Active Directory, stratégies de groupe, DNS, DHCP, 20 switchs Cisco, Wi-Fi, plan de reprise d'activité",
+            "Repérage des premiers comptes compromis lors d'un incident de sécurité, puis 6 jours de gestion de crise avec le DSI",
+            "Participation à la migration de Google Workspace vers Microsoft 365 pour 150 collaborateurs et 3 000 étudiants (Entra ID, MFA)",
+            "Exploitation et durcissement de l'Active Directory, des stratégies de groupe, du DNS et du DHCP, suivi du plan de reprise d'activité",
           ],
         },
         {
@@ -48,7 +43,7 @@ export const translations = {
           organization: "ISC Paris (alternance)",
           highlights: [
             "Maintenance et administration de l'infrastructure",
-            "Configuration des équipements réseau Cisco",
+            "Premières configurations sur les switchs Cisco",
             "Administration de l'environnement vSphere",
             "Mise en production de SysPass, NetAlertX et Evoko",
           ],
@@ -68,14 +63,14 @@ export const translations = {
           highlight: "Cybersécurité Cloud",
           organization: "En alternance, 2027-2029",
           status: "Visé",
-          description: "Titre RNCP 7 : gestion des identités, protection des workloads, architectures hybrides, conformité",
+          description: "Titre RNCP 7, axé sur la gestion des identités, la protection des workloads et les architectures hybrides",
         },
         {
           title: "Certifications Microsoft AZ-500 & SC-200",
           highlight: "AZ-500 & SC-200",
           organization: "Azure Security Engineer, Security Operations Analyst",
           status: "Visé",
-          description: "Sécurité Azure et Microsoft 365 : identités, réseau, données, détection avec Defender et Sentinel",
+          description: "Pour aller plus loin sur la sécurité Azure et Microsoft 365, avec Defender et Sentinel",
         },
         {
           title: "Certification Microsoft AZ-900",
@@ -83,7 +78,7 @@ export const translations = {
           organization: "Microsoft Certified : Azure Fundamentals",
           status: "Obtenue",
           date: "Novembre 2026",
-          description: "Bases du cloud Azure : services, sécurité, identités, gouvernance et coûts",
+          description: "Les bases d'Azure, de la sécurité et de la gouvernance du cloud",
         },
         {
           title: "Administrateur Systèmes & Réseaux",
@@ -209,7 +204,7 @@ export const translations = {
     contact: {
       title: "Prenons",
       titleAccent: "contact",
-      text: "Une offre d'alternance ou une question sur mon parcours : le plus simple est de m'écrire.",
+      text: "Pour une offre d'alternance ou une question sur mon parcours, le plus simple est de m'écrire.",
     },
     footer: "Administrateur Systèmes & Réseaux",
     notFound: {
@@ -218,218 +213,6 @@ export const translations = {
     },
   },
 
-  en: {
-    meta: {
-      title: "Nicolas HELT | System and network admin, moving into cloud security",
-      description:
-        "Nicolas HELT, system and network administrator (work-study), Microsoft Certified: Azure Fundamentals (AZ-900), focused on cloud security. Looking for a cloud security work-study position from September 2027.",
-    },
-    nav: {
-      experience: "Background",
-      skills: "Skills",
-      projects: "Work",
-      contact: "Contact",
-      switchLabel: "Passer en français",
-    },
-    hero: {
-      role: "System and network administrator, moving into cloud security",
-      badge: "Looking for a cloud security work-study position, September 2027",
-      intro:
-        "Three years as a work-study student in the IT department of ISC Paris: 200 workstations, 150 staff, 3,000 students. During a security incident, I spotted the early signs of compromise. Before IT, five years in the French Army. Next step: cloud security.",
-      location: "Noisy-le-Sec, France",
-      cta: "Get in touch",
-      certBadge: "Microsoft Certified: Azure Fundamentals (AZ-900), see certifications",
-    },
-    experience: {
-      title: "Professional",
-      titleAccent: "background",
-      jobsTitle: "Experience",
-      educationTitle: "Education and certifications",
-      targetStatus: "Target",
-      jobs: [
-        {
-          title: "System & Network Administrator",
-          organization: "ISC Paris (work-study)",
-          highlights: [
-            "Security incident: detected the first compromised accounts, then 6 days of crisis response alongside the IT director",
-            "Took part in the migration from Google Workspace to Microsoft 365: 150 staff, 3,000 students, Entra ID and MFA",
-            "Operations and hardening: Active Directory, group policies, DNS, DHCP, 20 Cisco switches, Wi-Fi, disaster recovery plan",
-          ],
-        },
-        {
-          title: "IT Technician",
-          organization: "ISC Paris (work-study)",
-          highlights: [
-            "Infrastructure maintenance and administration",
-            "Cisco network equipment configuration",
-            "vSphere administration",
-            "Deployment of SysPass, NetAlertX and Evoko",
-          ],
-        },
-        {
-          title: "Soldier",
-          organization: "French Army",
-          highlights: [
-            "Five years of service in demanding operational environments",
-            "Strict application of procedures and safety rules",
-          ],
-        },
-      ],
-      education: [
-        {
-          title: "Master's degree in Cloud Cybersecurity",
-          highlight: "Cloud Cybersecurity",
-          organization: "Work-study, 2027-2029",
-          status: "Target",
-          description: "RNCP level 7 (EQF 7): identity management, workload protection, hybrid architectures, compliance",
-        },
-        {
-          title: "Microsoft AZ-500 & SC-200 certifications",
-          highlight: "AZ-500 & SC-200",
-          organization: "Azure Security Engineer, Security Operations Analyst",
-          status: "Target",
-          description: "Azure and Microsoft 365 security: identity, network, data, detection with Defender and Sentinel",
-        },
-        {
-          title: "Microsoft AZ-900 certification",
-          highlight: "AZ-900",
-          organization: "Microsoft Certified: Azure Fundamentals",
-          status: "Earned",
-          date: "November 2026",
-          description: "Azure cloud fundamentals: services, security, identity, governance and pricing",
-        },
-        {
-          title: "System & Network Administrator",
-          organization: "IPI Groupe IGENSIA",
-          status: "RNCP 6 (Bachelor's level)",
-        },
-        {
-          title: "Systems, Networks & Security Technician",
-          organization: "IPI Groupe IGENSIA",
-          status: "RNCP 5 (Associate level)",
-        },
-      ],
-    },
-    skills: {
-      title: "Technical",
-      titleAccent: "skills",
-      levels: [
-        {
-          title: "Day to day",
-          note: "Work-study at ISC Paris",
-          items: [
-            "Microsoft 365, Entra ID (IAM, MFA)",
-            "Windows Server, Active Directory",
-            "Group policies (GPO)",
-            "Windows hardening",
-            "DHCP, DNS, VLANs",
-            "Incident response",
-            "Disaster recovery plan, backups",
-            "vSphere",
-          ],
-        },
-        {
-          title: "Hands-on",
-          note: "In training and projects",
-          items: [
-            "Linux (Debian, Fedora), hardening",
-            "Proxmox, Docker",
-            "Zabbix, Wazuh (proof of concept on 3 workstations)",
-            "VPN (WireGuard, IPSec)",
-            "Cisco (basics)",
-            "PowerShell, Python (basics)",
-          ],
-        },
-        {
-          title: "In progress",
-          note: "Next steps",
-          soon: true,
-          items: [
-            "Azure security",
-            "Private cloud at home",
-          ],
-        },
-      ],
-    },
-    work: {
-      title: "Work",
-      subtitle: "What I have built and what I am working towards, at work and at home.",
-      clickHint: "Click a card for details and screenshots.",
-      tabs: { projects: "Projects", missions: "Tasks" },
-      all: "All",
-      categories: {
-        infra: "Infrastructure",
-        cloud: "Cloud",
-        securite: "Security",
-        reseau: "Networking",
-        supervision: "Monitoring",
-      },
-      status: { ongoing: "In progress", upcoming: "Upcoming" },
-      seeDetail: "See details",
-      proofs: "screenshots",
-      context: "Context",
-      actions: "What I did",
-      result: "Result",
-    },
-    cv: {
-      download: "Download my resume",
-      short: "Resume",
-    },
-    recommendations: {
-      title: "Recommendations",
-      subtitle: "What the people I have worked with say.",
-      verify: "See the LinkedIn profile of",
-      cta: "Have we worked together?",
-      ctaLink: "Leave a recommendation",
-    },
-    letter: {
-      open: "Read the recommendation letter",
-      title: "Recommendation letter",
-      download: "Download the PDF",
-      request: "Request the original",
-      requestSubject: "Request for the original recommendation letter",
-      viewOnly: "Viewing copy. The signed original is available on request.",
-    },
-    recommend: {
-      title: "Recommend Nicolas",
-      intro: "A few lines are enough. Nothing is published without review, and you can ask for removal at any time.",
-      name: "Full name",
-      role: "Job title",
-      company: "Company or organization",
-      relation: "How you know Nicolas",
-      relations: {
-        manager: "Manager",
-        colleague: "Colleague",
-        teacher: "Instructor",
-        client: "User or client",
-        other: "Other",
-      },
-      linkedin: "LinkedIn profile (optional)",
-      linkedinHint: "Lets recruiters check that the recommendation really comes from you.",
-      message: "Your recommendation",
-      messageHint: "What did you work on together? What stood out to you?",
-      consent: "I agree that this text may be published on nhelt.fr with my name, job title and company.",
-      consentShort: "Publication consent",
-      send: "Send",
-      sendMail: "Prepare the email",
-      sending: "Sending...",
-      thanks: "Thank you! Your recommendation has been received. It will be published after review.",
-      thanksMail: "Your email app has opened with the message prefilled. You just need to send it. Thank you!",
-      error: "Sending failed. Please try again or write directly to Nicolas@helt.fr.",
-      privacy: "Your information is only used to publish this recommendation. Removal on request at Nicolas@helt.fr.",
-      mailSubject: "Recommendation for nhelt.fr from",
-    },
-    contact: {
-      title: "Get in",
-      titleAccent: "touch",
-      text: "A work-study offer or a question about my background: email is the easiest way to reach me.",
-    },
-    footer: "System & Network Administrator",
-    notFound: {
-      message: "Page not found",
-      back: "Back to home",
-    },
-  },
 };
 
 export type Translations = (typeof translations)["fr"];

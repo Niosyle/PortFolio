@@ -90,7 +90,6 @@ const Projects = () => {
   );
   const visible = filter === "all" ? list : list.filter((item) => item.category === filter);
 
-  // Lien direct : nhelt.fr/#projet-homelab ou nhelt.fr/#mission-xxx ouvre la fiche
   useEffect(() => {
     const openFromHash = () => {
       const hash = decodeURIComponent(window.location.hash.slice(1));
@@ -134,7 +133,6 @@ const Projects = () => {
           subtitle={`${t.work.subtitle}${missions.length > 0 || projects.some(hasDetail) ? ` ${t.work.clickHint}` : ""}`}
         />
 
-        {/* Onglets : l'onglet Missions n'apparaît que s'il y a au moins une mission */}
         {missions.length > 0 && (
           <div role="tablist" className="flex gap-8 mb-8 border-b border-border/70">
             {(["projects", "missions"] as Tab[]).map((value) => (
@@ -157,7 +155,6 @@ const Projects = () => {
           </div>
         )}
 
-        {/* Filtres par domaine */}
         {categories.length > 1 && (
           <div className="flex flex-wrap gap-2 mb-10">
             {(["all", ...categories] as (Category | "all")[]).map((value) => (
@@ -266,7 +263,6 @@ const Projects = () => {
         )}
       </div>
 
-      {/* Fiche détaillée */}
       <Dialog open={selected !== null} onOpenChange={(isOpen) => !isOpen && close()}>
         <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
           {selected?.kind === "project" && (

@@ -15,14 +15,13 @@ const styles = {
     "inline-flex items-center gap-1.5 px-4 py-1.5 text-sm font-medium rounded-full border border-primary/50 text-primary hover:bg-primary/10 transition-colors",
 };
 
-/** Affiche le bouton seulement si un CV est configuré dans l'admin (Réglages) */
 const CvButton = ({ variant = "secondary" }: CvButtonProps) => {
-  const { lang, t } = useLanguage();
-  const href = cv[lang] ?? cv.fr ?? cv.en;
+  const { t } = useLanguage();
+  const href = cv.fr;
   if (!href) return null;
 
   return (
-    <a href={href} download className={styles[variant]} data-umami-event="cv-download" data-umami-event-lang={lang}>
+    <a href={href} download className={styles[variant]} data-umami-event="cv-download">
       <Download className="w-4 h-4" aria-hidden="true" />
       {variant === "compact" ? t.cv.short : t.cv.download}
     </a>

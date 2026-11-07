@@ -2,9 +2,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import SectionHeading from "@/components/SectionHeading";
 import badgeAz900 from "@/assets/badge-az900.webp";
 
-// Données non traduites (dates), alignées par index sur les traductions
 const jobPeriods = ["2025-2027", "2023-2025", "2016-2021"];
-// kind : "target" = objectif, "earned" = certification obtenue (avec badge), "done" = titre obtenu ou en cours
 const educationMeta: { period?: string; badge?: string; kind: "target" | "earned" | "done" }[] = [
   { kind: "target" },
   { kind: "target" },
@@ -13,7 +11,6 @@ const educationMeta: { period?: string; badge?: string; kind: "target" | "earned
   { period: "2023-2025", kind: "done" },
 ];
 
-/** Met en couleur la partie importante du titre (ex. AZ-900) */
 const withHighlight = (title: string, highlight?: string) => {
   if (!highlight || !title.includes(highlight)) return title;
   const at = title.indexOf(highlight);
@@ -25,7 +22,6 @@ const withHighlight = (title: string, highlight?: string) => {
     </>
   );
 };
-
 
 const Experience = () => {
   const { t } = useLanguage();

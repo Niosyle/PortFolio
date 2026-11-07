@@ -1,8 +1,3 @@
-/*
-  Recommandations de collaborateurs.
-  Une recommandation n'est affichée que si elle est marquée « Publiée » dans l'admin
-  ET que son auteur a donné son accord de publication.
-*/
 
 export type Recommendation = {
   slug: string;

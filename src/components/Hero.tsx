@@ -2,6 +2,7 @@ import { ArrowDown } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
 import CvButton from "@/components/CvButton";
+import badgeAz900 from "@/assets/badge-az900.webp";
 
 const EMAIL = "Nicolas@helt.fr";
 const LINKEDIN_URL = "https://www.linkedin.com/in/nicolas-h-03b75438b/";
@@ -63,6 +64,21 @@ const Hero = () => {
             height={375}
             className="relative w-full aspect-[4/5] object-cover rounded-sm grayscale-[15%]"
           />
+          <a
+            href="#formations"
+            aria-label={t.hero.certBadge}
+            title={t.hero.certBadge}
+            data-umami-event="badge-az900"
+            className="absolute -bottom-7 -left-7 w-20 lg:w-24 transition-transform hover:-translate-y-1"
+          >
+            <img
+              src={badgeAz900}
+              alt=""
+              width={96}
+              height={99}
+              className="w-full h-auto drop-shadow-[0_10px_24px_rgba(0,0,0,0.6)]"
+            />
+          </a>
         </figure>
       </div>
 

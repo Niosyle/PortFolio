@@ -1,13 +1,14 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import SectionHeading from "@/components/SectionHeading";
+import badgeAz900 from "@/assets/badge-az900.webp";
 
 // Données non traduites (dates), alignées par index sur les traductions
 const jobPeriods = ["2025-2027", "2023-2025", "2016-2021"];
-// kind : "soon" = examen daté, "target" = objectif, "done" = titre obtenu ou en cours
-const educationMeta: { period?: string; kind: "soon" | "target" | "done" }[] = [
+// kind : "target" = objectif, "earned" = certification obtenue (avec badge), "done" = titre obtenu ou en cours
+const educationMeta: { period?: string; badge?: string; kind: "target" | "earned" | "done" }[] = [
   { kind: "target" },
-  { kind: "soon" },
   { kind: "target" },
+  { kind: "earned", badge: badgeAz900 },
   { period: "2025-2027", kind: "done" },
   { period: "2023-2025", kind: "done" },
 ];
@@ -25,10 +26,6 @@ const withHighlight = (title: string, highlight?: string) => {
   );
 };
 
-const statusStyle = {
-  soon: "bg-primary text-primary-foreground border-primary",
-  target: "border-primary/60 text-primary",
-} as const;
 
 const Experience = () => {
   const { t } = useLanguage();
@@ -58,7 +55,7 @@ const Experience = () => {
           ))}
         </ol>
 
-        <div className="mt-24">
+        <div id="formations" className="mt-24 scroll-mt-28">
           <h3 className="text-3xl font-normal text-foreground mb-8">{t.experience.educationTitle}</h3>
           <ul className="divide-y divide-border/70 border-t border-border/70">
             {t.experience.education.map((item, index) => {
@@ -66,15 +63,27 @@ const Experience = () => {
               const description = "description" in item ? item.description : undefined;
               const highlight = "highlight" in item ? item.highlight : undefined;
               const done = meta.kind === "done";
+              const earned = meta.kind === "earned";
+              const date = "date" in item ? item.date : undefined;
               return (
                 <li key={item.title} className="grid gap-3 md:grid-cols-[180px_1fr] md:gap-10 py-8">
                   <div className="md:pt-1.5">
-                    {done ? (
+                    {earned ? (
+                      <div className="flex items-center gap-4 md:block">
+                        <img
+                          src={meta.badge}
+                          alt={item.organization}
+                          width={88}
+                          height={91}
+                          loading="lazy"
+                          className="w-[72px] md:w-[88px] h-auto drop-shadow-[0_4px_10px_rgba(0,0,0,0.35)]"
+                        />
+                        <p className="md:mt-3 font-serif italic text-lg text-primary">{date}</p>
+                      </div>
+                    ) : done ? (
                       <p className="font-serif italic text-lg text-muted-foreground">{meta.period}</p>
                     ) : (
-                      <span
-                        className={`inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium tracking-wide ${statusStyle[meta.kind]}`}
-                      >
+                      <span className="inline-flex items-center rounded-full border border-primary/60 px-3 py-1 text-xs font-medium tracking-wide text-primary">
                         {item.status}
                       </span>
                     )}
@@ -83,10 +92,15 @@ const Experience = () => {
                     <p className="font-serif text-2xl text-foreground leading-snug">
                       {withHighlight(item.title, highlight)}
                     </p>
-                    <p className="mt-1 text-muted-foreground">
+                    <p className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-2 text-muted-foreground">
                       {item.organization}
                       {done && (
-                        <span className="ml-3 inline-flex items-center rounded-full border border-primary/40 px-2.5 py-0.5 text-xs font-medium text-primary align-middle">
+                        <span className="inline-flex items-center rounded-full border border-primary/40 px-2.5 py-0.5 text-xs font-medium text-primary">
+                          {item.status}
+                        </span>
+                      )}
+                      {earned && (
+                        <span className="inline-flex items-center rounded-full border border-primary bg-primary px-2.5 py-0.5 text-xs font-medium text-primary-foreground">
                           {item.status}
                         </span>
                       )}

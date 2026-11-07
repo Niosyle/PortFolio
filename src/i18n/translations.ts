@@ -9,7 +9,7 @@ export const translations = {
     meta: {
       title: "Nicolas HELT | Admin systèmes et réseaux, orienté sécurité cloud",
       description:
-        "Nicolas HELT, administrateur systèmes et réseaux en alternance, orienté sécurité cloud. Recherche une alternance en sécurité cloud pour septembre 2027.",
+        "Nicolas HELT, administrateur systèmes et réseaux en alternance, certifié Microsoft Azure Fundamentals (AZ-900), orienté sécurité cloud. Recherche une alternance en sécurité cloud pour septembre 2027.",
     },
     nav: {
       experience: "Parcours",
@@ -25,6 +25,7 @@ export const translations = {
         "Trois ans d'alternance au service informatique d'ISC Paris : 200 postes, 150 collaborateurs, 3 000 étudiants. Lors d'un incident de sécurité, j'ai repéré les premiers signes de compromission. Avant l'informatique, cinq ans dans l'Armée de Terre. Prochaine étape : la sécurité du cloud.",
       location: "93130 Noisy-le-Sec",
       cta: "Me contacter",
+      certBadge: "Certifié Microsoft Azure Fundamentals (AZ-900), voir les certifications",
     },
     experience: {
       title: "Parcours",
@@ -70,18 +71,19 @@ export const translations = {
           description: "Titre RNCP 7 : gestion des identités, protection des workloads, architectures hybrides, conformité",
         },
         {
-          title: "Certification Microsoft AZ-900",
-          highlight: "AZ-900",
-          organization: "Azure Fundamentals",
-          status: "Novembre 2026",
-          description: "Bases du cloud Azure : services, sécurité, identités, gouvernance et coûts",
-        },
-        {
           title: "Certifications Microsoft AZ-500 & SC-200",
           highlight: "AZ-500 & SC-200",
           organization: "Azure Security Engineer, Security Operations Analyst",
           status: "Visé",
           description: "Sécurité Azure et Microsoft 365 : identités, réseau, données, détection avec Defender et Sentinel",
+        },
+        {
+          title: "Certification Microsoft AZ-900",
+          highlight: "AZ-900",
+          organization: "Microsoft Certified : Azure Fundamentals",
+          status: "Obtenue",
+          date: "Novembre 2026",
+          description: "Bases du cloud Azure : services, sécurité, identités, gouvernance et coûts",
         },
         {
           title: "Administrateur Systèmes & Réseaux",
@@ -132,7 +134,7 @@ export const translations = {
           note: "Prochaines étapes",
           soon: true,
           items: [
-            "Azure (AZ-900 en novembre)",
+            "Sécurité Azure",
             "Wazuh, Zabbix dans le homelab",
             "Cloud privé en local",
           ],
@@ -223,7 +225,7 @@ export const translations = {
     meta: {
       title: "Nicolas HELT | System and network admin, moving into cloud security",
       description:
-        "Nicolas HELT, system and network administrator (work-study), focused on cloud security. Looking for a cloud security work-study position from September 2027.",
+        "Nicolas HELT, system and network administrator (work-study), Microsoft Certified: Azure Fundamentals (AZ-900), focused on cloud security. Looking for a cloud security work-study position from September 2027.",
     },
     nav: {
       experience: "Background",
@@ -239,6 +241,7 @@ export const translations = {
         "Three years as a work-study student in the IT department of ISC Paris: 200 workstations, 150 staff, 3,000 students. During a security incident, I spotted the early signs of compromise. Before IT, five years in the French Army. Next step: cloud security.",
       location: "Noisy-le-Sec, France",
       cta: "Get in touch",
+      certBadge: "Microsoft Certified: Azure Fundamentals (AZ-900), see certifications",
     },
     experience: {
       title: "Professional",
@@ -284,18 +287,19 @@ export const translations = {
           description: "RNCP level 7 (EQF 7): identity management, workload protection, hybrid architectures, compliance",
         },
         {
-          title: "Microsoft AZ-900 certification",
-          highlight: "AZ-900",
-          organization: "Azure Fundamentals",
-          status: "November 2026",
-          description: "Azure cloud fundamentals: services, security, identity, governance and pricing",
-        },
-        {
           title: "Microsoft AZ-500 & SC-200 certifications",
           highlight: "AZ-500 & SC-200",
           organization: "Azure Security Engineer, Security Operations Analyst",
           status: "Target",
           description: "Azure and Microsoft 365 security: identity, network, data, detection with Defender and Sentinel",
+        },
+        {
+          title: "Microsoft AZ-900 certification",
+          highlight: "AZ-900",
+          organization: "Microsoft Certified: Azure Fundamentals",
+          status: "Earned",
+          date: "November 2026",
+          description: "Azure cloud fundamentals: services, security, identity, governance and pricing",
         },
         {
           title: "System & Network Administrator",
@@ -346,7 +350,7 @@ export const translations = {
           note: "Next steps",
           soon: true,
           items: [
-            "Azure (AZ-900 in November)",
+            "Azure security",
             "Wazuh, Zabbix in the homelab",
             "Private cloud at home",
           ],

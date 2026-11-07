@@ -2,7 +2,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import CvButton from "@/components/CvButton";
 
 const EMAIL = "Nicolas@helt.fr";
-const LINKEDIN_URL = "https://www.linkedin.com/in/nicolas-h-03b75438b/";
+const LINKEDIN_URL = "https://www.linkedin.com/in/nicolas-helt/";
 
 const Contact = () => {
   const { t } = useLanguage();

@@ -5,7 +5,7 @@ import CvButton from "@/components/CvButton";
 import badgeAz900 from "@/assets/badge-az900.webp";
 
 const EMAIL = "Nicolas@helt.fr";
-const LINKEDIN_URL = "https://www.linkedin.com/in/nicolas-h-03b75438b/";
+const LINKEDIN_URL = "https://www.linkedin.com/in/nicolas-helt/";
 
 const Hero = () => {
   const { t } = useLanguage();

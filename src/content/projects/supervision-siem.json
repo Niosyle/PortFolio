@@ -3,31 +3,27 @@
   "order": 2,
   "category": "supervision",
   "icon": "activity",
-  "status": "upcoming",
+  "status": "",
   "title": {
     "fr": "Supervision & SIEM",
     "en": "Monitoring & SIEM"
   },
   "summary": {
-    "fr": "Dans mon homelab, sur 5 machines : surveiller à la fois la disponibilité des services et les événements de sécurité.",
-    "en": "In my homelab, on 5 machines: watching both service availability and security events."
+    "fr": "Zabbix pour surveiller la disponibilité des services, et une preuve de concept Wazuh pour les événements de sécurité.",
+    "en": "Zabbix to monitor service availability, and a Wazuh proof of concept for security events."
   },
   "highlights": {
     "fr": [
-      "Wazuh : agents sur les 5 machines, règles, alertes",
-      "Zabbix : hôtes, services, seuils",
-      "Tableaux de bord communs"
+      "Zabbix : supervision mise en place",
+      "Wazuh : preuve de concept sur 3 postes"
     ],
     "en": [
-      "Wazuh: agents on all 5 machines, rules, alerts",
-      "Zabbix: hosts, services, thresholds",
-      "Shared dashboards"
+      "Zabbix: monitoring set up",
+      "Wazuh: proof of concept on 3 workstations"
     ]
   },
   "tech": [
-    "Wazuh",
     "Zabbix",
-    "Linux",
-    "Windows"
+    "Wazuh"
   ]
 }

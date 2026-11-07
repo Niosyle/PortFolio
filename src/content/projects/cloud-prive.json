@@ -5,23 +5,16 @@
   "icon": "cloud",
   "status": "upcoming",
   "title": {
-    "fr": "Cloud privé en local",
-    "en": "On-premises private cloud"
+    "fr": "Cloud privé en local"
   },
   "summary": {
-    "fr": "Monter un cloud privé sur le homelab pour voir comment fonctionne une plateforme cloud de l'intérieur.",
-    "en": "Building a private cloud on the homelab to see how a cloud platform works from the inside."
+    "fr": "Monter un cloud privé sur le homelab pour voir comment fonctionne une plateforme cloud de l'intérieur."
   },
   "highlights": {
     "fr": [
       "Création d'instances à la demande",
       "Réseaux virtuels et groupes de sécurité",
       "Gestion des identités et des accès"
-    ],
-    "en": [
-      "On-demand instances",
-      "Virtual networks and security groups",
-      "Identity and access management"
     ]
   },
   "tech": [

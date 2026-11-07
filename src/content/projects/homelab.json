@@ -5,23 +5,16 @@
   "icon": "server",
   "status": "",
   "title": {
-    "fr": "Homelab",
-    "en": "Homelab"
+    "fr": "Homelab"
   },
   "summary": {
-    "fr": "Mon labo perso sous Proxmox, pour tester ce que je n'ai pas le droit de casser au travail.",
-    "en": "My personal lab on Proxmox, where I test what I am not allowed to break at work."
+    "fr": "Mon labo perso sous Proxmox, pour tester ce que je n'ai pas le droit de casser au travail."
   },
   "highlights": {
     "fr": [
       "Domaine Active Directory de test",
       "Réseau découpé en VLAN",
       "Machines Windows et Linux pour tester le durcissement"
-    ],
-    "en": [
-      "Test Active Directory domain",
-      "Network split into VLANs",
-      "Windows and Linux machines to test hardening"
     ]
   },
   "tech": [

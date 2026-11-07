@@ -1,41 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
-import type { Lang } from "@/i18n/translations";
 import CvButton from "@/components/CvButton";
-import { track } from "@/content/site";
-
-const LanguageSwitch = () => {
-  const { lang, setLang, t } = useLanguage();
-  const options: Lang[] = ["fr", "en"];
-
-  return (
-    <div
-      role="group"
-      aria-label={t.nav.switchLabel}
-      className="flex items-center gap-1 text-xs font-medium tracking-wide"
-    >
-      {options.map((option) => (
-        <button
-          key={option}
-          type="button"
-          onClick={() => {
-            setLang(option);
-            track("lang-switch", { lang: option });
-          }}
-          aria-pressed={lang === option}
-          className={`px-1.5 py-1 uppercase transition-colors ${
-            lang === option
-              ? "text-primary"
-              : "text-muted-foreground hover:text-foreground"
-          }`}
-        >
-          {option}
-        </button>
-      ))}
-    </div>
-  );
-};
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -60,8 +26,8 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/90 backdrop-blur-md border-b border-border"
+        isScrolled || isMobileMenuOpen
+          ? "bg-background/95 backdrop-blur-md border-b border-border"
           : "bg-transparent"
       }`}
     >
@@ -86,12 +52,10 @@ const Header = () => {
               ))}
             </nav>
             <CvButton variant="compact" />
-            <LanguageSwitch />
           </div>
 
-          {/* Mobile: language + menu button */}
+          {/* Mobile */}
           <div className="md:hidden flex items-center gap-2">
-            <LanguageSwitch />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 text-muted-foreground hover:text-foreground"
@@ -116,6 +80,9 @@ const Header = () => {
                   {link.label}
                 </a>
               ))}
+              <div>
+                <CvButton variant="compact" />
+              </div>
             </div>
           </nav>
         )}

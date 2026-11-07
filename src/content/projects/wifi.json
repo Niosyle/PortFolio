@@ -5,23 +5,16 @@
   "icon": "wifi",
   "status": "upcoming",
   "title": {
-    "fr": "Sécurisation d'un réseau Wi-Fi",
-    "en": "Securing a Wi-Fi network"
+    "fr": "Sécurisation d'un réseau Wi-Fi"
   },
   "summary": {
-    "fr": "Authentification forte et séparation des usages sur le réseau sans fil.",
-    "en": "Strong authentication and separated uses on the wireless network."
+    "fr": "Authentification forte et séparation des usages sur le réseau sans fil."
   },
   "highlights": {
     "fr": [
       "Authentification 802.1X via RADIUS (NPS)",
       "Un SSID par usage, chacun dans son VLAN",
       "Réseau invités isolé, WPA2/WPA3-Enterprise"
-    ],
-    "en": [
-      "802.1X authentication with RADIUS (NPS)",
-      "One SSID per use, each in its own VLAN",
-      "Isolated guest network, WPA2/WPA3-Enterprise"
     ]
   },
   "tech": [

@@ -11,7 +11,6 @@ const formatDate = (value: string, lang: "fr" | "en") => {
   return new Date(y, m - 1).toLocaleDateString(lang === "fr" ? "fr-FR" : "en-GB", { month: "long", year: "numeric" });
 };
 
-/** Section masquée tant qu'il n'y a ni recommandation publiée ni lettre */
 const Recommendations = () => {
   const { t, lang } = useLanguage();
   if (recommendations.length === 0 && letter.mode === "hidden") return null;

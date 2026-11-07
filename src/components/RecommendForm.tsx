@@ -3,13 +3,6 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } f
 import { formEndpoint, notify, OWNER_EMAIL, track } from "@/content/site";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-/*
-  Formulaire de recommandation, ouvert par le lien nhelt.fr/#recommander (à envoyer aux collaborateurs).
-  Rien n'est publié automatiquement : le texte arrive par mail, puis est validé dans l'admin.
-  - Si une URL Formspree est configurée (Réglages), envoi direct.
-  - Sinon, le message est préparé dans la messagerie du collaborateur.
-*/
-
 const HASH = "#recommander";
 const MAX = 1200;
 
@@ -31,7 +24,7 @@ const RecommendForm = () => {
     linkedin: "",
     message: "",
     consent: false,
-    website: "", // champ piège anti-robots, invisible pour les humains
+    website: "",
   });
 
   useEffect(() => {
@@ -63,7 +56,7 @@ const RecommendForm = () => {
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (values.website) return; // robot
+    if (values.website) return;
     track("recommendation-submit", { lang });
 
     if (!formEndpoint) {
@@ -167,7 +160,6 @@ const RecommendForm = () => {
               </span>
             </label>
 
-            {/* Champ piège : caché aux humains, rempli par les robots */}
             <input
               type="text"
               name="website"

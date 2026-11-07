@@ -5,21 +5,15 @@
   "icon": "activity",
   "status": "",
   "title": {
-    "fr": "Supervision & SIEM",
-    "en": "Monitoring & SIEM"
+    "fr": "Supervision & SIEM"
   },
   "summary": {
-    "fr": "Zabbix pour surveiller la disponibilité des services, et une preuve de concept Wazuh pour les événements de sécurité.",
-    "en": "Zabbix to monitor service availability, and a Wazuh proof of concept for security events."
+    "fr": "Zabbix pour surveiller la disponibilité des services, et une preuve de concept Wazuh pour les événements de sécurité."
   },
   "highlights": {
     "fr": [
-      "Zabbix : supervision mise en place",
-      "Wazuh : preuve de concept sur 3 postes"
-    ],
-    "en": [
-      "Zabbix: monitoring set up",
-      "Wazuh: proof of concept on 3 workstations"
+      "Mise en place de Zabbix pour la supervision",
+      "Preuve de concept Wazuh sur 3 postes"
     ]
   },
   "tech": [

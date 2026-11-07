@@ -1,7 +1,6 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import SectionHeading from "@/components/SectionHeading";
 
-/** Compétences classées par niveau : au quotidien, pratiqué, en cours */
 const Skills = () => {
   const { t } = useLanguage();
 

@@ -3,12 +3,6 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { letter, OWNER_EMAIL, track } from "@/content/site";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-/*
-  Lettre de recommandation.
-  En mode « view », les pages sont affichées en images avec un filigrane et sans lien de téléchargement.
-  C'est dissuasif, pas infaillible : une capture d'écran reste possible. D'où le bouton « Demander l'original ».
-*/
-
 const Watermark = () => (
   <div
     aria-hidden="true"

@@ -3,7 +3,6 @@ type SectionHeadingProps = {
   subtitle?: string;
 };
 
-/** Titre de section aligné à gauche, en serif, avec un trait or fin */
 const SectionHeading = ({ title, subtitle }: SectionHeadingProps) => (
   <div className="mb-12 max-w-2xl">
     <span aria-hidden="true" className="block w-10 h-px bg-primary mb-6" />

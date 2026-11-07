@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 
-/* Thème Obsidian Gold : fond #0B0F14, surface #171E27, or mat #C5A46D, texte #E7E9EB, secondaire #778696 */
 
 @layer base {
   :root {

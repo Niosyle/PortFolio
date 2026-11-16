@@ -6,6 +6,7 @@ const jobPeriods = ["2025-2027", "2023-2025", "2016-2021"];
 const educationMeta: { period?: string; badge?: string; kind: "target" | "earned" | "done" }[] = [
   { kind: "target" },
   { kind: "target" },
+  { kind: "target" },
   { kind: "earned", badge: badgeAz900 },
   { period: "2025-2027", kind: "done" },
   { period: "2023-2025", kind: "done" },

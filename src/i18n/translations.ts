@@ -66,11 +66,18 @@ export const translations = {
           description: "Titre RNCP 7, axé sur la gestion des identités, la protection des workloads et les architectures hybrides",
         },
         {
-          title: "Certifications Microsoft AZ-500 & SC-200",
-          highlight: "AZ-500 & SC-200",
-          organization: "Azure Security Engineer, Security Operations Analyst",
+          title: "Certifications Microsoft SC-300 et AZ-104",
+          highlight: "SC-300 et AZ-104",
+          organization: "Identity and Access Administrator, Azure Administrator",
           status: "Visé",
-          description: "Pour aller plus loin sur la sécurité Azure et Microsoft 365, avec Defender et Sentinel",
+          description: "Gérer les identités et les accès avec Entra ID, puis administrer Azure",
+        },
+        {
+          title: "Certification Microsoft SC-900",
+          highlight: "SC-900",
+          organization: "Security, Compliance, and Identity Fundamentals",
+          status: "En préparation",
+          description: "Les bases de la sécurité, de la conformité et des identités chez Microsoft",
         },
         {
           title: "Certification Microsoft AZ-900",
